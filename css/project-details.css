@@ -4,11 +4,11 @@
    Colors: Primary #101F30 | Secondary #BF9F76 | Font: Almarai
    ========================================================================== */
 
-/* Main Hero Banner */
+/* Main Hero Banner: 2-Column Split Showcase */
 .project-single-hero {
   position: relative;
-  padding: 140px 0 60px;
-  background: linear-gradient(135deg, #09131d 0%, #101F30 60%, #182e47 100%);
+  padding: 160px 0 70px;
+  background: linear-gradient(145deg, #09131d 0%, #101F30 55%, #162a3f 100%);
   color: #FFFFFF;
   border-bottom: 1px solid rgba(191, 159, 118, 0.25);
   overflow: hidden;
@@ -25,13 +25,20 @@
   pointer-events: none;
 }
 
+.hero-split-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 45px;
+  align-items: center;
+}
+
 .p-breadcrumb-nav {
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 0.88rem;
   color: var(--secondary-light);
-  margin-bottom: 22px;
+  margin-bottom: 18px;
   flex-wrap: wrap;
 }
 
@@ -56,7 +63,7 @@
 
 /* Hero Content Area */
 .hero-content-meta {
-  max-width: 950px;
+  width: 100%;
 }
 
 .hero-meta-badges {
@@ -136,7 +143,7 @@
 }
 
 .project-hero-slogan {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: #E2E8F0;
   font-weight: 400;
   line-height: 1.7;
@@ -146,10 +153,11 @@
 .project-hero-location-row {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   color: var(--secondary-light);
   font-size: 0.98rem;
   flex-wrap: wrap;
+  margin-bottom: 22px;
 }
 
 .project-hero-location-row svg {
@@ -157,6 +165,119 @@
   height: 18px;
   fill: var(--secondary);
   flex-shrink: 0;
+}
+
+/* Quick Hero Actions */
+.hero-quick-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-hero-vip-book {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 26px;
+  background: var(--gold-gradient);
+  color: #101F30;
+  font-weight: 800;
+  font-size: 0.96rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 6px 20px rgba(191, 159, 118, 0.35);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-hero-vip-book:hover {
+  background: var(--gold-gradient-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(191, 159, 118, 0.5);
+}
+
+.btn-hero-vip-book svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.btn-hero-quick-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 0.94rem;
+  border-radius: var(--radius-full);
+  transition: var(--transition);
+}
+
+.btn-hero-quick-wa:hover {
+  background: #25D366;
+  border-color: #25D366;
+  color: #FFFFFF;
+}
+
+.btn-hero-quick-wa svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Hero Visual Card (Left Column) */
+.hero-visual-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(191, 159, 118, 0.4);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  height: 420px;
+  background: #101F30;
+}
+
+.hero-visual-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-visual-card:hover img {
+  transform: scale(1.05);
+}
+
+.hero-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(16, 31, 48, 0.75) 0%, rgba(16, 31, 48, 0) 50%);
+  pointer-events: none;
+}
+
+.hero-visual-badge {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  background: rgba(16, 31, 48, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(191, 159, 118, 0.4);
+  color: var(--secondary-light);
+  padding: 7px 18px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-visual-badge svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--secondary);
 }
 
 /* Page Body Layout */
@@ -887,6 +1008,17 @@
 
   .similar-projects-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-split-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .hero-visual-card {
+    height: 320px;
   }
 }
 

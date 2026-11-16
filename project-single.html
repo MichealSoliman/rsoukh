@@ -3,800 +3,697 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title id="pageTitle">مشروع رسوخ إيليت | شركة رسوخ العقارية</title>
-  <meta name="description" content="تفاصيل ومخططات صروح شركة رسوخ العقارية في أرقى أحياء الرياض - صكوك إلكترونية وضمانات حتى 25 عاماً.">
+  <title>تفاصيل الصرح المعماري | شركة رسوخ العقارية</title>
+  <meta name="description" content="استعرض التفاصيل المعمارية والمخططات الهندسية والمميزات لصروح شركة رسوخ العقارية في أرقى أحياء العاصمة الرياض.">
+  
+  <!-- Google Fonts: Almarai -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* Dedicated Project Single Page Styles */
-    .project-hero-banner {
-      position: relative;
-      padding: 160px 0 90px;
-      background: linear-gradient(135deg, #101F30 0%, #0d1927 60%, #182e47 100%);
-      color: #FFFFFF;
-      overflow: hidden;
-    }
-    .project-hero-banner::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 80% 30%, rgba(191, 159, 118, 0.15) 0%, transparent 60%);
-      pointer-events: none;
-    }
-    .p-breadcrumb {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.88rem;
-      color: var(--secondary-light);
-      margin-bottom: 20px;
-    }
-    .p-breadcrumb a {
-      color: #FFFFFF;
-      opacity: 0.8;
-      text-decoration: underline;
-    }
-    .p-breadcrumb a:hover {
-      opacity: 1;
-      color: var(--secondary);
-    }
-    .single-hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 40px;
-      align-items: center;
-      position: relative;
-      z-index: 2;
-    }
-    .single-header-tags {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
-    }
-    .single-project-title {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 15px;
-      line-height: 1.2;
-    }
-    .single-project-title span {
-      display: block;
-      color: var(--secondary);
-      font-size: 1.5rem;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      margin-top: 6px;
-    }
-    .single-project-location {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--secondary-light);
-      font-size: 1.05rem;
-      margin-bottom: 20px;
-    }
-    .single-project-location svg {
-      width: 20px;
-      height: 20px;
-      fill: var(--secondary);
-    }
-    .single-project-lead {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #D1D8E2;
-      margin-bottom: 30px;
-    }
-    .single-hero-visual {
-      position: relative;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 1px solid rgba(191, 159, 118, 0.4);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-      height: 420px;
-    }
-    .single-hero-visual img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Specs Section */
-    .single-specs-section {
-      padding: 70px 0;
-      background: #FFFFFF;
-    }
-    .single-specs-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-bottom: 60px;
-    }
-    .single-spec-card {
-      background: #F8F9FA;
-      border: 1px solid rgba(16, 31, 48, 0.08);
-      border-radius: var(--radius-md);
-      padding: 24px;
-      text-align: center;
-      transition: var(--transition);
-    }
-    .single-spec-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--secondary);
-      box-shadow: 0 10px 25px rgba(191, 159, 118, 0.15);
-    }
-    .single-spec-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: rgba(191, 159, 118, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 12px;
-    }
-    .single-spec-icon svg {
-      width: 24px;
-      height: 24px;
-      fill: var(--secondary-dark);
-    }
-    .single-spec-label {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-    .single-spec-val {
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: var(--primary);
-    }
-
-    /* Plans & Gallery Layout */
-    .plans-inquiry-layout {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 40px;
-      align-items: start;
-    }
-    .plan-box {
-      background: #F8F9FA;
-      border: 1px solid rgba(16, 31, 48, 0.08);
-      border-radius: var(--radius-lg);
-      padding: 30px;
-      box-shadow: var(--shadow-sm);
-    }
-    .plan-tabs {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid rgba(16, 31, 48, 0.08);
-      padding-bottom: 12px;
-    }
-    .plan-tab-btn {
-      padding: 8px 18px;
-      border-radius: var(--radius-full);
-      background: #FFFFFF;
-      border: 1px solid rgba(16, 31, 48, 0.1);
-      font-size: 0.9rem;
-      font-weight: 700;
-      cursor: pointer;
-      color: var(--text-secondary);
-      transition: var(--transition);
-    }
-    .plan-tab-btn.active {
-      background: var(--primary);
-      color: #FFFFFF;
-      border-color: var(--primary);
-    }
-    .plan-preview-box {
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      background: #FFFFFF;
-      border: 1px solid rgba(16, 31, 48, 0.08);
-      min-height: 380px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      text-align: center;
-    }
-    .plan-preview-box img {
-      max-height: 320px;
-      object-fit: contain;
-      border-radius: var(--radius-sm);
-    }
-    .plan-meta-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 18px;
-      justify-content: center;
-    }
-    .plan-meta-item {
-      font-size: 0.85rem;
-      background: #F4F6F9;
-      padding: 6px 14px;
-      border-radius: var(--radius-full);
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    /* Single Booking Sidebar */
-    .single-booking-sidebar {
-      background: #FFFFFF;
-      border: 2px solid rgba(191, 159, 118, 0.4);
-      border-radius: var(--radius-lg);
-      padding: 30px;
-      box-shadow: 0 15px 40px rgba(16, 31, 48, 0.08);
-      position: sticky;
-      top: 110px;
-    }
-    .single-booking-sidebar h3 {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 6px;
-    }
-    .single-booking-sidebar p {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      margin-bottom: 20px;
-    }
-
-    @media (max-width: 992px) {
-      .single-hero-grid {
-        grid-template-columns: 1fr;
-      }
-      .single-specs-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .plans-inquiry-layout {
-        grid-template-columns: 1fr;
-      }
-    }
-    @media (max-width: 576px) {
-      .single-project-title {
-        font-size: 2.2rem;
-      }
-      .single-specs-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/project-details.css">
 </head>
 <body>
 
-  <!-- Navigation Header (Matching Index) -->
-  <header class="site-header scrolled">
-    <div class="container header-container">
-      <a href="index.html" class="brand-logo" aria-label="شركة رسوخ العقارية">
-        <div class="brand-emblem">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 9.5V22h7v-7h6v7h7V9.5L12 2zm0 3.8l6 4.5v9.7h-3v-7H9v7H6V10.3l6-4.5z"/></svg>
-        </div>
-        <div class="brand-text">
-          <span class="brand-name">رُسـوخ <span>العقارية</span></span>
-          <span class="brand-tagline">ROSOKH REAL ESTATE</span>
-        </div>
-      </a>
+  <!-- ==========================================================================
+       Header & Navbar (Identical to Homepage with Full Luxury Layout)
+       ========================================================================== -->
+  <header class="site-header scrolled" id="siteHeader">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Brand Logo with Official Image -->
+        <a href="index.html" class="brand-logo" aria-label="شركة رسوخ العقارية">
+          <div class="brand-emblem">
+            <img src="./img/logo.webp" alt="شعار شركة رسوخ العقارية">
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">رُسـوخ <span>العقارية</span></span>
+            <span class="brand-tagline">ROSOKH REAL ESTATE</span>
+          </div>
+        </a>
 
-      <nav class="main-navigation">
-        <ul class="nav-menu">
+        <!-- Desktop Navigation Menu -->
+        <ul class="nav-menu" id="navMenu">
           <li><a href="index.html" class="nav-link">الرئيسية</a></li>
           <li><a href="index.html#about-rosokh" class="nav-link">من نحن</a></li>
-          <li><a href="index.html#projects" class="nav-link active">مشاريعنا</a></li>
+
+          <!-- Dropdown 1: خدماتنا -->
+          <li class="nav-item-dropdown">
+            <span class="nav-link">
+              <span>خدماتنا</span>
+              <svg class="dropdown-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            </span>
+            <div class="dropdown-menu services-dropdown">
+              <a href="index.html#features" class="dropdown-item">
+                <div class="item-icon-box">
+                  <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 3.8l6 4.5v9.7h-3v-7H9v7H6V11.3l6-4.5z"/></svg>
+                </div>
+                <span>التطوير العقاري</span>
+              </a>
+              <a href="index.html#about-rosokh" class="dropdown-item">
+                <div class="item-icon-box">
+                  <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                </div>
+                <span>إدارة المجتمعات</span>
+              </a>
+              <a href="index.html#features" class="dropdown-item">
+                <div class="item-icon-box">
+                  <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                </div>
+                <span>الاستشارات العقارية</span>
+              </a>
+              <a href="index.html#contact" class="dropdown-item">
+                <div class="item-icon-box">
+                  <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                </div>
+                <span>إدارة البيع والتسويق</span>
+              </a>
+            </div>
+          </li>
+
+          <!-- Dropdown 2: مشاريعنا (Mega-Dropdown with 13 projects) -->
+          <li class="nav-item-dropdown">
+            <a href="index.html#projects" class="nav-link active">
+              <span>مشاريعنا</span>
+              <svg class="dropdown-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+            </a>
+            <div class="dropdown-menu projects-mega-dropdown">
+              <div class="mega-columns-grid">
+                <!-- Col 1: مشاريع النخبة الأيقونية -->
+                <div class="mega-column">
+                  <div class="mega-group-title">
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <span>مشاريع النخبة</span>
+                  </div>
+                  <a href="project-single.html?id=elite" class="project-item">
+                    <div class="project-item-inner">
+                      <div class="project-mini-icon"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg></div>
+                      <span>رسوخ إيليت</span>
+                    </div>
+                    <span class="project-tag">فاخر</span>
+                  </a>
+                  <a href="project-single.html?id=residence" class="project-item">
+                    <div class="project-item-inner">
+                      <div class="project-mini-icon"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg></div>
+                      <span>رسوخ ريزيدنس</span>
+                    </div>
+                    <span class="project-tag">سكني</span>
+                  </a>
+                  <a href="project-single.html?id=riwaq" class="project-item">
+                    <div class="project-item-inner">
+                      <div class="project-mini-icon"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg></div>
+                      <span>رسوخ رواق</span>
+                    </div>
+                    <span class="project-tag">عصري</span>
+                  </a>
+                  <a href="project-single.html?id=darwazah262" class="project-item">
+                    <div class="project-item-inner">
+                      <div class="project-mini-icon"><svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg></div>
+                      <span>رسوخ دروازة 262</span>
+                    </div>
+                    <span class="project-tag">حصري</span>
+                  </a>
+                </div>
+
+                <!-- Col 2: سلسلة رسوخ (المجموعة الأولى) -->
+                <div class="mega-column">
+                  <div class="mega-group-title">
+                    <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+                    <span>سلسلة رسوخ السكنية</span>
+                  </div>
+                  <a href="project-single.html?id=269" class="project-item">
+                    <div class="project-item-inner">
+                      <div class="project-mini-icon"><svg viewBox="0 0 24 24"><path d="M19 12h-2V8h-2v4h-2V6H9v6H7V9H5v10h14v-7z"/></svg></div>
+                      <span>رسوخ 269</span>
+                    </div>
+                  </a>
+                  <a href="project-single.html?id=235" class="project-item">
+                    <div class="project-item-inner">
+                      <div class="project-mini-icon"><svg viewBox="0 0 24 24"><path d="M19 12h-2V8h-2v4h-2V6H9v6H7V9H5v10h14v-7z"/></svg></div>
+                      <span>رسوخ 235</span>
+                    </div>
+                  </a>
+                  <a href="project-single.html?id=247" class="project-item">
+                    <div class="project-item-inner">
+                      <div class="project-mini-icon"><svg viewBox="0 0 24 24"><path d="M19 12h-2V8h-2v4h-2V6H9v6H7V9H5v10h14v-7z"/></svg></div>
+                      <span>رسوخ 247</span>
+                    </div>
+                  </a>
+                  <a href="project-single.html?id=248" class="project-item">
+                    <div class="project-item-inner">
+                      <div class="project-mini-icon"><svg viewBox="0 0 24 24"><path d="M19 12h-2V8h-2v4h-2V6H9v6H7V9H5v10h14v-7z"/></svg></div>
+                      <span>رسوخ 248</span>
+                    </div>
+                  </a>
+                  <a href="project-single.html?id=251" class="project-item">
+                    <div class="project-item-inner">
+                      <div class="project-mini-icon"><svg viewBox="0 0 24 24"><path d="M19 12h-2V8h-2v4h-2V6H9v6H7V9H5v10h14v-7z"/></svg></div>
+                      <span>رسوخ 251</span>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- Col 3: سلسلة رسوخ (المجموعة الثانية) -->
+                <div class="mega-column">
+                  <div class="mega-group-title">
+                    <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+                    <span>سلسلة رسوخ السكنية</span>
+                  </div>
+                  <a href="project-single.html?id=257" class="project-item">
+                    <div class="project-item-inner">
+                      <div class="project-mini-icon"><svg viewBox="0 0 24 24"><path d="M19 12h-2V8h-2v4h-2V6H9v6H7V9H5v10h14v-7z"/></svg></div>
+                      <span>رسوخ 257</span>
+                    </div>
+                  </a>
+                  <a href="project-single.html?id=258" class="project-item">
+                    <div class="project-item-inner">
+                      <div class="project-mini-icon"><svg viewBox="0 0 24 24"><path d="M19 12h-2V8h-2v4h-2V6H9v6H7V9H5v10h14v-7z"/></svg></div>
+                      <span>رسوخ 258</span>
+                    </div>
+                  </a>
+                  <a href="project-single.html?id=259" class="project-item">
+                    <div class="project-item-inner">
+                      <div class="project-mini-icon"><svg viewBox="0 0 24 24"><path d="M19 12h-2V8h-2v4h-2V6H9v6H7V9H5v10h14v-7z"/></svg></div>
+                      <span>رسوخ 259</span>
+                    </div>
+                  </a>
+                  <a href="project-single.html?id=261" class="project-item">
+                    <div class="project-item-inner">
+                      <div class="project-mini-icon"><svg viewBox="0 0 24 24"><path d="M19 12h-2V8h-2v4h-2V6H9v6H7V9H5v10h14v-7z"/></svg></div>
+                      <span>رسوخ 261</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+
           <li><a href="index.html#contact" class="nav-link">تواصل معنا</a></li>
         </ul>
+
+        <!-- Nav Actions: Email Button & Mobile Hamburger -->
         <div class="nav-actions">
-          <a href="mailto:info@rosohk.com" class="nav-email-btn">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:info@rosohk.com" class="nav-email-btn" title="راسلنا عبر البريد الإلكتروني">
+            <svg viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
             <span>info@rosohk.com</span>
           </a>
+          
+          <button class="mobile-toggle" id="mobileToggle" aria-label="القائمة">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero Banner with Dynamic Project Details -->
-    <section class="project-hero-banner">
+    <!-- ==========================================================================
+         1. Hero Header Banner (2-Column Split Showcase - No Empty Void)
+         ========================================================================== -->
+    <section class="project-single-hero">
       <div class="container">
         
-        <div class="p-breadcrumb">
-          <a href="index.html">الرئيسية</a>
-          <span>/</span>
-          <a href="index.html#projects">مشاريعنا</a>
-          <span>/</span>
-          <span id="breadcrumbCurrent" style="color:var(--secondary);">رسوخ إيليت</span>
-        </div>
+        <div class="hero-split-grid">
+          
+          <!-- Right Column: Project Meta Details -->
+          <div class="hero-content-meta">
+            <!-- Breadcrumb Navigation -->
+            <nav class="p-breadcrumb-nav" aria-label="مسار التنقل">
+              <a href="index.html">الرئيسية</a>
+              <span class="separator">/</span>
+              <a href="index.html#projects">مشاريعنا</a>
+              <span class="separator">/</span>
+              <span class="current-crumb" id="pBreadcrumbName">الصرح المعماري</span>
+            </nav>
 
-        <div class="single-hero-grid">
-          <div>
-            <div class="single-header-tags">
-              <span class="p-category-tag tag-elite" id="pCategoryTag">مشاريع النخبة</span>
-              <span class="p-status-pill pill-available" id="pStatusPill"><span class="dot"></span> <span id="pStatusText">متاح للحجز الفوري</span></span>
-              <span class="p-code-badge" id="pCodeBadge">R-ELITE-01</span>
+            <!-- Metadata Badges (Rendered Conditionally) -->
+            <div class="hero-meta-badges">
+              <span id="pCategoryBadge" class="badge-tag-category elite">مشاريع النخبة</span>
+              <span id="pStatusBadge" class="badge-status-pill available">متاح للحجز</span>
+              <span id="pCodeBadge" class="badge-code-ref">R-01</span>
             </div>
 
-            <h1 class="single-project-title" id="pTitle">
-              رسـوخ إيـلـيـت
-              <span id="pEnTitle">ROSOKH ELITE</span>
+            <!-- Project Title & Slogan -->
+            <h1 class="project-hero-title" id="pTitle">
+              اسم الصرح
             </h1>
 
-            <div class="single-project-location">
-              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-              <span id="pDistrict">الرياض - حي حطين الراقي</span>
-            </div>
-
-            <p class="single-project-lead" id="pDesc">
-              تحفة معمارية تنبض بالحداثة والخصوصية المطلقة في أرقى مربعات حي حطين؛ قصور وفلل فارهة صُممت لتلائم نخبة المجتمع، بواجهات زجاجية مزدوجة معزولة، مساحات متدفقة، ومسابح خاصة مع أنظمة سمارت هوم ذكية متكاملة.
+            <p class="project-hero-slogan" id="pSlogan">
+              وصف معماري مقتضب للصرح
             </p>
 
-            <div class="spotlight-footer-row" style="border-top:1px solid rgba(255,255,255,0.15);padding-top:20px;">
-              <div class="spotlight-price-box">
-                <span class="sp-label">القيمة الاستثمارية تبدأ من</span>
-                <div class="sp-amount" id="pPrice">
-                  6,800,000 <span>ر.س</span>
-                </div>
-              </div>
+            <!-- Location Details -->
+            <div class="project-hero-location-row" id="pLocationRow">
+              <!-- Dynamically populated if location exists -->
+            </div>
 
-              <div class="spotlight-actions-group">
-                <a href="#bookingSection" class="btn-spotlight-primary">
-                  <span>طلب حجز معاينة ميدانية</span>
-                  <svg viewBox="0 0 24 24"><path d="M14 7l-5 5 5 5V7z"/></svg>
-                </a>
-                <a id="pWhatsAppBtn" href="#" target="_blank" rel="noopener" class="btn-advisory-wa" style="background:#25D366;border-color:#25D366;">
-                  <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
-                  <span>واتساب مباشر</span>
-                </a>
-              </div>
+            <!-- Quick Hero Action Buttons -->
+            <div class="hero-quick-actions">
+              <button class="btn-hero-vip-book open-booking-modal">
+                <span>طلب حجز معاينة VIP</span>
+                <svg viewBox="0 0 24 24"><path d="M14 7l-5 5 5 5V7z"/></svg>
+              </button>
+              <a id="heroWhatsAppBtn" href="#" target="_blank" rel="noopener" class="btn-hero-quick-wa">
+                <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
+                <span>محادثة واتساب مباشرة</span>
+              </a>
             </div>
           </div>
 
-          <div class="single-hero-visual">
-            <img id="pMainImg" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85" alt="واجهة المشروع">
+          <!-- Left Column: Architectural Visual Card (Eliminates the empty dark area) -->
+          <div class="hero-visual-card">
+            <img id="heroVisualImg" src="" alt="واجهة الصرح المعماري">
+            <div class="hero-visual-overlay"></div>
+            <div class="hero-visual-badge">
+              <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              <span id="heroVisualBadgeText">معاينة معمارية حصرية</span>
+            </div>
           </div>
+
         </div>
 
       </div>
     </section>
 
-    <!-- Specs Matrix -->
-    <section class="single-specs-section">
+    <!-- ==========================================================================
+         2. Main Project Details Layout (Grid: Left Content + Right Sticky Sidebar)
+         ========================================================================== -->
+    <section class="project-details-page-wrap">
       <div class="container">
         
-        <div class="single-specs-grid">
-          <div class="single-spec-card">
-            <div class="single-spec-icon">
-              <svg viewBox="0 0 24 24"><path d="M19 12h-2V8h-2v4h-2V6H9v6H7V9H5v10h14v-7z"/></svg>
+        <div class="project-layout-grid">
+          
+          <!-- LEFT MAIN CONTENT COLUMN -->
+          <div class="project-main-content">
+            
+            <!-- A. Interactive Photo Gallery Showcase (Conditional) -->
+            <div class="gallery-showcase-container" id="galleryContainer">
+              <div class="gallery-main-view">
+                <img id="galleryMainImg" class="gallery-main-img" src="" alt="معاينة الصرح">
+                <div class="gallery-caption-overlay">
+                  <span id="galleryCaptionText" class="gallery-caption-text"></span>
+                  <span id="galleryCounterPill" class="gallery-counter-pill"></span>
+                </div>
+              </div>
+              <div class="gallery-thumbs-row" id="galleryThumbsRow">
+                <!-- Thumbnail items injected dynamically -->
+              </div>
             </div>
-            <div class="single-spec-label">المساحات المتوفرة</div>
-            <div class="single-spec-val" id="specArea">450 - 620 م²</div>
+
+            <!-- B. Exclusive Specifications Grid (Conditional: only present keys) -->
+            <div class="project-block-card" id="specsSection">
+              <div class="block-section-header">
+                <div class="block-title-group">
+                  <div class="block-icon-wrap">
+                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                  </div>
+                  <h3 class="block-title">المواصفات الفنية والهندسية</h3>
+                </div>
+              </div>
+              <div class="specs-data-grid" id="specsGrid">
+                <!-- Injected conditionally from project.specs -->
+              </div>
+            </div>
+
+            <!-- C. Features & Amenities Checklist (Conditional) -->
+            <div class="project-block-card" id="featuresSection">
+              <div class="block-section-header">
+                <div class="block-title-group">
+                  <div class="block-icon-wrap">
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  </div>
+                  <h3 class="block-title">مميزات ومرافق الصرح</h3>
+                </div>
+              </div>
+              <div class="features-pills-grid" id="featuresGrid">
+                <!-- Injected conditionally from project.features -->
+              </div>
+            </div>
+
+            <!-- D. Interactive Floor Plans (Conditional) -->
+            <div class="project-block-card" id="plansSection">
+              <div class="block-section-header">
+                <div class="block-title-group">
+                  <div class="block-icon-wrap">
+                    <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+                  </div>
+                  <h3 class="block-title">المخططات الهندسية وتوزيع الفراغات</h3>
+                </div>
+              </div>
+              <div class="plans-tabs-strip" id="plansTabsStrip">
+                <!-- Dynamic tabs for Ground, First, Roof, etc. -->
+              </div>
+              <div class="plan-details-frame" id="planDetailsFrame">
+                <!-- Injected dynamically on tab switch -->
+              </div>
+            </div>
+
+            <!-- E. Nearby Landmarks & Location (Conditional) -->
+            <div class="project-block-card" id="landmarksSection">
+              <div class="block-section-header">
+                <div class="block-title-group">
+                  <div class="block-icon-wrap">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                  </div>
+                  <h3 class="block-title">المعالم والأماكن القريبة</h3>
+                </div>
+              </div>
+              <div class="landmarks-grid" id="landmarksGrid">
+                <!-- Injected conditionally from project.nearbyLandmarks -->
+              </div>
+              <div class="landmarks-map-frame" id="landmarksMapFrame" style="display:none;">
+                <!-- Embedded Google Map iframe if present -->
+              </div>
+            </div>
+
+            <!-- F. Warranties & Guarantee Certificates (Conditional) -->
+            <div class="project-block-card" id="warrantiesSection">
+              <div class="block-section-header">
+                <div class="block-title-group">
+                  <div class="block-icon-wrap">
+                    <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                  </div>
+                  <h3 class="block-title">الضمانات والتأمين الإنشائي المعتمد</h3>
+                </div>
+              </div>
+              <div class="warranties-list-grid" id="warrantiesGrid">
+                <!-- Injected conditionally from project.warranties -->
+              </div>
+            </div>
+
           </div>
 
-          <div class="single-spec-card">
-            <div class="single-spec-icon">
-              <svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>
-            </div>
-            <div class="single-spec-label">الغرف والأجنحة</div>
-            <div class="single-spec-val" id="specRooms">6 أجنحة ماستر</div>
+          <!-- RIGHT STICKY SIDEBAR COLUMN -->
+          <div class="project-sidebar-col">
+            <aside class="project-sidebar-sticky">
+              
+              <!-- Pricing & Action Card -->
+              <div class="sidebar-pricing-card">
+                <div class="price-header-row">
+                  <span class="price-prefix-text" id="sidebarPricePrefix">القيمة الاستثمارية تبدأ من</span>
+                </div>
+
+                <div class="sidebar-price-amount" id="sidebarPrice">
+                  --
+                </div>
+
+                <!-- Payment Plan Box (Conditional) -->
+                <div class="sidebar-payment-plan" id="sidebarPaymentPlan" style="display:none;">
+                  <!-- Injected conditionally if paymentPlan exists in JSON -->
+                </div>
+
+                <!-- CTA Actions Stack -->
+                <div class="sidebar-actions-stack">
+                  <button class="btn-sidebar-book open-booking-modal">
+                    <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+                    <span>طلب جولة معاينة VIP خاصة</span>
+                  </button>
+
+                  <a id="sidebarWhatsAppBtn" href="#" target="_blank" rel="noopener" class="btn-sidebar-wa">
+                    <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
+                    <span>محادثة واتساب مباشرة</span>
+                  </a>
+
+                  <a href="tel:8001237000" class="btn-sidebar-secondary">
+                    <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1.01A11.36 11.36 0 0 1 8.5 3.92c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.54c0-.55-.45-1-.99-1z"/></svg>
+                    <span>الاتصال بالمستشار: 800 123 7000</span>
+                  </a>
+
+                  <!-- Download Brochure Button (Conditional: rendered if brochurePdf exists) -->
+                  <a id="sidebarBrochureBtn" href="#" class="btn-sidebar-secondary" style="display:none;">
+                    <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                    <span>تحميل كتالوج المشروع (PDF)</span>
+                  </a>
+
+                  <!-- Share Link Button -->
+                  <button id="sidebarShareBtn" class="btn-sidebar-secondary">
+                    <svg viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg>
+                    <span>مشاركة رابط الصرح</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Dedicated Consultant Badge -->
+              <div class="sidebar-consultant-card">
+                <div class="consultant-profile-row">
+                  <div class="consultant-avatar">R</div>
+                  <div class="consultant-info">
+                    <span class="c-name">مستشار صروح رسوخ</span>
+                    <span class="c-role">قسم التطوير والاستثمار العقاري</span>
+                  </div>
+                </div>
+                <div class="consultant-status-line">
+                  <span class="pulse-status-dot"></span>
+                  <span>متاح للرد وتقديم الاستشارات الحصرية</span>
+                </div>
+              </div>
+
+            </aside>
           </div>
 
-          <div class="single-spec-card">
-            <div class="single-spec-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-            </div>
-            <div class="single-spec-label">الضمانات المعتمدة</div>
-            <div class="single-spec-val" id="specWarranty">25 سنة هيكل إنشائي</div>
-          </div>
-
-          <div class="single-spec-card">
-            <div class="single-spec-icon">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-            </div>
-            <div class="single-spec-label">حالة الصك</div>
-            <div class="single-spec-val" id="specDeed">صك إلكتروني مستقل</div>
-          </div>
         </div>
 
-        <!-- Floor Plans & Direct Booking Form Layout -->
-        <div class="plans-inquiry-layout" id="bookingSection">
-          
-          <!-- Left: Architectural Floor Plans & Amenities -->
-          <div class="plan-box">
-            <div class="circles-header" style="text-align:right;margin-bottom:20px;">
-              <span class="section-subtitle">المخططات الهندسية المعتمدة</span>
-              <h2 class="section-title" style="font-size:1.8rem;">توزيع ذكي ومساحات متدفقة</h2>
-            </div>
+      </div>
+    </section>
 
-            <div class="plan-tabs">
-              <button class="plan-tab-btn active" onclick="switchPlan(this, 'ground')">الدور الأرضي (الضيافة والاستقبال)</button>
-              <button class="plan-tab-btn" onclick="switchPlan(this, 'first')">الدور الأول (أجنحة النوم العائلية)</button>
-              <button class="plan-tab-btn" onclick="switchPlan(this, 'roof')">الملحق العلوي (الروف والخدمات)</button>
-            </div>
+    <!-- ==========================================================================
+         3. Similar Projects Section (مشاريع متشابهة ذات صلة)
+         ========================================================================== -->
+    <section class="similar-projects-section" id="similarSection">
+      <div class="container">
+        
+        <div class="similar-header-box">
+          <span class="similar-pretitle">صروح معمارية متميزة</span>
+          <h2 class="similar-title">مشاريع مشابهة قد تناسب تطلعاتك</h2>
+        </div>
 
-            <div class="plan-preview-box">
-              <img id="planImg" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" alt="المخطط المعماري">
-              <div class="plan-meta-list" id="planMetaList">
-                <span class="plan-meta-item">مجلس ضيافة رسمي فسيح</span>
-                <span class="plan-meta-item">صالة طعام ملكية</span>
-                <span class="plan-meta-item">مطبخ مفتوح + مطبخ خدمة</span>
-                <span class="plan-meta-item">مسبح خارجي وشلال مائي</span>
-                <span class="plan-meta-item">كراج لـ 3 سيارات</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right: VIP Consultation Booking Form -->
-          <div class="single-booking-sidebar">
-            <div class="advisory-badge" style="color:var(--secondary);margin-bottom:8px;">
-              <svg style="width:18px;height:18px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 8.5L4.47 7 12 3.24 19.53 7 12 10.5zm0 3.5l-8-4v6.5l8 4 8-4V10l-8 4z"/></svg>
-              <span>حجز مباشر مع مستشار المشروع</span>
-            </div>
-            <h3>طلب جولة معاينة VIP</h3>
-            <p>سيتواصل معك مستشار رسوخ المختص بهذا المشروع لترتيب موعد زيارة ميدانية خاصة وتزويدك بالكتالوج الكامل.</p>
-
-            <form onsubmit="event.preventDefault(); alert('شكراً لاهتمامك بمشاريع رسوخ! تم تسجيل طلبك بنجاح وسيتواصل معك مستشار المشروع خلال 15 دقيقة.'); this.reset();">
-              <div class="form-group" style="margin-bottom:14px;">
-                <label style="font-size:0.88rem;font-weight:700;display:block;margin-bottom:4px;">الاسم الكريم</label>
-                <input type="text" class="form-control" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;" placeholder="أدخل اسمك الكريم" required>
-              </div>
-
-              <div class="form-group" style="margin-bottom:14px;">
-                <label style="font-size:0.88rem;font-weight:700;display:block;margin-bottom:4px;">رقم الجوال</label>
-                <input type="tel" class="form-control" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;" placeholder="05XXXXXXXX" required>
-              </div>
-
-              <div class="form-group" style="margin-bottom:18px;">
-                <label style="font-size:0.88rem;font-weight:700;display:block;margin-bottom:4px;">نوع الاستفسار</label>
-                <select class="form-control" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
-                  <option>حجز موعد معاينة ميدانية</option>
-                  <option>طلب ملف البروشور والمخططات الهندسية PDF</option>
-                  <option>استشارة تمويلية وحجز فوري</option>
-                </select>
-              </div>
-
-              <button type="submit" class="btn-hero-primary" style="width:100%;">
-                <span>إرسال طلب المعاينة</span>
-                <svg style="width:18px;height:18px;fill:currentColor" viewBox="0 0 24 24"><path d="M14 7l-5 5 5 5V7z"/></svg>
-              </button>
-            </form>
-          </div>
-
+        <div class="similar-projects-grid" id="similarGrid">
+          <!-- Injected dynamically from project.similarProjectIds -->
         </div>
 
       </div>
     </section>
   </main>
 
-  <!-- Masterpiece Footer (Matching Index) -->
-  <footer class="masterpiece-footer">
+  <!-- ==========================================================================
+       VIP Booking Modal
+       ========================================================================== -->
+  <div class="modal-backdrop" id="bookingModal">
+    <div class="modal-dialog booking-dialog">
+      <button class="modal-close-btn" id="closeBookingModal" aria-label="إغلاق">&times;</button>
+
+      <div class="booking-header">
+        <h3>حجز جولة معاينة <span>VIP خاصة</span></h3>
+        <p>املأ بياناتك وسيتم التواصل معك مباشرة من قِبل مستشار الصرح لترتيب جولة ميدانية وتزويدك بكافة المخططات.</p>
+      </div>
+
+      <form class="booking-form" id="bookingForm">
+        <div class="form-group">
+          <label for="modalProjectName">الصرح المطلوب</label>
+          <input type="text" id="modalProjectName" class="form-control" readonly style="background:#f4f6f9;font-weight:700;color:var(--primary);">
+        </div>
+
+        <div class="form-group">
+          <label for="clientName">الاسم الكريم</label>
+          <input type="text" id="clientName" class="form-control" placeholder="أدخل اسمك الكريم" required>
+        </div>
+
+        <div class="form-group">
+          <label for="clientPhone">رقم الجوال</label>
+          <input type="tel" id="clientPhone" class="form-control" placeholder="05XXXXXXXX" required>
+        </div>
+
+        <div class="form-group">
+          <label for="preferredTime">الوقت المفضل للمعاينة</label>
+          <select id="preferredTime" class="form-control">
+            <option value="morning">الفترة الصباحية (10:00 ص - 01:00 م)</option>
+            <option value="evening" selected>الفترة المسائية (04:00 م - 09:00 م)</option>
+            <option value="weekend">عطلة نهاية الأسبوع</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-hero-primary" style="width:100%;margin-top:10px;">
+          <span>تأكيد طلب المعاينة الميدانية</span>
+          <svg style="width:18px;height:18px;fill:currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Masterpiece Footer (Matching Homepage 100% with Parallax Background)
+       ========================================================================== -->
+  <footer class="masterpiece-footer" id="contact">
+    
+    <!-- VIP Newsletter & Investor Club Strip -->
+    <div class="footer-vip-strip">
+      <div class="container">
+        <div class="vip-strip-content">
+          <div class="vip-text-wrap">
+            <h3>انضم إلى <span>نادي النخبة والمستثمرين</span> لدى رُسوخ</h3>
+            <p>احصل على أحدث الفرص الاستثمارية والقصور الحصرية قبل طرحها في السوق مع استشارات خاصة.</p>
+          </div>
+          <form class="vip-form" onsubmit="event.preventDefault(); showToast('شكراً لانضمامك لنادي النخبة لدى رسوخ! ستصلك أحدث العروض الحصرية.'); this.reset();">
+            <input type="email" class="vip-input" placeholder="أدخل بريدك الإلكتروني" required>
+            <button type="submit" class="btn-vip-submit">
+              <span>اشتراك حصري</span>
+              <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Footer Columns Grid -->
     <div class="container">
       <div class="footer-main-grid">
+
+        <!-- Col 1: Brand Logo & About Rosokh -->
         <div class="footer-brand-box">
           <div class="brand-logo footer-logo-wrap">
-            <div class="brand-emblem"><svg viewBox="0 0 24 24"><path d="M12 2L2 9.5V22h7v-7h6v7h7V9.5L12 2zm0 3.8l6 4.5v9.7h-3v-7H9v7H6V10.3l6-4.5z"/></svg></div>
+            <div class="brand-emblem">
+              <img src="./img/logo.webp" alt="شعار شركة رسوخ العقارية">
+            </div>
             <div class="brand-text">
               <span class="brand-name">رُسـوخ <span>العقارية</span></span>
               <span class="brand-tagline">ROSOKH REAL ESTATE</span>
             </div>
           </div>
+
           <span class="footer-brand-slogan">نحن نبني مجتمعات تدوم</span>
-          <p class="footer-brand-desc">ريادة في تطوير وتسويق الصروح المعمارية الفاخرة بالرياض، صكوك إلكترونية وضمانات حتى 25 عاماً.</p>
+
+          <p class="footer-brand-desc">
+            ريادة في تطوير وتسويق الصروح المعمارية والفلل الفاخرة بالمملكة العربية السعودية؛ نبتكر حلولاً وخدمات عقارية متكاملة تصنع قيمة حقيقية تدوم للأجيال.
+          </p>
+
+          <div class="footer-licenses-pills">
+            <span class="lic-pill">ترخيص فال العقاري: 1200028471</span>
+            <span class="lic-pill">س.ت: 1010892341</span>
+          </div>
         </div>
+
+        <!-- Col 2: Our Services -->
         <div class="footer-col">
-          <h4 class="footer-col-title"><span>روابط سريعة</span></h4>
+          <h4 class="footer-col-title">
+            <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>
+            <span>خدماتنا</span>
+          </h4>
           <ul class="footer-links-list">
-            <li><a href="index.html">الصفحة الرئيسية</a></li>
-            <li><a href="index.html#projects">جميع المشاريع الـ 13</a></li>
-            <li><a href="index.html#about-rosokh">من نحن</a></li>
-            <li><a href="index.html#contact">تواصل معنا</a></li>
+            <li><a href="index.html#about-rosokh">التطوير العقاري</a></li>
+            <li><a href="index.html#about-rosokh">إدارة المجتمعات</a></li>
+            <li><a href="index.html#contact">الاستشارات العقارية</a></li>
+            <li><a href="index.html#contact">إدارة البيع والتسويق</a></li>
+            <li><a href="index.html#features">إدارة وصيانة المرافق</a></li>
           </ul>
         </div>
+
+        <!-- Col 3: Exclusive Projects -->
         <div class="footer-col">
-          <h4 class="footer-col-title"><span>المقر والتواصل</span></h4>
+          <h4 class="footer-col-title">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            <span>مشاريعنا</span>
+          </h4>
+          <ul class="footer-links-list">
+            <li><a href="project-single.html?id=elite">رسوخ إيليت (حي حطين)</a></li>
+            <li><a href="project-single.html?id=residence">رسوخ ريزيدنس (حي النرجس)</a></li>
+            <li><a href="project-single.html?id=riwaq">رسوخ رواق (حي الياسمين)</a></li>
+            <li><a href="project-single.html?id=darwazah262">رسوخ دروازة 262</a></li>
+            <li><a href="index.html#projects">سلسلة رسوخ السكنية</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Interactive QR Code -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>المقر والتواصل</span>
+          </h4>
+          
           <div class="footer-contact-items">
-            <div class="footer-contact-row"><span>الرياض، حي حطين الراقي | طريق الأمير تركي الأول</span></div>
-            <div class="footer-contact-row"><span>الهاتف: <strong style="color:#BF9F76;">800 123 7000</strong></span></div>
-            <div class="footer-contact-row"><span>info@rosohk.com</span></div>
+            <div class="footer-contact-row">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </div>
+              <span>الرياض، حي حطين الراقي | طريق الأمير تركي بن عبدالعزيز الأول</span>
+            </div>
+
+            <div class="footer-contact-row">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1.01A11.36 11.36 0 0 1 8.5 3.92c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.54c0-.55-.45-1-.99-1z"/></svg>
+              </div>
+              <span>الهاتف المجاني: <strong style="color:#BF9F76;">800 123 7000</strong></span>
+            </div>
+
+            <div class="footer-contact-row">
+              <div class="footer-contact-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </div>
+              <span>info@rosohk.com</span>
+            </div>
+          </div>
+
+          <!-- Mini QR Code Card from the Flyer -->
+          <div class="footer-qr-container">
+            <div class="footer-qr-img">
+              <svg viewBox="0 0 100 100" fill="#101F30">
+                <path d="M0 0h34v34H0V0zm6 6v22h22V6H6zm5 5h12v12H11V11zM66 0h34v34H66V0zm6 6v22h22V6H72zm5 5h12v12H77V11zM0 66h34v34H0V66zm6 6v22h22V72H6zm5 5h12v12H11V77zM42 0h16v10H42V0zm0 18h8v16h-8V18zm8 8h8v8h-8v-8zm16 16h10v8H66v-8zm8 8h10v8H74v-8zm-32 8h8v8h-8v-8zm8 8h8v8h-8v-8zm8-8h8v16h-8V50zm-16 8h8v8h-8v-8zm-8 8h8v8h-8v-8zm32 0h16v8H66v-8zm0 16h8v10H66V74zm8 10h10v8H74v-8zm10-18h8v8h-8v-8zm8 8h8v16h-8V72zm0-16h8v8h-8v-8z"/>
+              </svg>
+            </div>
+            <div class="footer-qr-text">
+              <span class="t1">امسح الكود عبر هاتفك</span>
+              <span class="t2">لتحميل الكتالوج وحجز معاينة</span>
+            </div>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="footer-social-row">
+            <a href="#" class="social-circle-btn" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="social-circle-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="social-circle-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c-.95 0-1.72-.77-1.72-1.72s.77-1.72 1.72-1.72 1.72.77 1.72 1.72-.77 1.72-1.72 1.72M7.86 18.5v-8.37H5.07v8.37h2.79z"/></svg>
+            </a>
+            <a href="https://wa.me/966500000000" target="_blank" rel="noopener" class="social-circle-btn" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Legal & Copyright Bar -->
+    <div class="footer-bottom-bar">
+      <div class="container">
+        <div class="bottom-bar-flex">
+          <p class="footer-copy-text">
+            جميع الحقوق محفوظة © شركة رسوخ العقارية 2026. ريادة في بناء مجتمعات تدوم.
+          </p>
+          <div class="footer-legal-links">
+            <a href="#">سياسة الخصوصية</a>
+            <span>•</span>
+            <a href="#">الشروط والأحكام</a>
+            <span>•</span>
+            <a href="#">الهيئة العامة للعقار</a>
           </div>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Script to load the project data based on URL parameter -->
-  <script>
-    const projectsData = {
-      elite: {
-        title: 'رسـوخ إيـلـيـت',
-        enTitle: 'ROSOKH ELITE',
-        code: 'R-ELITE-01',
-        district: 'الرياض - حي حطين النموذجي',
-        category: 'elite',
-        categoryName: 'مشاريع النخبة',
-        status: 'available',
-        statusText: 'متاح للحجز الفوري',
-        price: '6,800,000 ر.س',
-        area: '450 - 620 م²',
-        rooms: '6 أجنحة ماستر ملكية',
-        warranty: '25 سنة هيكل إنشائي معتمد',
-        deed: 'صك إلكتروني مستقل فوري',
-        desc: 'تحفة معمارية تنبض بالحداثة والخصوصية المطلقة في أرقى مربعات حي حطين؛ قصور وفلل فارهة صُممت لتلائم نخبة المجتمع، بواجهات زجاجية مزدوجة معزولة، ومسابح خاصة مع أنظمة سمارت هوم ذكية متكاملة ومصاعد إيطالية.',
-        img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85'
-      },
-      residence: {
-        title: 'رسـوخ ريـزيـدنـس',
-        enTitle: 'ROSOKH RESIDENCE',
-        code: 'R-RES-02',
-        district: 'الرياض - حي النرجس (شمال طريق الملك سلمان)',
-        category: 'elite',
-        categoryName: 'مشاريع النخبة',
-        status: 'available',
-        statusText: 'متاح للحجز الفوري',
-        price: '4,200,000 ر.س',
-        area: '380 - 480 م²',
-        rooms: '5 أجنحة ماستر',
-        warranty: '25 سنة هيكل إنشائي',
-        deed: 'صك إلكتروني مستقل',
-        desc: 'مجتمع سكني مغلق راقي يوفر أعلى مستويات الأمان والرفاهية العائلية، مع حدائق ومسارات مشي خاصة وتشطيبات إيطالية متقنة وإضاءات طبيعية فسيحة.',
-        img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85'
-      },
-      riwaq: {
-        title: 'رسـوخ رِواق',
-        enTitle: 'ROSOKH RIWAQ',
-        code: 'R-RWQ-03',
-        district: 'الرياض - حي الياسمين النموذجي',
-        category: 'elite',
-        categoryName: 'مشاريع النخبة',
-        status: 'available',
-        statusText: 'متاح للحجز',
-        price: '2,150,000 ر.س',
-        area: '220 - 340 م²',
-        rooms: '4 غرف نوم',
-        warranty: '15 سنة شاملة',
-        deed: 'صك إلكتروني مستقل',
-        desc: 'فلل روف وشقق بوتيك فاخرة بتصميم نيوكلاسيك معاصر ومصاعد خاصة وإطلالات بانورامية مفتوحة في أحد أهدأ مواقع حي الياسمين.',
-        img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85'
-      },
-      darwazah262: {
-        title: 'رسـوخ دروازة 262',
-        enTitle: 'DARWAZAH 262',
-        code: 'R-DAR-262',
-        district: 'الرياض - حي الملقا (طريق أنس بن مالك)',
-        category: 'elite',
-        categoryName: 'مشاريع النخبة',
-        status: 'sold',
-        statusText: 'مباع بالكامل (Sold Out)',
-        price: 'مباع 100% بنجاح',
-        area: '400 - 520 م²',
-        rooms: '5 أجنحة ماستر',
-        warranty: '25 سنة',
-        deed: 'تم الإفراغ للملاك',
-        desc: 'أحد أبرز صروح رسوخ التاريخية في حي الملقا؛ فلل فارهة بقبو ترفيهي وصالة سينما خاصة ومصعد إيطالي وشلالات زجاجية مميزة.',
-        img: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=85'
-      },
-      269: {
-        title: 'رسـوخ 269',
-        enTitle: 'ROSOKH 269',
-        code: 'R-269',
-        district: 'الرياض - حي العارض (شمال الملك سلمان)',
-        category: 'series',
-        categoryName: 'سلسلة رسوخ السكنية',
-        status: 'available',
-        statusText: 'متاح للحجز',
-        price: '3,450,000 ر.س',
-        area: '320 - 410 م²',
-        rooms: '5 غرف ماستر',
-        warranty: '20 سنة',
-        deed: 'صك إلكتروني مستقل',
-        desc: 'فلل مودرن ذكية بواجهات رخامية حديثة بنظام تحكم ذكي كامل بالأجهزة والتكييف والإضاءات مع حوش خلفي فسيح.',
-        img: 'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1200&q=85'
-      },
-      235: {
-        title: 'رسـوخ 235',
-        enTitle: 'ROSOKH 235',
-        code: 'R-235',
-        district: 'الرياض - حي النرجس (موقع حيوي)',
-        category: 'series',
-        categoryName: 'سلسلة رسوخ السكنية',
-        status: 'sold',
-        statusText: 'مباع بالكامل',
-        price: 'مباع بالكامل',
-        area: '260 - 350 م²',
-        rooms: '4 غرف نوم',
-        warranty: '20 سنة',
-        deed: 'تم الإفراغ للملاك',
-        desc: 'تاون هاوس وأدوار سكنية مستقلة بمداخل سيارات خاصة وتشطيب سوبر ديلوكس في قلب حي النرجس الحيوي.',
-        img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=85'
-      },
-      247: {
-        title: 'رسـوخ 247',
-        enTitle: 'ROSOKH 247',
-        code: 'R-247',
-        district: 'الرياض - حي الياسمين (مربع 14)',
-        category: 'series',
-        categoryName: 'سلسلة رسوخ السكنية',
-        status: 'available',
-        statusText: 'متاح للحجز',
-        price: '3,850,000 ر.س',
-        area: '350 - 450 م²',
-        rooms: '5 أجنحة ماستر',
-        warranty: '25 سنة',
-        deed: 'صك إلكتروني مستقل',
-        desc: 'فلل سكنية بطراز معماري سلماني حديث يدمج مفردات العمارة النجدية مع راحة وتقنيات الحياة المعاصرة.',
-        img: 'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1200&q=85'
-      },
-      248: {
-        title: 'رسـوخ 248',
-        enTitle: 'ROSOKH 248',
-        code: 'R-248',
-        district: 'الرياض - حي القيروان الراقي',
-        category: 'series',
-        categoryName: 'سلسلة رسوخ السكنية',
-        status: 'available',
-        statusText: 'متاح للحجز',
-        price: '3,900,000 ر.س',
-        area: '360 - 430 م²',
-        rooms: '5 غرف ماستر',
-        warranty: '25 سنة',
-        deed: 'صك إلكتروني مستقل',
-        desc: 'فلل عائلية فارهة بمسطحات خضراء واسعة، مصاعد خاصة، وتوزيع ذكي للفراغات يضمن أعلى مستويات الخصوصية.',
-        img: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=85'
-      },
-      251: {
-        title: 'رسـوخ 251',
-        enTitle: 'ROSOKH 251',
-        code: 'R-251',
-        district: 'الرياض - حي الصحافة (قرب برج الراجحي)',
-        category: 'series',
-        categoryName: 'سلسلة رسوخ السكنية',
-        status: 'sold',
-        statusText: 'مباع بالكامل',
-        price: 'مباع بالكامل',
-        area: '300 - 380 م²',
-        rooms: '4 غرف نوم',
-        warranty: '20 سنة',
-        deed: 'تم الإفراغ للملاك',
-        desc: 'مجمع فلل متلاصقة بتشطيبات إيطالية وموقع استراتيجي ممتاز بالقرب من طريق الملك فهد وأبراج الأعمال.',
-        img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85'
-      },
-      257: {
-        title: 'رسـوخ 257',
-        enTitle: 'ROSOKH 257',
-        code: 'R-257',
-        district: 'الرياض - حي الربيع الفاخر',
-        category: 'series',
-        categoryName: 'سلسلة رسوخ السكنية',
-        status: 'available',
-        statusText: 'متاح للحجز',
-        price: '4,600,000 ر.س',
-        area: '390 - 510 م²',
-        rooms: '5 أجنحة ماستر',
-        warranty: '25 سنة',
-        deed: 'صك إلكتروني مستقل',
-        desc: 'فلل فاخرة بإطلالات زجاجية كاملة وتصميم مودرن متطور مع مصاعد راكبة ومسابح خاصة وتكييف كونسيلد.',
-        img: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=85'
-      },
-      258: {
-        title: 'رسـوخ 258',
-        enTitle: 'ROSOKH 258',
-        code: 'R-258',
-        district: 'الرياض - حي الندا (قرب جامعة الإمام)',
-        category: 'series',
-        categoryName: 'سلسلة رسوخ السكنية',
-        status: 'available',
-        statusText: 'متاح للحجز',
-        price: '2,900,000 ر.س',
-        area: '280 - 370 م²',
-        rooms: '4 غرف نوم',
-        warranty: '20 سنة',
-        deed: 'صك إلكتروني مستقل',
-        desc: 'وحدات سكنية ذكية بنظام أمني متطور وتشطيب فندقي متكامل بالقرب من الطرق والمحاور الرئيسية.',
-        img: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=85'
-      },
-      259: {
-        title: 'رسـوخ 259',
-        enTitle: 'ROSOKH 259',
-        code: 'R-259',
-        district: 'الرياض - حي الغدير (موقع استراتيجي)',
-        category: 'series',
-        categoryName: 'سلسلة رسوخ السكنية',
-        status: 'sold',
-        statusText: 'مباع بالكامل',
-        price: 'مباع بالكامل',
-        area: '310 - 400 م²',
-        rooms: '4 غرف نوم',
-        warranty: '20 سنة',
-        deed: 'تم الإفراغ للملاك',
-        desc: 'فلل دبلكس مودرن مع حدائق أسطح مجهزة لجلسات الشواء وإطلالات ساحرة على شمال الرياض.',
-        img: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85'
-      },
-      261: {
-        title: 'رسـوخ 261',
-        enTitle: 'ROSOKH 261',
-        code: 'R-261',
-        district: 'الرياض - حي العقيق (دقيقة من KAFD)',
-        category: 'series',
-        categoryName: 'سلسلة رسوخ السكنية',
-        status: 'available',
-        statusText: 'متاح للحجز',
-        price: '5,200,000 ر.س',
-        area: '420 - 560 م²',
-        rooms: '5 أجنحة ماستر',
-        warranty: '25 سنة',
-        deed: 'صك إلكتروني مستقل',
-        desc: 'فلل تنفيذية فاخرة بموقع استثنائي بجوار مركز الملك عبدالله المالي، تمثل فرصة نادرة للسكن الراقي والاستثمار عالي العائد.',
-        img: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85'
-      }
-    };
-
-    // Load data from URL query param ?id=...
-    const urlParams = new URLSearchParams(window.location.search);
-    const projectId = urlParams.get('id') || 'elite';
-    const project = projectsData[projectId] || projectsData['elite'];
-
-    // Populate Page Elements
-    document.getElementById('pageTitle').textContent = `مشروع ${project.title} | شركة رسوخ العقارية`;
-    document.getElementById('breadcrumbCurrent').textContent = project.title;
-    document.getElementById('pTitle').childNodes[0].nodeValue = project.title + ' ';
-    document.getElementById('pEnTitle').textContent = project.enTitle;
-    document.getElementById('pCodeBadge').textContent = project.code;
-    document.getElementById('pDistrict').textContent = project.district;
-    document.getElementById('pDesc').textContent = project.desc;
-    document.getElementById('pPrice').innerHTML = project.price.includes('ر.س') ? `${project.price.replace('ر.س','')} <span>ر.س</span>` : project.price;
-    document.getElementById('pMainImg').src = project.img;
-    document.getElementById('pCategoryTag').textContent = project.categoryName;
-    document.getElementById('pStatusText').textContent = project.statusText;
-    
-    // Status styling
-    if (project.status === 'sold') {
-      document.getElementById('pStatusPill').className = 'p-status-pill pill-sold';
-    } else {
-      document.getElementById('pStatusPill').className = 'p-status-pill pill-available';
-    }
-
-    // Specs
-    document.getElementById('specArea').textContent = project.area;
-    document.getElementById('specRooms').textContent = project.rooms;
-    document.getElementById('specWarranty').textContent = project.warranty;
-    document.getElementById('specDeed').textContent = project.deed;
-
-    // WhatsApp CTA
-    document.getElementById('pWhatsAppBtn').href = `https://wa.me/966500000000?text=${encodeURIComponent('مرحباً شركة رسوخ العقارية، أود الاستفسار عن مشروع ' + project.title)}`;
-
-    // Floor plan switcher
-    function switchPlan(btn, type) {
-      document.querySelectorAll('.plan-tab-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const meta = document.getElementById('planMetaList');
-      if (type === 'ground') {
-        meta.innerHTML = `
-          <span class="plan-meta-item">مجلس ضيافة رسمي فسيح</span>
-          <span class="plan-meta-item">صالة طعام ملكية</span>
-          <span class="plan-meta-item">مطبخ مفتوح + مطبخ خدمة</span>
-          <span class="plan-meta-item">مسبح خارجي وشلال مائي</span>
-          <span class="plan-meta-item">كراج لـ 3 سيارات</span>
-        `;
-      } else if (type === 'first') {
-        meta.innerHTML = `
-          <span class="plan-meta-item">جناح ماستر ملكي مع غرفة ملابس وجاكوزي</span>
-          <span class="plan-meta-item">3 أجنحة نوم ماستر إضافية</span>
-          <span class="plan-meta-item">صالة معيشة عائلية خاصة</span>
-          <span class="plan-meta-item">أوفيس تحضيري مجهز</span>
-        `;
-      } else {
-        meta.innerHTML = `
-          <span class="plan-meta-item">صالة رياضية خاصة / سينما</span>
-          <span class="plan-meta-item">روف وتراس خارجي مجهز للشواء</span>
-          <span class="plan-meta-item">غرفة غسيل وغرفة خادمة مستقلة</span>
-          <span class="plan-meta-item">إطلالة بانورامية علوية</span>
-        `;
-      }
-    }
-  </script>
+  <!-- Scripts -->
+  <script src="data/projects-data.js"></script>
+  <script src="js/project-details.js"></script>
 </body>
 </html>

@@ -17,9 +17,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
     allProjects = await res.json();
   } catch (err) {
-    console.warn('Could not fetch data/projects.json directly, using fallback.', err);
-    // Graceful error notification
-    showToast('جاري تحميل بيانات الصرح المعماري...');
+    console.warn('Could not fetch data/projects.json directly, using window.PROJECTS_DATA fallback if available.', err);
+    if (window.PROJECTS_DATA) {
+      allProjects = window.PROJECTS_DATA;
+    }
   }
 
   // Fallback to elite if requested id does not exist
@@ -102,6 +103,53 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
       pLocationRow.style.display = 'none';
     }
+  }
+
+  // Populate Hero Visual Card (Left Column)
+  const heroVisualImg = document.getElementById('heroVisualImg');
+  const heroVisualBadgeText = document.getElementById('heroVisualBadgeText');
+  const heroWhatsAppBtn = document.getElementById('heroWhatsAppBtn');
+
+  const heroImgUrl = (project.gallery && project.gallery[0]?.url) || 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85';
+  if (heroVisualImg) {
+    heroVisualImg.src = heroImgUrl;
+    heroVisualImg.alt = project.name;
+  }
+  if (heroVisualBadgeText) {
+    heroVisualBadgeText.textContent = `معاينة صرح ${project.name}`;
+  }
+  if (heroWhatsAppBtn) {
+    const waText = encodeURIComponent(`مرحباً شركة رسوخ العقارية، أود الاستفسار عن مشروع (${project.name} - ${project.code || ''}).`);
+    heroWhatsAppBtn.href = `https://wa.me/966500000000?text=${waText}`;
+  }
+
+  // Navbar Interactions (Mobile Menu & Dropdowns)
+  const mobileToggle = document.getElementById('mobileToggle');
+  const navMenu = document.getElementById('navMenu');
+  if (mobileToggle && navMenu) {
+    mobileToggle.addEventListener('click', () => {
+      mobileToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-item-dropdown').forEach(dropdown => {
+      const toggle = dropdown.querySelector('.nav-link');
+      if (toggle) {
+        toggle.addEventListener('click', (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            dropdown.classList.toggle('open');
+          }
+        });
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target) && navMenu.classList.contains('active')) {
+        mobileToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      }
+    });
   }
 
   // 4. Interactive Photo Gallery Showcase (Conditional)
