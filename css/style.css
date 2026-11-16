@@ -1115,130 +1115,397 @@ img, video {
 }
 
 /* ==========================================================================
-   Section 2: The 3 Circular Portals (Directly from flyer)
+   Section: Rosokh Integrated Real Estate Services (Pure White Luxury Vector)
    ========================================================================== */
-.showcase-circles-section {
-  padding: 60px 0 80px;
+.rosokh-services-section {
+  padding: 100px 0 110px;
+  background-color: #FFFFFF;
+  background-image: radial-gradient(rgba(16, 31, 48, 0.05) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
   position: relative;
-  z-index: 2;
-  background: linear-gradient(180deg, #FFFFFF 0%, #F5F7FA 100%);
-  border-top: 1px solid rgba(191, 159, 118, 0.2);
+  border-top: 1px solid #EAEFEF;
+  border-bottom: 1px solid #EAEFEF;
 }
 
-.circles-header {
+.services-header-center {
   text-align: center;
-  max-width: 720px;
-  margin: 0 auto 50px;
+  max-width: 840px;
+  margin: 0 auto 60px;
 }
 
-.section-subtitle {
-  display: inline-block;
-  color: var(--secondary-dark);
+.services-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(191, 159, 118, 0.1);
+  border: 1px solid rgba(191, 159, 118, 0.35);
+  padding: 6px 18px;
+  border-radius: 50px;
+  color: var(--secondary);
+  font-size: 0.85rem;
   font-weight: 700;
-  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+}
+
+.services-badge-pill .gold-sparkle {
+  color: var(--secondary);
+}
+
+.services-main-headline {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.35;
+  margin-bottom: 18px;
+}
+
+.services-main-headline span {
+  color: var(--secondary);
+  position: relative;
+  display: inline-block;
+}
+
+.services-lead-desc {
+  font-size: 1.1rem;
+  color: #55687D;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* 6 Services Cards Grid */
+.services-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.service-card-item {
+  background: #FFFFFF;
+  border: 1px solid rgba(16, 31, 48, 0.09);
+  border-radius: 20px;
+  padding: 38px 30px 32px;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(16, 31, 48, 0.03);
+  overflow: hidden;
+}
+
+.service-card-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.service-card-item:hover {
+  transform: translateY(-8px);
+  border-color: rgba(191, 159, 118, 0.55);
+  box-shadow: 0 20px 45px rgba(16, 31, 48, 0.08), 0 0 0 1px rgba(191, 159, 118, 0.2);
+}
+
+.service-card-item:hover::before {
+  opacity: 1;
+}
+
+.service-watermark-num {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: rgba(16, 31, 48, 0.05);
+  font-family: inherit;
+  line-height: 1;
+  pointer-events: none;
+  transition: color 0.35s ease;
+}
+
+.service-card-item:hover .service-watermark-num {
+  color: rgba(191, 159, 118, 0.18);
+}
+
+.service-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(191, 159, 118, 0.1);
+  border: 1px solid rgba(191, 159, 118, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+  margin-bottom: 24px;
+  transition: all 0.35s ease;
+}
+
+.service-icon-box svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+  transition: transform 0.35s ease;
+}
+
+.service-card-item:hover .service-icon-box {
+  background: var(--gold-gradient);
+  color: #FFFFFF;
+  border-color: transparent;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(191, 159, 118, 0.3);
+}
+
+.service-category-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--secondary);
+  text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 8px;
 }
 
-.section-title {
-  font-size: 2.3rem;
+.service-card-title {
+  font-size: 1.35rem;
   font-weight: 800;
   color: var(--primary);
-  line-height: 1.25;
+  margin-bottom: 14px;
+  line-height: 1.4;
+  transition: color 0.3s ease;
 }
 
-/* Circular Grid */
-.circles-grid {
+.service-card-item:hover .service-card-title {
+  color: var(--primary-light);
+}
+
+.service-card-desc {
+  font-size: 0.94rem;
+  color: #55687D;
+  line-height: 1.7;
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+.service-specs-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(16, 31, 48, 0.07);
+}
+
+.service-spec-pill {
+  font-size: 0.76rem;
+  padding: 5px 12px;
+  border-radius: 6px;
+  background: #F4F7F9;
+  border: 1px solid #E2E8F0;
+  color: #4A5568;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.service-card-item:hover .service-spec-pill {
+  background: rgba(191, 159, 118, 0.08);
+  border-color: rgba(191, 159, 118, 0.25);
+  color: var(--primary);
+}
+
+.service-card-footer {
+  margin-top: auto;
+}
+
+.service-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 18px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  color: var(--primary);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.service-btn-arrow {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.service-card-item:hover .service-explore-btn {
+  background: var(--primary);
+  color: #FFFFFF;
+  border-color: var(--primary);
+  box-shadow: 0 4px 15px rgba(16, 31, 48, 0.15);
+}
+
+.service-card-item:hover .service-btn-arrow {
+  transform: translateX(-5px);
+  fill: var(--secondary);
+}
+
+/* Executive Commitments Ribbon */
+.services-commitments-ribbon {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  padding: 26px 30px;
+  margin-bottom: 45px;
+}
+
+.commitment-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.commitment-item:not(:last-child) {
+  border-left: 1px solid #E2E8F0;
+  padding-left: 20px;
+}
+
+.commitment-badge-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(191, 159, 118, 0.15);
+  color: var(--secondary);
+  display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
 }
 
-.circle-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  transition: var(--transition);
-}
-
-.circle-portal {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  padding: 8px;
-  background: var(--white);
-  border: 4px solid var(--white);
-  box-shadow: 0 16px 40px rgba(16, 31, 48, 0.12);
-  position: relative;
-  overflow: hidden;
-  transition: var(--transition);
-}
-
-.circle-portal::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border: 3px solid var(--secondary);
-  opacity: 0.6;
-  transition: var(--transition);
-  z-index: 2;
-  pointer-events: none;
-}
-
-.circle-portal img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  transition: transform 0.6s ease;
-}
-
-.circle-card:hover .circle-portal {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 24px 50px rgba(191, 159, 118, 0.35);
-}
-
-.circle-card:hover .circle-portal::before {
-  opacity: 1;
-  border-color: var(--secondary);
-  transform: scale(1.02);
-}
-
-.circle-card:hover .circle-portal img {
-  transform: scale(1.12);
-}
-
-.circle-meta {
-  margin-top: 20px;
-}
-
-.circle-number {
-  display: inline-block;
-  font-size: 0.85rem;
-  font-weight: 800;
-  color: var(--secondary);
-  margin-bottom: 4px;
-}
-
-.circle-title {
-  font-size: 1.3rem;
+.commitment-text strong {
+  display: block;
+  font-size: 0.96rem;
   font-weight: 800;
   color: var(--primary);
-  margin-bottom: 6px;
+  margin-bottom: 2px;
 }
 
-.circle-description {
-  font-size: 0.92rem;
-  color: var(--text-secondary);
-  max-width: 280px;
-  line-height: 1.5;
+.commitment-text span {
+  font-size: 0.8rem;
+  color: #64748B;
+  display: block;
 }
 
+/* Bottom Action Strip */
+.services-bottom-action {
+  background: linear-gradient(135deg, #101F30 0%, #172D45 100%);
+  border-radius: 20px;
+  padding: 35px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  box-shadow: 0 15px 35px rgba(16, 31, 48, 0.12);
+}
+
+.services-action-content h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.services-action-content p {
+  font-size: 0.95rem;
+  color: #A0B2C6;
+  margin: 0;
+}
+
+.btn-services-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #FFFFFF;
+  padding: 14px 26px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.btn-services-wa svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.btn-services-wa:hover {
+  background: #20BA5A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+}
+
+/* Responsive Services */
+@media (max-width: 1024px) {
+  .services-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .services-commitments-ribbon {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .commitment-item:nth-child(2) {
+    border-left: none;
+  }
+  .services-bottom-action {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .rosokh-services-section {
+    padding: 70px 0 75px;
+  }
+  .services-main-headline {
+    font-size: 1.9rem;
+  }
+  .services-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .services-commitments-ribbon {
+    grid-template-columns: 1fr;
+    padding: 22px 20px;
+  }
+  .commitment-item:not(:last-child) {
+    border-left: none;
+    border-bottom: 1px solid #E2E8F0;
+    padding-left: 0;
+    padding-bottom: 14px;
+  }
+  .btn-services-wa {
+    width: 100%;
+    justify-content: center;
+  }
+}
 /* ==========================================================================
    Section 3: Home Features Checklist (Flyer features bar)
    ========================================================================== */
