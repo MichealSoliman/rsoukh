@@ -36,23 +36,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Mobile Menu Toggle & Dropdown Accordions
+  // 3. Mobile Navigation Drawer & Accordions
   const mobileToggle = document.getElementById('mobileToggle');
   const navMenu = document.getElementById('navMenu');
+  const navBackdrop = document.getElementById('navBackdrop');
+  const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
+
+  function setMobileMenu(isOpen) {
+    if (!mobileToggle || !navMenu) return;
+    if (isOpen) {
+      mobileToggle.classList.add('active');
+      navMenu.classList.add('active');
+      if (navBackdrop) navBackdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    } else {
+      mobileToggle.classList.remove('active');
+      navMenu.classList.remove('active');
+      if (navBackdrop) navBackdrop.classList.remove('active');
+      document.body.style.overflow = '';
+      dropdownItems.forEach(d => d.classList.remove('open'));
+    }
+  }
 
   if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
-      mobileToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const willOpen = !navMenu.classList.contains('active');
+      setMobileMenu(willOpen);
     });
 
+    if (navBackdrop) {
+      navBackdrop.addEventListener('click', () => setMobileMenu(false));
+    }
+
     // Handle Mobile Dropdown Accordion
-    const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
     dropdownItems.forEach(dropdown => {
       const toggle = dropdown.querySelector('.nav-link');
       if (toggle) {
         toggle.addEventListener('click', (e) => {
-          if (window.innerWidth <= 768) {
+          if (window.innerWidth <= 1024) {
             e.preventDefault();
             dropdown.classList.toggle('open');
           }
@@ -61,20 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Close when clicking actual nav links (not dropdown toggles)
-    document.querySelectorAll('.nav-menu a').forEach(link => {
+    document.querySelectorAll('.nav-menu a:not(.nav-item-dropdown > .nav-link)').forEach(link => {
       link.addEventListener('click', () => {
-        mobileToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-        dropdownItems.forEach(d => d.classList.remove('open'));
+        setMobileMenu(false);
       });
     });
 
     // Close on click outside
     document.addEventListener('click', (e) => {
       if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target) && navMenu.classList.contains('active')) {
-        mobileToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-        dropdownItems.forEach(d => d.classList.remove('open'));
+        setMobileMenu(false);
       }
     });
   }
@@ -151,6 +169,29 @@ document.addEventListener('DOMContentLoaded', () => {
       closeBooking();
       showToast(`شكراً لك ${name}! تم استلام طلبك وسيتواصل معك مستشار رسوخ خلال دقائق.`);
       bookingForm.reset();
+    });
+  }
+
+  // Handle WhatsApp Direct Lead Form Submission
+  const whatsappLeadForm = document.getElementById('whatsappLeadForm');
+  if (whatsappLeadForm) {
+    whatsappLeadForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('waLeadName')?.value.trim() || 'عميل كريم';
+      const phone = document.getElementById('waLeadPhone')?.value.trim() || '';
+      const email = document.getElementById('waLeadEmail')?.value.trim() || 'غير محدد';
+      const interest = document.getElementById('waLeadInterest')?.value || 'استفسار عام';
+
+      const messageText = `مرحباً شركة رسوخ العقارية 🌟\nأود الاستفسار والتواصل بخصوص مشاريعكم العقارية:\n\n👤 *الاسم:* ${name}\n📱 *رقم الجوال:* ${phone}\n✉️ *البريد الإلكتروني:* ${email}\n🎯 *نوع الاهتمام:* ${interest}\n\nأرجو تزويدي بالأسعار والمخططات المتاحة، شكراً لكم!`;
+
+      const encodedMsg = encodeURIComponent(messageText);
+      const waUrl = `https://wa.me/966500000000?text=${encodedMsg}`;
+
+      if (typeof showToast === 'function') {
+        showToast(`شكراً لك ${name}! جاري تحويلك الآن لمحادثة واتساب الرسمية مع مستشار رسوخ...`);
+      }
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+      whatsappLeadForm.reset();
     });
   }
 

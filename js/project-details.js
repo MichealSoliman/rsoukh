@@ -105,38 +105,92 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  // Populate Hero Visual Card (Left Column)
-  const heroVisualImg = document.getElementById('heroVisualImg');
-  const heroVisualBadgeText = document.getElementById('heroVisualBadgeText');
+  // Populate Full-Bleed Hero Background & Hero Metadata
+  const projectHeroSection = document.getElementById('projectHeroSection');
   const heroWhatsAppBtn = document.getElementById('heroWhatsAppBtn');
+  const heroPhotosCount = document.getElementById('heroPhotosCount');
+  const heroMetricsStrip = document.getElementById('heroMetricsStrip');
+  const btnOpenHeroGallery = document.getElementById('btnOpenHeroGallery');
 
-  const heroImgUrl = (project.gallery && project.gallery[0]?.url) || 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85';
-  if (heroVisualImg) {
-    heroVisualImg.src = heroImgUrl;
-    heroVisualImg.alt = project.name;
+  const heroImgUrl = (project.gallery && project.gallery[0]?.url) || 'img/projects/p-247.webp';
+  if (projectHeroSection) {
+    projectHeroSection.style.backgroundImage = `url('${heroImgUrl}')`;
   }
-  if (heroVisualBadgeText) {
-    heroVisualBadgeText.textContent = `معاينة صرح ${project.name}`;
+
+  if (heroPhotosCount && project.gallery) {
+    heroPhotosCount.textContent = project.gallery.length;
   }
+
   if (heroWhatsAppBtn) {
     const waText = encodeURIComponent(`مرحباً شركة رسوخ العقارية، أود الاستفسار عن مشروع (${project.name} - ${project.code || ''}).`);
     heroWhatsAppBtn.href = `https://wa.me/966500000000?text=${waText}`;
   }
 
-  // Navbar Interactions (Mobile Menu & Dropdowns)
+  // Populate Hero Metrics Capsules Strip
+  if (heroMetricsStrip && project.specs) {
+    const capsules = [];
+    if (project.specs.landArea) {
+      capsules.push({ label: 'مساحة الأرض', val: project.specs.landArea, icon: '<path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>' });
+    }
+    if (project.specs.builtArea) {
+      capsules.push({ label: 'مسطح البناء', val: project.specs.builtArea, icon: '<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>' });
+    }
+    if (project.specs.bedrooms) {
+      capsules.push({ label: 'أجنحة النوم', val: project.specs.bedrooms, icon: '<path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/>' });
+    }
+    if (project.price) {
+      capsules.push({ label: 'القيمة الاستثمارية', val: `${project.pricePrefix || ''} ${project.price} ${project.currency || 'ر.س'}`, icon: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/>' });
+    }
+
+    heroMetricsStrip.innerHTML = capsules.map(c => `
+      <div class="hero-metric-capsule">
+        <svg viewBox="0 0 24 24">${c.icon}</svg>
+        <div>
+          <div class="m-label">${c.label}</div>
+          <div class="m-val">${c.val}</div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  // Navbar Interactions (Mobile Menu Drawer & Dropdowns)
   const mobileToggle = document.getElementById('mobileToggle');
   const navMenu = document.getElementById('navMenu');
+  const navBackdrop = document.getElementById('navBackdrop');
+  const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
+
+  function setMobileMenu(isOpen) {
+    if (!mobileToggle || !navMenu) return;
+    if (isOpen) {
+      mobileToggle.classList.add('active');
+      navMenu.classList.add('active');
+      if (navBackdrop) navBackdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    } else {
+      mobileToggle.classList.remove('active');
+      navMenu.classList.remove('active');
+      if (navBackdrop) navBackdrop.classList.remove('active');
+      document.body.style.overflow = '';
+      dropdownItems.forEach(d => d.classList.remove('open'));
+    }
+  }
+
   if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
-      mobileToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const willOpen = !navMenu.classList.contains('active');
+      setMobileMenu(willOpen);
     });
 
-    document.querySelectorAll('.nav-item-dropdown').forEach(dropdown => {
+    if (navBackdrop) {
+      navBackdrop.addEventListener('click', () => setMobileMenu(false));
+    }
+
+    dropdownItems.forEach(dropdown => {
       const toggle = dropdown.querySelector('.nav-link');
       if (toggle) {
         toggle.addEventListener('click', (e) => {
-          if (window.innerWidth <= 768) {
+          if (window.innerWidth <= 1024) {
             e.preventDefault();
             dropdown.classList.toggle('open');
           }
@@ -144,65 +198,110 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     });
 
+    document.querySelectorAll('.nav-menu a:not(.nav-item-dropdown > .nav-link)').forEach(link => {
+      link.addEventListener('click', () => {
+        setMobileMenu(false);
+      });
+    });
+
     document.addEventListener('click', (e) => {
       if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target) && navMenu.classList.contains('active')) {
-        mobileToggle.classList.remove('active');
-        navMenu.classList.remove('active');
+        setMobileMenu(false);
       }
     });
   }
 
-  // 4. Interactive Photo Gallery Showcase (Conditional)
-  const galleryContainer = document.getElementById('galleryContainer');
-  if (galleryContainer) {
-    if (project.gallery && Array.isArray(project.gallery) && project.gallery.length > 0) {
-      const mainImg = document.getElementById('galleryMainImg');
-      const captionText = document.getElementById('galleryCaptionText');
-      const counterPill = document.getElementById('galleryCounterPill');
-      const thumbsRow = document.getElementById('galleryThumbsRow');
+  // 4. Creative Bento Mosaic Photo Gallery & Full-Screen Lightbox Modal
+  const bentoGalleryWrap = document.getElementById('bentoGalleryWrap');
+  const bentoMosaicGrid = document.getElementById('bentoMosaicGrid');
+  const btnOpenAllPhotos = document.getElementById('btnOpenAllPhotos');
+  const lightboxModal = document.getElementById('galleryLightboxModal');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+  const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
+  const lightboxNextBtn = document.getElementById('lightboxNextBtn');
+  const lightboxPrevBtn = document.getElementById('lightboxPrevBtn');
 
-      let activeIndex = 0;
+  let currentPhotoIndex = 0;
+  const galleryList = (project.gallery && Array.isArray(project.gallery)) ? project.gallery : [];
 
-      function setPhoto(index) {
-        if (!project.gallery[index]) return;
-        activeIndex = index;
-        const item = project.gallery[index];
-        if (mainImg) {
-          mainImg.style.opacity = '0.4';
-          setTimeout(() => {
-            mainImg.src = item.url;
-            mainImg.alt = item.caption || project.name;
-            mainImg.style.opacity = '1';
-          }, 150);
+  function openLightbox(index) {
+    if (!galleryList.length || !lightboxModal) return;
+    currentPhotoIndex = (index + galleryList.length) % galleryList.length;
+    const item = galleryList[currentPhotoIndex];
+    if (lightboxImg) {
+      lightboxImg.src = item.url;
+      lightboxImg.alt = item.caption || project.name;
+    }
+    if (lightboxCaption) {
+      lightboxCaption.textContent = item.caption || project.name;
+    }
+    if (lightboxCounter) {
+      lightboxCounter.textContent = `${currentPhotoIndex + 1} / ${galleryList.length}`;
+    }
+    lightboxModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    if (!lightboxModal) return;
+    lightboxModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (lightboxCloseBtn) lightboxCloseBtn.addEventListener('click', closeLightbox);
+  if (lightboxNextBtn) lightboxNextBtn.addEventListener('click', () => openLightbox(currentPhotoIndex + 1));
+  if (lightboxPrevBtn) lightboxPrevBtn.addEventListener('click', () => openLightbox(currentPhotoIndex - 1));
+
+  if (lightboxModal) {
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) closeLightbox();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightboxModal || !lightboxModal.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') openLightbox(currentPhotoIndex + 1);
+    if (e.key === 'ArrowLeft') openLightbox(currentPhotoIndex - 1);
+  });
+
+  if (btnOpenAllPhotos) btnOpenAllPhotos.addEventListener('click', () => openLightbox(0));
+  if (btnOpenHeroGallery) btnOpenHeroGallery.addEventListener('click', () => openLightbox(0));
+
+  if (bentoGalleryWrap && bentoMosaicGrid) {
+    if (galleryList.length > 0) {
+      bentoMosaicGrid.innerHTML = '';
+      const displayCount = Math.min(5, galleryList.length);
+
+      for (let i = 0; i < displayCount; i++) {
+        const item = galleryList[i];
+        const cell = document.createElement('div');
+        cell.className = `bento-cell ${i === 0 ? 'bento-cell-main' : ''}`;
+        
+        let overlayHtml = '';
+        if (i === 4 && galleryList.length > 5) {
+          overlayHtml = `
+            <div class="bento-overlay-count">
+              <span class="plus-num">+${galleryList.length - 4}</span>
+              <span class="t-view">صور إضافية</span>
+            </div>
+          `;
         }
-        if (captionText) captionText.textContent = item.caption || project.name;
-        if (counterPill) counterPill.textContent = `صورة ${index + 1} من ${project.gallery.length}`;
 
-        // Update active thumbnail
-        if (thumbsRow) {
-          thumbsRow.querySelectorAll('.thumb-item').forEach((t, i) => {
-            if (i === index) t.classList.add('active');
-            else t.classList.remove('active');
-          });
-        }
+        cell.innerHTML = `
+          <img src="${item.url}" alt="${item.caption || project.name}" loading="lazy">
+          <div class="bento-cell-badge">${item.caption || `معاينة ${i + 1}`}</div>
+          ${overlayHtml}
+        `;
+
+        cell.addEventListener('click', () => openLightbox(i));
+        bentoMosaicGrid.appendChild(cell);
       }
-
-      // Populate Thumbnails
-      if (thumbsRow) {
-        thumbsRow.innerHTML = '';
-        project.gallery.forEach((g, idx) => {
-          const thumb = document.createElement('div');
-          thumb.className = `thumb-item ${idx === 0 ? 'active' : ''}`;
-          thumb.innerHTML = `<img src="${g.url}" alt="${g.caption || ''}" loading="lazy">`;
-          thumb.addEventListener('click', () => setPhoto(idx));
-          thumbsRow.appendChild(thumb);
-        });
-      }
-
-      setPhoto(0);
-      galleryContainer.style.display = '';
+      bentoGalleryWrap.style.display = '';
     } else {
-      galleryContainer.style.display = 'none';
+      bentoGalleryWrap.style.display = 'none';
     }
   }
 
@@ -414,6 +513,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     sidebarPricePrefix.textContent = project.pricePrefix;
   }
 
+  // Populate Mobile Bottom Action Bar
+  const mBarPrice = document.getElementById('mBarPrice');
+  const mBarPriceLabel = document.getElementById('mBarPriceLabel');
+  const mBarWaBtn = document.getElementById('mBarWaBtn');
+
+  if (mBarPrice && project.price) {
+    mBarPrice.innerHTML = `${project.price} <small style="font-size:0.75rem;color:var(--secondary);font-weight:700;">${project.currency || 'ر.س'}</small>`;
+  }
+  if (mBarPriceLabel && project.pricePrefix) {
+    mBarPriceLabel.textContent = project.pricePrefix;
+  }
+  if (mBarWaBtn) {
+    const waText = encodeURIComponent(`مرحباً شركة رسوخ العقارية، أود الاستفسار عن مشروع (${project.name} - ${project.code || ''}).`);
+    mBarWaBtn.href = `https://wa.me/966500000000?text=${waText}`;
+  }
+
   // Payment Plan Box
   if (sidebarPaymentPlan) {
     if (project.paymentPlan && (project.paymentPlan.downPayment || project.paymentPlan.milestones)) {
@@ -558,6 +673,27 @@ document.addEventListener('DOMContentLoaded', async () => {
       closeModal();
       showToast(`شكراً لك ${name}! تم تسجيل طلبك بخصوص ${project.name} وسيتواصل معك مستشار المشروع فوراً.`);
       bookingForm.reset();
+    });
+  }
+
+  // Handle WhatsApp Direct Lead Form Submission
+  const whatsappLeadForm = document.getElementById('whatsappLeadForm');
+  if (whatsappLeadForm) {
+    whatsappLeadForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('waLeadName')?.value.trim() || 'عميل كريم';
+      const phone = document.getElementById('waLeadPhone')?.value.trim() || '';
+      const email = document.getElementById('waLeadEmail')?.value.trim() || 'غير محدد';
+      const interest = document.getElementById('waLeadInterest')?.value || 'استفسار عام';
+
+      const messageText = `مرحباً شركة رسوخ العقارية 🌟\nأود الاستفسار والتواصل بخصوص مشروع (${project.name} - ${project.code || ''}):\n\n👤 *الاسم:* ${name}\n📱 *رقم الجوال:* ${phone}\n✉️ *البريد الإلكتروني:* ${email}\n🎯 *نوع الاهتمام:* ${interest}\n\nأرجو تزويدي بكافة التفاصيل والأسعار والمخططات المتاحة، شكراً لكم!`;
+
+      const encodedMsg = encodeURIComponent(messageText);
+      const waUrl = `https://wa.me/966500000000?text=${encodedMsg}`;
+
+      showToast(`شكراً لك ${name}! جاري تحويلك الآن لمحادثة واتساب الرسمية مع مستشار رسوخ...`);
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+      whatsappLeadForm.reset();
     });
   }
 

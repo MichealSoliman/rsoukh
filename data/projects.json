@@ -107,24 +107,24 @@
     ],
     "gallery": [
       {
-        "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85",
-        "caption": "الواجهة المعمارية الرئيسية لرسوخ إيليت"
+        "url": "img/projects/p-elite.webp",
+        "caption": "الواجهة الملكية لـ رسوخ إيليت"
       },
       {
-        "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85",
-        "caption": "المسبح الخاص والجلسة الخارجية المعاصرة"
+        "url": "img/projects/p-elite-2.webp",
+        "caption": "التشطيبات الرخامية والمداخل الخاصة"
       },
       {
-        "url": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85",
-        "caption": "صالون الضيافة المزدوج الفسيح"
+        "url": "img/projects/p-elite-3.webp",
+        "caption": "الإطلالات البانورامية والأفنية"
       },
       {
-        "url": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=85",
-        "caption": "جناح الماستر الملكي بإطلالة شرفة خاصة"
+        "url": "img/projects/interior-living.webp",
+        "caption": "صالون الاستقبال الملكي"
       },
       {
-        "url": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=85",
-        "caption": "المطبخ الإيطالي المعاصر مع جزيرة رخامية"
+        "url": "img/projects/circle_bedroom.webp",
+        "caption": "الجناح الرئاسي"
       }
     ],
     "floorPlans": [
@@ -139,7 +139,7 @@
           "مطبخ تحضيري ورئيسي",
           "كراج 3 سيارات ومسطحات خضراء"
         ],
-        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+        "image": "img/projects/p-elite.webp"
       },
       {
         "id": "first",
@@ -151,7 +151,7 @@
           "صالة معيشة عائلية علوية",
           "أوفيس خدمات مجهز"
         ],
-        "image": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80"
+        "image": "img/projects/p-elite.webp"
       },
       {
         "id": "roof",
@@ -163,7 +163,7 @@
           "غرفة غسيل وغرفة خادمة",
           "غرفة نوم للضيوف"
         ],
-        "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80"
+        "image": "img/projects/p-elite.webp"
       }
     ],
     "warranties": [
@@ -279,12 +279,28 @@
     ],
     "gallery": [
       {
-        "url": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85",
-        "caption": "الواجهة الخارجية للمجمع السكني"
+        "url": "img/projects/p-residence.webp",
+        "caption": "الواجهة المعمارية الرئيسية لـ رسوخ ريزيدنس"
       },
       {
-        "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85",
-        "caption": "المسطحات الخضراء والحديقة الخاصة"
+        "url": "img/projects/interior-living.webp",
+        "caption": "صالون الضيافة وصالة المعيشة الفسيحة"
+      },
+      {
+        "url": "img/projects/interior-master.webp",
+        "caption": "جناح الماستر الرئاسي الفاخر"
+      },
+      {
+        "url": "img/projects/interior-kitchen.webp",
+        "caption": "المطبخ الإيطالي المعاصر المجهز"
+      },
+      {
+        "url": "img/projects/circle_dining.webp",
+        "caption": "صالون الطعام الفسيح وإطلالة الفناء"
+      },
+      {
+        "url": "img/projects/circle_bedroom.webp",
+        "caption": "تفاصيل جناح النوم والخزائن الخشبية"
       }
     ],
     "floorPlans": [
@@ -298,7 +314,7 @@
           "مطبخ فسيح",
           "فناء خارجي"
         ],
-        "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
+        "image": "img/projects/p-residence.webp"
       },
       {
         "id": "first",
@@ -309,7 +325,7 @@
           "3 غرف نوم ماستر",
           "صالة جلوس علوية"
         ],
-        "image": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80"
+        "image": "img/projects/p-residence.webp"
       }
     ],
     "warranties": [
@@ -381,12 +397,24 @@
     ],
     "gallery": [
       {
-        "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85",
-        "caption": "الواجهة البوتيكية الفاخرة"
+        "url": "img/projects/p-riwaq.webp",
+        "caption": "واجهات مشروع رسوخ رواق الحديثة"
       },
       {
-        "url": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85",
-        "caption": "الصالة ذات الإطلالة المفتوحة"
+        "url": "img/projects/p-riwaq-2.webp",
+        "caption": "المداخل والتناسق المعماري"
+      },
+      {
+        "url": "img/projects/p-riwaq-3.webp",
+        "caption": "الإضاءات والتفاصيل الخارجية"
+      },
+      {
+        "url": "img/projects/interior-living.webp",
+        "caption": "الفراغات الداخلية المفتوحة"
+      },
+      {
+        "url": "img/projects/circle_bedroom.webp",
+        "caption": "غرف النوم الفاخرة"
       }
     ],
     "similarProjectIds": [
@@ -445,12 +473,24 @@
     ],
     "gallery": [
       {
-        "url": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=85",
-        "caption": "الإضاءة الليلية الفاخرة للواجهة"
+        "url": "img/projects/p-darwazah262.webp",
+        "caption": "واجهة صرح دروازة 262 الاستثنائية"
       },
       {
-        "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85",
-        "caption": "القبو الترفيهي الفسيح"
+        "url": "img/projects/p-darwazah262-2.webp",
+        "caption": "التصميم المعماري التراثي المعاصر"
+      },
+      {
+        "url": "img/projects/p-darwazah262-3.webp",
+        "caption": "المداخل والبهو الرئيسي"
+      },
+      {
+        "url": "img/projects/interior-living.webp",
+        "caption": "مجلس الضيافة الرحب"
+      },
+      {
+        "url": "img/projects/circle_bedroom.webp",
+        "caption": "جناح الماستر"
       }
     ],
     "similarProjectIds": [
@@ -521,8 +561,24 @@
     ],
     "gallery": [
       {
-        "url": "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1200&q=85",
-        "caption": "التصميم المعماري العصري للمشروع"
+        "url": "img/projects/p-269.webp",
+        "caption": "الواجهة الهندسية الأيقونية لـ رسوخ 269"
+      },
+      {
+        "url": "img/projects/p-269-2.webp",
+        "caption": "الإطلالة الخارجية والتدرج المعماري"
+      },
+      {
+        "url": "img/projects/p-269-3.webp",
+        "caption": "مداخل الوحدات والتكسيات الحجرية"
+      },
+      {
+        "url": "img/projects/interior-living.webp",
+        "caption": "صالات الاستقبال"
+      },
+      {
+        "url": "img/projects/circle_bedroom.webp",
+        "caption": "الأجنحة السكنية"
       }
     ],
     "similarProjectIds": [
@@ -568,8 +624,28 @@
     ],
     "gallery": [
       {
-        "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=85",
-        "caption": "الواجهة البسيطة الأنيقة"
+        "url": "img/projects/p-235.webp",
+        "caption": "الواجهة المعمارية الرئيسية لـ رسوخ 235"
+      },
+      {
+        "url": "img/projects/interior-living.webp",
+        "caption": "صالون الضيافة وصالة المعيشة الفسيحة"
+      },
+      {
+        "url": "img/projects/interior-master.webp",
+        "caption": "جناح الماستر الرئاسي الفاخر"
+      },
+      {
+        "url": "img/projects/interior-kitchen.webp",
+        "caption": "المطبخ الإيطالي المعاصر المجهز"
+      },
+      {
+        "url": "img/projects/circle_dining.webp",
+        "caption": "صالون الطعام الفسيح وإطلالة الفناء"
+      },
+      {
+        "url": "img/projects/circle_bedroom.webp",
+        "caption": "تفاصيل جناح النوم والخزائن الخشبية"
       }
     ],
     "similarProjectIds": [
@@ -634,8 +710,28 @@
     ],
     "gallery": [
       {
-        "url": "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1200&q=85",
-        "caption": "الهوية السلمانية الأصيلة للمشروع"
+        "url": "img/projects/p-247.webp",
+        "caption": "الواجهة المعمارية الرئيسية لصرح رسوخ 247"
+      },
+      {
+        "url": "img/projects/p-247-2.webp",
+        "caption": "التصميم الهندسي المعاصر والأفنية المفتوحة"
+      },
+      {
+        "url": "img/projects/p-247-3.webp",
+        "caption": "الإطلالة البانورامية للمشروع ومداخل الضيوف"
+      },
+      {
+        "url": "img/projects/circle_bedroom.webp",
+        "caption": "جناح الماستر الرئاسي الفاخر"
+      },
+      {
+        "url": "img/projects/circle_dining.webp",
+        "caption": "صالة الطعام العائلية الفسيحة"
+      },
+      {
+        "url": "img/projects/circle_kitchen.webp",
+        "caption": "المطبخ العصري المجهز بالكامل"
       }
     ],
     "similarProjectIds": [
@@ -687,8 +783,24 @@
     ],
     "gallery": [
       {
-        "url": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=85",
-        "caption": "الحديقة والواجهة الخارجية الفاخرة"
+        "url": "img/projects/p-248.webp",
+        "caption": "الواجهة المعمارية الرئيسية لصرح رسوخ 248"
+      },
+      {
+        "url": "img/projects/p-248-2.webp",
+        "caption": "المداخل الفاخرة والتفاصيل الإنشائية"
+      },
+      {
+        "url": "img/projects/interior-living.webp",
+        "caption": "صالون الضيافة وصالة المعيشة"
+      },
+      {
+        "url": "img/projects/circle_bedroom.webp",
+        "caption": "جناح النوم الرئيسي"
+      },
+      {
+        "url": "img/projects/circle_kitchen.webp",
+        "caption": "المطبخ المعاصر المجهز"
       }
     ],
     "similarProjectIds": [
@@ -733,8 +845,24 @@
     ],
     "gallery": [
       {
-        "url": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85",
-        "caption": "الواجهة الحديثة لمشروع 251"
+        "url": "img/projects/p-251.webp",
+        "caption": "الواجهة الخارجية لصرح رسوخ 251"
+      },
+      {
+        "url": "img/projects/p-251-2.webp",
+        "caption": "التفاصيل المعمارية الدقيقة"
+      },
+      {
+        "url": "img/projects/p-251-3.webp",
+        "caption": "مداخل الوحدات السكنية"
+      },
+      {
+        "url": "img/projects/interior-living.webp",
+        "caption": "المساحات الداخلية الفسيحة"
+      },
+      {
+        "url": "img/projects/circle_bedroom.webp",
+        "caption": "أجنحة النوم الهادئة"
       }
     ],
     "similarProjectIds": [
@@ -802,8 +930,24 @@
     ],
     "gallery": [
       {
-        "url": "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=85",
-        "caption": "الواجهات الزجاجية المتطورة لرسوخ 257"
+        "url": "img/projects/p-257.webp",
+        "caption": "واجهة صرح رسوخ 257 المتميزة"
+      },
+      {
+        "url": "img/projects/p-257-2.webp",
+        "caption": "الأفنية الجانبية والإضاءة الطبيعية"
+      },
+      {
+        "url": "img/projects/p-257-3.webp",
+        "caption": "التشطيبات الخارجية الفندقية"
+      },
+      {
+        "url": "img/projects/interior-living.webp",
+        "caption": "الصالون الرئيسي"
+      },
+      {
+        "url": "img/projects/circle_dining.webp",
+        "caption": "صالة الطعام العائلية"
       }
     ],
     "similarProjectIds": [
@@ -852,8 +996,24 @@
     ],
     "gallery": [
       {
-        "url": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=85",
-        "caption": "الواجهة الهندسية الأنيقة لرسوخ 258"
+        "url": "img/projects/p-258.webp",
+        "caption": "الواجهة الرئيسية لـ رسوخ 258"
+      },
+      {
+        "url": "img/projects/p-258-2.webp",
+        "caption": "الإطلالة الزاوية والمداخل الخاصة"
+      },
+      {
+        "url": "img/projects/p-258-3.webp",
+        "caption": "التصميم المعماري الحديث والتراسات"
+      },
+      {
+        "url": "img/projects/p-258-4.webp",
+        "caption": "تفاصيل الواجهات والإنارة الليلية"
+      },
+      {
+        "url": "img/projects/circle_bedroom.webp",
+        "caption": "غرفة النوم الرئيسية"
       }
     ],
     "similarProjectIds": [
@@ -898,8 +1058,24 @@
     ],
     "gallery": [
       {
-        "url": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85",
-        "caption": "حديقة السطح المفتوحة"
+        "url": "img/projects/p-259.webp",
+        "caption": "مبنى رُسُوخ ٢٥٩ بإطلالة مسائية ساحرة"
+      },
+      {
+        "url": "img/projects/p-259-2.webp",
+        "caption": "تراس بنتهاوس فاخر عند الغروب"
+      },
+      {
+        "url": "img/projects/p-259-3.webp",
+        "caption": "واجهة المشروع العصرية المتألقة"
+      },
+      {
+        "url": "img/projects/interior-living.webp",
+        "caption": "صالون المعيشة المفتوح"
+      },
+      {
+        "url": "img/projects/circle_dining.webp",
+        "caption": "ركن الطعام الراقي"
       }
     ],
     "similarProjectIds": [
@@ -980,12 +1156,28 @@
     ],
     "gallery": [
       {
-        "url": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85",
-        "caption": "الإضاءة الليلية للواجهة المعمارية التنفيذية"
+        "url": "img/projects/p-261.webp",
+        "caption": "الواجهة المعمارية الرئيسية لـ رسوخ 261"
       },
       {
-        "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85",
-        "caption": "المسبح الخاص والإطلالة"
+        "url": "img/projects/interior-living.webp",
+        "caption": "صالون الضيافة وصالة المعيشة الفسيحة"
+      },
+      {
+        "url": "img/projects/interior-master.webp",
+        "caption": "جناح الماستر الرئاسي الفاخر"
+      },
+      {
+        "url": "img/projects/interior-kitchen.webp",
+        "caption": "المطبخ الإيطالي المعاصر المجهز"
+      },
+      {
+        "url": "img/projects/circle_dining.webp",
+        "caption": "صالون الطعام الفسيح وإطلالة الفناء"
+      },
+      {
+        "url": "img/projects/circle_bedroom.webp",
+        "caption": "تفاصيل جناح النوم والخزائن الخشبية"
       }
     ],
     "similarProjectIds": [

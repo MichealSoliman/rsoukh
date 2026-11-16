@@ -23,15 +23,9 @@
   <header class="site-header scrolled" id="siteHeader">
     <div class="container">
       <nav class="navbar">
-        <!-- Brand Logo with Official Image -->
+        <!-- Brand Logo (Official Artwork without Side Text) -->
         <a href="index.html" class="brand-logo" aria-label="شركة رسوخ العقارية">
-          <div class="brand-emblem">
-            <img src="./img/logo.webp" alt="شعار شركة رسوخ العقارية">
-          </div>
-          <div class="brand-text">
-            <span class="brand-name">رُسـوخ <span>العقارية</span></span>
-            <span class="brand-tagline">ROSOKH REAL ESTATE</span>
-          </div>
+          <img src="./img/logo.webp" alt="شركة رسوخ العقارية" class="navbar-brand-logo">
         </a>
 
         <!-- Desktop Navigation Menu -->
@@ -191,6 +185,18 @@
           </li>
 
           <li><a href="index.html#contact" class="nav-link">تواصل معنا</a></li>
+
+          <!-- Mobile Drawer Quick Actions -->
+          <li class="nav-drawer-footer">
+            <a href="https://wa.me/966500000000?text=مرحباً%20شركة%20رسوخ%20العقارية" target="_blank" rel="noopener" class="nav-drawer-btn wa">
+              <svg style="width:18px;height:18px;fill:currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
+              <span>محادثة واتساب مباشرة</span>
+            </a>
+            <a href="tel:8001237000" class="nav-drawer-btn phone">
+              <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1.01A11.36 11.36 0 0 1 8.5 3.92c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.54c0-.55-.45-1-.99-1z"/></svg>
+              <span>الاتصال الهاتفي: 800 123 7000</span>
+            </a>
+          </li>
         </ul>
 
         <!-- Nav Actions: Email Button & Mobile Hamburger -->
@@ -211,71 +217,67 @@
       </nav>
     </div>
   </header>
+  <!-- Dark Backdrop for Mobile Navigation Drawer -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
 
   <main>
     <!-- ==========================================================================
-         1. Hero Header Banner (2-Column Split Showcase - No Empty Void)
+         1. Full-Bleed Architectural Hero Section (Project Photo in Background)
          ========================================================================== -->
-    <section class="project-single-hero">
+    <section class="project-single-hero" id="projectHeroSection">
       <div class="container">
         
-        <div class="hero-split-grid">
-          
-          <!-- Right Column: Project Meta Details -->
-          <div class="hero-content-meta">
-            <!-- Breadcrumb Navigation -->
-            <nav class="p-breadcrumb-nav" aria-label="مسار التنقل">
-              <a href="index.html">الرئيسية</a>
-              <span class="separator">/</span>
-              <a href="index.html#projects">مشاريعنا</a>
-              <span class="separator">/</span>
-              <span class="current-crumb" id="pBreadcrumbName">الصرح المعماري</span>
-            </nav>
+        <div class="hero-full-wrap">
+          <!-- Breadcrumb Navigation -->
+          <nav class="p-breadcrumb-nav" aria-label="مسار التنقل">
+            <a href="index.html">الرئيسية</a>
+            <span class="separator">/</span>
+            <a href="index.html#projects">مشاريعنا</a>
+            <span class="separator">/</span>
+            <span class="current-crumb" id="pBreadcrumbName">الصرح المعماري</span>
+          </nav>
 
-            <!-- Metadata Badges (Rendered Conditionally) -->
-            <div class="hero-meta-badges">
-              <span id="pCategoryBadge" class="badge-tag-category elite">مشاريع النخبة</span>
-              <span id="pStatusBadge" class="badge-status-pill available">متاح للحجز</span>
-              <span id="pCodeBadge" class="badge-code-ref">R-01</span>
-            </div>
-
-            <!-- Project Title & Slogan -->
-            <h1 class="project-hero-title" id="pTitle">
-              اسم الصرح
-            </h1>
-
-            <p class="project-hero-slogan" id="pSlogan">
-              وصف معماري مقتضب للصرح
-            </p>
-
-            <!-- Location Details -->
-            <div class="project-hero-location-row" id="pLocationRow">
-              <!-- Dynamically populated if location exists -->
-            </div>
-
-            <!-- Quick Hero Action Buttons -->
-            <div class="hero-quick-actions">
-              <button class="btn-hero-vip-book open-booking-modal">
-                <span>طلب حجز معاينة VIP</span>
-                <svg viewBox="0 0 24 24"><path d="M14 7l-5 5 5 5V7z"/></svg>
-              </button>
-              <a id="heroWhatsAppBtn" href="#" target="_blank" rel="noopener" class="btn-hero-quick-wa">
-                <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
-                <span>محادثة واتساب مباشرة</span>
-              </a>
-            </div>
+          <!-- Metadata Badges (Rendered Conditionally) -->
+          <div class="hero-meta-badges">
+            <span id="pCategoryBadge" class="badge-tag-category elite">مشاريع النخبة</span>
+            <span id="pStatusBadge" class="badge-status-pill available">متاح للحجز</span>
+            <span id="pCodeBadge" class="badge-code-ref">R-01</span>
           </div>
 
-          <!-- Left Column: Architectural Visual Card (Eliminates the empty dark area) -->
-          <div class="hero-visual-card">
-            <img id="heroVisualImg" src="" alt="واجهة الصرح المعماري">
-            <div class="hero-visual-overlay"></div>
-            <div class="hero-visual-badge">
-              <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
-              <span id="heroVisualBadgeText">معاينة معمارية حصرية</span>
-            </div>
+          <!-- Project Title & Slogan -->
+          <h1 class="project-hero-title" id="pTitle">
+            اسم الصرح
+          </h1>
+
+          <p class="project-hero-slogan" id="pSlogan">
+            وصف معماري مقتضب للصرح
+          </p>
+
+          <!-- Location Details -->
+          <div class="project-hero-location-row" id="pLocationRow">
+            <!-- Dynamically populated if location exists -->
           </div>
 
+          <!-- Floating Specs Metrics Capsules -->
+          <div class="hero-metrics-capsule-strip" id="heroMetricsStrip">
+            <!-- Injected dynamically from project.specs -->
+          </div>
+
+          <!-- Quick Hero Action Buttons -->
+          <div class="hero-quick-actions">
+            <button class="btn-hero-vip-book open-booking-modal">
+              <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+              <span>طلب حجز معاينة VIP</span>
+            </button>
+            <a id="heroWhatsAppBtn" href="#" target="_blank" rel="noopener" class="btn-hero-quick-wa">
+              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
+              <span>محادثة واتساب مباشرة</span>
+            </a>
+            <button class="btn-open-all-photos" id="btnOpenHeroGallery" style="background: rgba(255,255,255,0.14); color: #fff; border-color: rgba(255,255,255,0.25); backdrop-filter: blur(8px);">
+              <svg viewBox="0 0 24 24" style="fill: var(--secondary);"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              <span>معرض الصور (<span id="heroPhotosCount">0</span>)</span>
+            </button>
+          </div>
         </div>
 
       </div>
@@ -292,17 +294,22 @@
           <!-- LEFT MAIN CONTENT COLUMN -->
           <div class="project-main-content">
             
-            <!-- A. Interactive Photo Gallery Showcase (Conditional) -->
-            <div class="gallery-showcase-container" id="galleryContainer">
-              <div class="gallery-main-view">
-                <img id="galleryMainImg" class="gallery-main-img" src="" alt="معاينة الصرح">
-                <div class="gallery-caption-overlay">
-                  <span id="galleryCaptionText" class="gallery-caption-text"></span>
-                  <span id="galleryCounterPill" class="gallery-counter-pill"></span>
+            <!-- A. Creative Bento Mosaic Gallery Showcase -->
+            <div class="bento-gallery-wrap" id="bentoGalleryWrap">
+              <div class="bento-gallery-header">
+                <div class="bento-title-row">
+                  <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+                  <h3>معرض الصور المعمارية والتفاصيل</h3>
                 </div>
+                <button class="btn-open-all-photos" id="btnOpenAllPhotos">
+                  <svg viewBox="0 0 24 24"><path d="M4 4h7V2H4c-1.1 0-2 .9-2 2v7h2V4zm6 9l-4 5h12l-3-4-2.03 2.71L10 13zm10-9h-7v2h7v7h2V4c0-1.1-.9-2-2-2zm0 16h-7v2h7c1.1 0 2-.9 2-2v-7h-2v7zM4 13H2v7c0 1.1.9 2 2 2h7v-2H4v-7z"/></svg>
+                  <span>عرض جميع الصور بالكامل</span>
+                </button>
               </div>
-              <div class="gallery-thumbs-row" id="galleryThumbsRow">
-                <!-- Thumbnail items injected dynamically -->
+
+              <!-- 5-Cell Bento Mosaic Grid populated by JS -->
+              <div class="bento-mosaic-grid" id="bentoMosaicGrid">
+                <!-- Dynamically populated with 5 cells -->
               </div>
             </div>
 
@@ -479,6 +486,24 @@
 
       </div>
     </section>
+
+    <!-- ==========================================================================
+         Full-Screen Interactive Lightbox Modal
+         ========================================================================== -->
+    <div class="lightbox-modal" id="galleryLightboxModal" role="dialog" aria-modal="true" aria-label="ألبوم صور المشروع">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="إغلاق">&times;</button>
+      <button class="lightbox-nav-btn next" id="lightboxNextBtn" aria-label="الصورة التالية">&#10095;</button>
+      <button class="lightbox-nav-btn prev" id="lightboxPrevBtn" aria-label="الصورة السابقة">&#10094;</button>
+      
+      <div class="lightbox-stage">
+        <img id="lightboxImg" src="" alt="معاينة بكامل الشاشة">
+      </div>
+
+      <div class="lightbox-caption-bar">
+        <div class="lightbox-caption-text" id="lightboxCaption"></div>
+        <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
+      </div>
+    </div>
   </main>
 
   <!-- ==========================================================================
@@ -527,9 +552,203 @@
   </div>
 
   <!-- ==========================================================================
+       Mobile Fixed Floating Quick Action Bar (Bottom Bar)
+       ========================================================================== -->
+  <div class="mobile-bottom-bar" id="mobileBottomBar">
+    <div class="mobile-bar-price">
+      <span class="m-price-lbl" id="mBarPriceLabel">يبدأ من</span>
+      <span class="m-price-val" id="mBarPrice">--</span>
+    </div>
+    <div class="mobile-bar-actions">
+      <a id="mBarWaBtn" href="#" target="_blank" rel="noopener" class="btn-m-wa" aria-label="محادثة واتساب">
+        <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
+      </a>
+      <button class="btn-m-book open-booking-modal">
+        <span>طلب حجز VIP</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Section: WhatsApp Direct Lead Generation & Concierge Pavilion
+       ========================================================================== -->
+  <section class="rosokh-contact-section" id="contact">
+    <div class="container">
+      
+      <!-- Grand Split Architectural Pavilion (Creative Asymmetric Suite) -->
+      <div class="concierge-pavilion">
+
+        <!-- Col 1: Interactive WhatsApp Inquiry Form -->
+        <div class="concierge-form-col">
+          <div class="concierge-form-header">
+            <div class="concierge-tag">
+              <span class="gold-sparkle">✦</span>
+              <span>استشارة عقارية مباشرة • DIRECT VIP INQUIRY</span>
+            </div>
+            <h2 class="concierge-title">تواصل مباشرة مع مستشارك العقاري</h2>
+            <p class="concierge-subtitle">
+              سجّل بياناتك وسيتم توجيهك فوراً لمحادثة مخصصة مع مستشار رُسوخ المعتمد لتزويدك بقوائم الأسعار والمخططات فوراً وبدون انتظار.
+            </p>
+          </div>
+
+          <form class="whatsapp-lead-form" id="whatsappLeadForm">
+            <div class="form-grid-2col">
+              
+              <!-- Input 1: Full Name -->
+              <div class="form-field-group">
+                <label class="field-label" for="waLeadName">الاسم الكريم</label>
+                <div class="input-wrap">
+                  <input 
+                    type="text" 
+                    id="waLeadName" 
+                    class="contact-input" 
+                    placeholder="مثال: محمد بن سعد" 
+                    required
+                    autocomplete="name"
+                  >
+                  <div class="field-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Input 2: Phone Number -->
+              <div class="form-field-group">
+                <label class="field-label" for="waLeadPhone">رقم الجوال (واتساب)</label>
+                <div class="input-wrap">
+                  <input 
+                    type="tel" 
+                    id="waLeadPhone" 
+                    class="contact-input" 
+                    placeholder="05XXXXXXXX" 
+                    required
+                    autocomplete="tel"
+                  >
+                  <div class="field-icon">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Input 3: Email Address -->
+              <div class="form-field-group">
+                <label class="field-label" for="waLeadEmail">البريد الإلكتروني</label>
+                <div class="input-wrap">
+                  <input 
+                    type="email" 
+                    id="waLeadEmail" 
+                    class="contact-input" 
+                    placeholder="name@domain.com" 
+                    required
+                    autocomplete="email"
+                  >
+                  <div class="field-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Input 4: Interest Type -->
+              <div class="form-field-group select-group">
+                <label class="field-label" for="waLeadInterest">نوع الاهتمام العقاري</label>
+                <div class="input-wrap">
+                  <select id="waLeadInterest" class="contact-select" required>
+                    <option value="" disabled selected>اختر نوع الاهتمام</option>
+                    <option value="شراء وحدة سكنية">شراء وحدة سكنية فاخرة</option>
+                    <option value="استثمار عقاري">استثمار عقاري بعوائد مجزية</option>
+                    <option value="استفسار عام وحجز معاينة">استفسار عام وحجز جولة معاينة VIP</option>
+                  </select>
+                  <div class="select-chevron">
+                    <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Submit Button (Direct to WhatsApp) -->
+            <button type="submit" class="btn-send-whatsapp" id="btnSendWaLead">
+              <svg viewBox="0 0 24 24" class="wa-btn-icon"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
+              <span>إرسال الطلب وبدء محادثة واتساب الرسمية</span>
+              <svg viewBox="0 0 24 24" class="arrow-btn-icon"><path d="M14 7l-5 5 5 5V7z"/></svg>
+            </button>
+
+            <!-- Micro Trust Badges Row -->
+            <div class="form-trust-row">
+              <span class="trust-pill"><span class="check-dot">✓</span> خصوصية وسرية تامة لبياناتك</span>
+              <span class="trust-pill"><span class="check-dot">✓</span> اتصال مشفر ومباشر مع المستشار</span>
+              <span class="trust-pill"><span class="check-dot">✓</span> تسليم الكتالوجات والأسعار فوراً</span>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Col 2: Luxury Architectural Showcase & Live Consultant Card -->
+        <div class="concierge-visual-col">
+          <div class="concierge-visual-bg">
+            <img src="./img/projects/flyer_villa_facade.webp" alt="صروح شركة رسوخ العقارية" loading="lazy">
+            <div class="visual-gradient-overlay"></div>
+          </div>
+
+          <div class="concierge-visual-content">
+            <div class="consultant-vip-card">
+              <div class="consultant-header">
+                <div class="consultant-avatar">
+                  <span>R</span>
+                  <span class="pulse-indicator" title="متواجد للرد الآن"></span>
+                </div>
+                <div class="consultant-meta">
+                  <span class="consultant-role">مستشار صروح رُسوخ</span>
+                  <h4 class="consultant-name">قسم التطوير والاستثمار العقاري</h4>
+                  <span class="consultant-status">● متواجد للرد الفوري وتقديم الاستشارات</span>
+                </div>
+              </div>
+              
+              <div class="concierge-perks-list">
+                <div class="perk-item">
+                  <div class="perk-icon">⚡</div>
+                  <div class="perk-text">
+                    <strong>رد مباشر خلال دقائق</strong>
+                    <span>محادثة رسمية موثقة دون فترات انتظار طويلة</span>
+                  </div>
+                </div>
+                <div class="perk-item">
+                  <div class="perk-icon">📐</div>
+                  <div class="perk-text">
+                    <strong>كروكيات ومخططات حصرية</strong>
+                    <span>استلام ملفات PDF والأسعار التفصيلية لحظياً</span>
+                  </div>
+                </div>
+                <div class="perk-item">
+                  <div class="perk-icon">🏛️</div>
+                  <div class="perk-text">
+                    <strong>حجز أسبقية معاينة خاصة</strong>
+                    <span>تنسيق جولة ميدانية VIP لأحدث الصروح العقارية</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="concierge-contact-strip">
+                <a href="tel:8001237000" class="hotline-pill">
+                  <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1.01A11.36 11.36 0 0 1 8.5 3.92c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.54c0-.55-.45-1-.99-1z"/></svg>
+                  <span>الرقم الموحد: 800 123 7000</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
        Masterpiece Footer (Matching Homepage 100% with Parallax Background)
        ========================================================================== -->
-  <footer class="masterpiece-footer" id="contact">
+  <footer class="masterpiece-footer">
     
     <!-- VIP Newsletter & Investor Club Strip -->
     <div class="footer-vip-strip">
@@ -558,14 +777,10 @@
 
         <!-- Col 1: Brand Logo & About Rosokh -->
         <div class="footer-brand-box">
-          <div class="brand-logo footer-logo-wrap">
-            <div class="brand-emblem">
-              <img src="./img/logo.webp" alt="شعار شركة رسوخ العقارية">
-            </div>
-            <div class="brand-text">
-              <span class="brand-name">رُسـوخ <span>العقارية</span></span>
-              <span class="brand-tagline">ROSOKH REAL ESTATE</span>
-            </div>
+          <div class="footer-logo-wrap">
+            <a href="index.html" aria-label="شركة رسوخ العقارية">
+              <img src="./img/logo.webp" alt="شركة رسوخ العقارية" class="footer-brand-logo">
+            </a>
           </div>
 
           <span class="footer-brand-slogan">نحن نبني مجتمعات تدوم</span>

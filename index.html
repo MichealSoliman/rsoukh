@@ -22,16 +22,9 @@
   <header class="site-header">
     <div class="container">
       <nav class="navbar">
-        <!-- Brand Logo -->
-        <a href="#" class="brand-logo" aria-label="شركة رسوخ العقارية">
-          <div class="brand-emblem">
-            <!-- Modern Luxury Architectural Monogram -->
-           <img src="./img/logo.webp" alt="">
-          </div>
-          <div class="brand-text">
-            <span class="brand-name">رُسـوخ <span>العقارية</span></span>
-            <span class="brand-tagline">ROSOKH REAL ESTATE</span>
-          </div>
+        <!-- Brand Logo (Official Artwork without Side Text) -->
+        <a href="index.html" class="brand-logo" aria-label="شركة رسوخ العقارية">
+          <img src="./img/logo.webp" alt="شركة رسوخ العقارية" class="navbar-brand-logo">
         </a>
 
         <!-- Desktop Navigation Menu -->
@@ -191,9 +184,21 @@
           </li>
 
           <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+
+          <!-- Mobile Drawer Quick Actions -->
+          <li class="nav-drawer-footer">
+            <a href="https://wa.me/966500000000?text=مرحباً%20شركة%20رسوخ%20العقارية" target="_blank" rel="noopener" class="nav-drawer-btn wa">
+              <svg style="width:18px;height:18px;fill:currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
+              <span>محادثة واتساب مباشرة</span>
+            </a>
+            <a href="tel:8001237000" class="nav-drawer-btn phone">
+              <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1.01A11.36 11.36 0 0 1 8.5 3.92c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.54c0-.55-.45-1-.99-1z"/></svg>
+              <span>الاتصال الهاتفي: 800 123 7000</span>
+            </a>
+          </li>
         </ul>
 
-        <!-- Nav Actions: Email Button Only -->
+        <!-- Nav Actions: Email Button & Hamburger -->
         <div class="nav-actions">
           <a href="mailto:info@rosohk.com" class="nav-email-btn" title="راسلنا عبر البريد الإلكتروني">
             <svg viewBox="0 0 24 24">
@@ -212,6 +217,8 @@
       </nav>
     </div>
   </header>
+  <!-- Dark Backdrop for Mobile Navigation Drawer -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
 
   <!-- ==========================================================================
        Hero Section (Full-Bleed Video Background with Luxury Content On Top)
@@ -313,16 +320,23 @@
     </section>
 
     <!-- ==========================================================================
-         Rosokh About & Stats Section (Directly from User Uploaded Image)
+         Rosokh About & Stats Section (Directly from User Uploaded Reference)
          ========================================================================== -->
     <section class="rosokh-about-section" id="about-rosokh">
-      <div class="container">
+      <div class="container rosokh-about-container">
+        
+        <!-- Architectural Visual Background on Right -->
+        <div class="rosokh-about-bg-visual">
+          <img src="./img/248/248 (4).png" alt="شركة رسوخ العقارية - تصميم فاخر">
+        </div>
+
+        <!-- The Floating White Card -->
         <div class="rosokh-about-card">
           <div class="rosokh-about-header">
             <span class="rosokh-about-tag">من نحن</span>
             <h2 class="rosokh-about-headline">نحن نبني مجتمعات تدوم</h2>
             <p class="rosokh-about-desc">
-              نقدم حلولاً وخدمات عقارية متكاملة، نركز على الجودة والاستدامة لنصنع قيمة حقيقية تدوم للأجيال.
+              نقدم حلولاً وخدمات عقارية متكاملة، نركزعلى الجودة والاستدامة لنصنع قيمة حقيقية تدوم للأجيال.
             </p>
           </div>
 
@@ -352,12 +366,10 @@
           <div class="rosokh-about-footer">
             <button class="btn-rosokh-dark open-booking-modal">
               <span>تعرف أكثر على رسوخ</span>
-              <svg style="width:18px;height:18px;fill:currentColor" viewBox="0 0 24 24">
-                <path d="M14 7l-5 5 5 5V7z"/>
-              </svg>
             </button>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -472,7 +484,7 @@
           <div class="spotlight-grid">
             <!-- Right: Architectural Preview -->
             <div class="spotlight-visual">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85" alt="مشروع رسوخ إيليت - حي حطين" loading="lazy">
+              <img src="img/projects/p-elite.webp" alt="مشروع رسوخ إيليت - حي حطين" loading="lazy">
               <div class="spotlight-visual-overlay"></div>
               
               <div class="spotlight-photo-count">
@@ -565,7 +577,7 @@
           <!-- Card 1: رسوخ إيليت -->
           <article class="project-matrix-card" data-category="elite" data-status="available" data-title="رسوخ إيليت" data-district="حي حطين">
             <div class="p-card-media">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="مشروع رسوخ إيليت" loading="lazy">
+              <img src="img/projects/p-elite.webp" alt="مشروع رسوخ إيليت" loading="lazy">
               <div class="p-card-overlay"></div>
               <div class="p-card-top-badges">
                 <span class="p-category-tag tag-elite">مشاريع النخبة</span>
@@ -615,7 +627,7 @@
           <!-- Card 2: رسوخ ريزيدنس -->
           <article class="project-matrix-card" data-category="elite" data-status="available" data-title="رسوخ ريزيدنس" data-district="حي النرجس">
             <div class="p-card-media">
-              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="مشروع رسوخ ريزيدنس" loading="lazy">
+              <img src="img/projects/p-residence.webp" alt="مشروع رسوخ ريزيدنس" loading="lazy">
               <div class="p-card-overlay"></div>
               <div class="p-card-top-badges">
                 <span class="p-category-tag tag-elite">مشاريع النخبة</span>
@@ -665,7 +677,7 @@
           <!-- Card 3: رسوخ رواق -->
           <article class="project-matrix-card" data-category="elite" data-status="available" data-title="رسوخ رواق" data-district="حي الياسمين">
             <div class="p-card-media">
-              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="مشروع رسوخ رواق" loading="lazy">
+              <img src="img/projects/p-riwaq.webp" alt="مشروع رسوخ رواق" loading="lazy">
               <div class="p-card-overlay"></div>
               <div class="p-card-top-badges">
                 <span class="p-category-tag tag-elite">مشاريع النخبة</span>
@@ -715,7 +727,7 @@
           <!-- Card 4: رسوخ دروازة 262 -->
           <article class="project-matrix-card" data-category="elite" data-status="sold" data-title="رسوخ دروازة 262" data-district="حي الملقا">
             <div class="p-card-media">
-              <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="مشروع رسوخ دروازة 262" loading="lazy">
+              <img src="img/projects/p-darwazah262.webp" alt="مشروع رسوخ دروازة 262" loading="lazy">
               <div class="p-card-overlay"></div>
               <div class="p-card-top-badges">
                 <span class="p-category-tag tag-elite">مشاريع النخبة</span>
@@ -765,7 +777,7 @@
           <!-- Card 5: رسوخ 269 -->
           <article class="project-matrix-card" data-category="series" data-status="available" data-title="رسوخ 269" data-district="حي العارض">
             <div class="p-card-media">
-              <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=800&q=80" alt="مشروع رسوخ 269" loading="lazy">
+              <img src="img/projects/p-269.webp" alt="مشروع رسوخ 269" loading="lazy">
               <div class="p-card-overlay"></div>
               <div class="p-card-top-badges">
                 <span class="p-category-tag tag-series">سلسلة رسوخ</span>
@@ -815,7 +827,7 @@
           <!-- Card 6: رسوخ 235 -->
           <article class="project-matrix-card" data-category="series" data-status="sold" data-title="رسوخ 235" data-district="حي النرجس">
             <div class="p-card-media">
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="مشروع رسوخ 235" loading="lazy">
+              <img src="img/projects/p-235.webp" alt="مشروع رسوخ 235" loading="lazy">
               <div class="p-card-overlay"></div>
               <div class="p-card-top-badges">
                 <span class="p-category-tag tag-series">سلسلة رسوخ</span>
@@ -865,7 +877,7 @@
           <!-- Card 7: رسوخ 247 -->
           <article class="project-matrix-card" data-category="series" data-status="available" data-title="رسوخ 247" data-district="حي الياسمين">
             <div class="p-card-media">
-              <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=800&q=80" alt="مشروع رسوخ 247" loading="lazy">
+              <img src="img/projects/p-247.webp" alt="مشروع رسوخ 247" loading="lazy">
               <div class="p-card-overlay"></div>
               <div class="p-card-top-badges">
                 <span class="p-category-tag tag-series">سلسلة رسوخ</span>
@@ -915,7 +927,7 @@
           <!-- Card 8: رسوخ 248 -->
           <article class="project-matrix-card" data-category="series" data-status="available" data-title="رسوخ 248" data-district="حي القيروان">
             <div class="p-card-media">
-              <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="مشروع رسوخ 248" loading="lazy">
+              <img src="img/projects/p-248.webp" alt="مشروع رسوخ 248" loading="lazy">
               <div class="p-card-overlay"></div>
               <div class="p-card-top-badges">
                 <span class="p-category-tag tag-series">سلسلة رسوخ</span>
@@ -965,7 +977,7 @@
           <!-- Card 9: رسوخ 251 -->
           <article class="project-matrix-card" data-category="series" data-status="sold" data-title="رسوخ 251" data-district="حي الصحافة">
             <div class="p-card-media">
-              <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="مشروع رسوخ 251" loading="lazy">
+              <img src="img/projects/p-251.webp" alt="مشروع رسوخ 251" loading="lazy">
               <div class="p-card-overlay"></div>
               <div class="p-card-top-badges">
                 <span class="p-category-tag tag-series">سلسلة رسوخ</span>
@@ -1015,7 +1027,7 @@
           <!-- Card 10: رسوخ 257 -->
           <article class="project-matrix-card" data-category="series" data-status="available" data-title="رسوخ 257" data-district="حي الربيع">
             <div class="p-card-media">
-              <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=800&q=80" alt="مشروع رسوخ 257" loading="lazy">
+              <img src="img/projects/p-257.webp" alt="مشروع رسوخ 257" loading="lazy">
               <div class="p-card-overlay"></div>
               <div class="p-card-top-badges">
                 <span class="p-category-tag tag-series">سلسلة رسوخ</span>
@@ -1065,7 +1077,7 @@
           <!-- Card 11: رسوخ 258 -->
           <article class="project-matrix-card" data-category="series" data-status="available" data-title="رسوخ 258" data-district="حي الندا">
             <div class="p-card-media">
-              <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="مشروع رسوخ 258" loading="lazy">
+              <img src="img/projects/p-258.webp" alt="مشروع رسوخ 258" loading="lazy">
               <div class="p-card-overlay"></div>
               <div class="p-card-top-badges">
                 <span class="p-category-tag tag-series">سلسلة رسوخ</span>
@@ -1115,7 +1127,7 @@
           <!-- Card 12: رسوخ 259 -->
           <article class="project-matrix-card" data-category="series" data-status="sold" data-title="رسوخ 259" data-district="حي الغدير">
             <div class="p-card-media">
-              <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" alt="مشروع رسوخ 259" loading="lazy">
+              <img src="img/projects/p-259.webp" alt="مشروع رسوخ 259" loading="lazy">
               <div class="p-card-overlay"></div>
               <div class="p-card-top-badges">
                 <span class="p-category-tag tag-series">سلسلة رسوخ</span>
@@ -1165,7 +1177,7 @@
           <!-- Card 13: رسوخ 261 -->
           <article class="project-matrix-card" data-category="series" data-status="available" data-title="رسوخ 261" data-district="حي العقيق">
             <div class="p-card-media">
-              <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80" alt="مشروع رسوخ 261" loading="lazy">
+              <img src="img/projects/p-261.webp" alt="مشروع رسوخ 261" loading="lazy">
               <div class="p-card-overlay"></div>
               <div class="p-card-top-badges">
                 <span class="p-category-tag tag-series">سلسلة رسوخ</span>
@@ -1301,69 +1313,188 @@
       </div>
     </section>
 
+ 
+
     <!-- ==========================================================================
-         Section 3: Home Features Checklist (Flyer features bar)
+         Section: WhatsApp Direct Lead Generation & Concierge Pavilion
          ========================================================================== -->
-    <section class="features-checklist-section" id="features">
+    <section class="rosokh-contact-section" id="contact">
       <div class="container">
-        <!-- "Home Features" Pill Badge directly from the flyer -->
-        <div class="features-badge-pill">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-          </svg>
-          <span>مميزات القصر ومرافقه الحصرية • Home Features</span>
+        
+        <!-- Grand Split Architectural Pavilion (Creative Asymmetric Suite) -->
+        <div class="concierge-pavilion">
+
+          <!-- Col 1: Interactive WhatsApp Inquiry Form -->
+          <div class="concierge-form-col">
+            <div class="concierge-form-header">
+              <div class="concierge-tag">
+                <span class="gold-sparkle">✦</span>
+                <span>استشارة عقارية مباشرة • DIRECT VIP INQUIRY</span>
+              </div>
+              <h2 class="concierge-title">تواصل مباشرة مع مستشارك العقاري</h2>
+              <p class="concierge-subtitle">
+                سجّل بياناتك وسيتم توجيهك فوراً لمحادثة مخصصة مع مستشار رُسوخ المعتمد لتزويدك بقوائم الأسعار والمخططات فوراً وبدون انتظار.
+              </p>
+            </div>
+
+            <form class="whatsapp-lead-form" id="whatsappLeadForm">
+              <div class="form-grid-2col">
+                
+                <!-- Input 1: Full Name -->
+                <div class="form-field-group">
+                  <label class="field-label" for="waLeadName">الاسم الكريم</label>
+                  <div class="input-wrap">
+                    <input 
+                      type="text" 
+                      id="waLeadName" 
+                      class="contact-input" 
+                      placeholder="مثال: محمد بن سعد" 
+                      required
+                      autocomplete="name"
+                    >
+                    <div class="field-icon">
+                      <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Input 2: Phone Number -->
+                <div class="form-field-group">
+                  <label class="field-label" for="waLeadPhone">رقم الجوال (واتساب)</label>
+                  <div class="input-wrap">
+                    <input 
+                      type="tel" 
+                      id="waLeadPhone" 
+                      class="contact-input" 
+                      placeholder="05XXXXXXXX" 
+                      required
+                      autocomplete="tel"
+                    >
+                    <div class="field-icon">
+                      <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Input 3: Email Address -->
+                <div class="form-field-group">
+                  <label class="field-label" for="waLeadEmail">البريد الإلكتروني</label>
+                  <div class="input-wrap">
+                    <input 
+                      type="email" 
+                      id="waLeadEmail" 
+                      class="contact-input" 
+                      placeholder="name@domain.com" 
+                      required
+                      autocomplete="email"
+                    >
+                    <div class="field-icon">
+                      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Input 4: Interest Type -->
+                <div class="form-field-group select-group">
+                  <label class="field-label" for="waLeadInterest">نوع الاهتمام العقاري</label>
+                  <div class="input-wrap">
+                    <select id="waLeadInterest" class="contact-select" required>
+                      <option value="" disabled selected>اختر نوع الاهتمام</option>
+                      <option value="شراء وحدة سكنية">شراء وحدة سكنية فاخرة</option>
+                      <option value="استثمار عقاري">استثمار عقاري بعوائد مجزية</option>
+                      <option value="استفسار عام وحجز معاينة">استفسار عام وحجز جولة معاينة VIP</option>
+                    </select>
+                    <div class="select-chevron">
+                      <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Submit Button (Direct to WhatsApp) -->
+              <button type="submit" class="btn-send-whatsapp" id="btnSendWaLead">
+                <svg viewBox="0 0 24 24" class="wa-btn-icon"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
+                <span>إرسال الطلب وبدء محادثة واتساب الرسمية</span>
+                <svg viewBox="0 0 24 24" class="arrow-btn-icon"><path d="M14 7l-5 5 5 5V7z"/></svg>
+              </button>
+
+              <!-- Micro Trust Badges Row -->
+              <div class="form-trust-row">
+                <span class="trust-pill"><span class="check-dot">✓</span> خصوصية وسرية تامة لبياناتك</span>
+                <span class="trust-pill"><span class="check-dot">✓</span> اتصال مشفر ومباشر مع المستشار</span>
+                <span class="trust-pill"><span class="check-dot">✓</span> تسليم الكتالوجات والأسعار فوراً</span>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Col 2: Luxury Architectural Showcase & Live Consultant Card -->
+          <div class="concierge-visual-col">
+            <div class="concierge-visual-bg">
+              <img src="./img/projects/flyer_villa_facade.webp" alt="صروح شركة رسوخ العقارية" loading="lazy">
+              <div class="visual-gradient-overlay"></div>
+            </div>
+
+            <div class="concierge-visual-content">
+              <div class="consultant-vip-card">
+                <div class="consultant-header">
+                  <div class="consultant-avatar">
+                    <span>R</span>
+                    <span class="pulse-indicator" title="متواجد للرد الآن"></span>
+                  </div>
+                  <div class="consultant-meta">
+                    <span class="consultant-role">مستشار صروح رُسوخ</span>
+                    <h4 class="consultant-name">قسم التطوير والاستثمار العقاري</h4>
+                    <span class="consultant-status">● متواجد للرد الفوري وتقديم الاستشارات</span>
+                  </div>
+                </div>
+                
+                <div class="concierge-perks-list">
+                  <div class="perk-item">
+                    <div class="perk-icon">⚡</div>
+                    <div class="perk-text">
+                      <strong>رد مباشر خلال دقائق</strong>
+                      <span>محادثة رسمية موثقة دون فترات انتظار طويلة</span>
+                    </div>
+                  </div>
+                  <div class="perk-item">
+                    <div class="perk-icon">📐</div>
+                    <div class="perk-text">
+                      <strong>كروكيات ومخططات حصرية</strong>
+                      <span>استلام ملفات PDF والأسعار التفصيلية لحظياً</span>
+                    </div>
+                  </div>
+                  <div class="perk-item">
+                    <div class="perk-icon">🏛️</div>
+                    <div class="perk-text">
+                      <strong>حجز أسبقية معاينة خاصة</strong>
+                      <span>تنسيق جولة ميدانية VIP لأحدث الصروح العقارية</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="concierge-contact-strip">
+                  <a href="tel:8001237000" class="hotline-pill">
+                    <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1.01A11.36 11.36 0 0 1 8.5 3.92c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.54c0-.55-.45-1-.99-1z"/></svg>
+                    <span>الرقم الموحد: 800 123 7000</span>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
-        <div class="features-top-grid">
-          <div class="feature-check-item">
-            <div class="feature-square-icon">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            </div>
-            <span class="feature-text">6 أجنحة نوم ماستر ملكية (Bedrooms)</span>
-          </div>
-
-          <div class="feature-check-item">
-            <div class="feature-square-icon">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            </div>
-            <span class="feature-text">مسبح إنفينيتي خارجي مع جاكوزي (Swimming Pool)</span>
-          </div>
-
-          <div class="feature-check-item">
-            <div class="feature-square-icon">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            </div>
-            <span class="feature-text">مطبخ إيطالي فاخر + مطبخ خدمة (Luxury Kitchen)</span>
-          </div>
-
-          <div class="feature-check-item">
-            <div class="feature-square-icon">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            </div>
-            <span class="feature-text">موقف سيارات مظلل لـ 4 سيارات مجهز بشاحن EV (Parking)</span>
-          </div>
-
-          <div class="feature-check-item">
-            <div class="feature-square-icon">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            </div>
-            <span class="feature-text">قبو ترفيهي وصالة سينما خاصة (Basement & Cinema)</span>
-          </div>
-
-          <div class="feature-check-item">
-            <div class="feature-square-icon">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            </div>
-            <span class="feature-text">حدائق طبيعية خاصة وجلسات خارجية (Small Garden)</span>
-          </div>
-        </div>
       </div>
     </section>
 
     <!-- ==========================================================================
          Section 4: Masterpiece Footer with Luxury Parallax Image Background
          ========================================================================== -->
-    <footer class="masterpiece-footer" id="contact">
+    <footer class="masterpiece-footer">
       
       <!-- VIP Newsletter & Investor Club Strip -->
       <div class="footer-vip-strip">
@@ -1392,16 +1523,10 @@
 
           <!-- Col 1: Brand Logo & About Rosokh -->
           <div class="footer-brand-box">
-            <div class="brand-logo footer-logo-wrap">
-              <div class="brand-emblem">
-                <svg viewBox="0 0 24 24">
-                  <path d="M12 2L2 9.5V22h7v-7h6v7h7V9.5L12 2zm0 3.8l6 4.5v9.7h-3v-7H9v7H6V10.3l6-4.5z"/>
-                </svg>
-              </div>
-              <div class="brand-text">
-                <span class="brand-name">رُسـوخ <span>العقارية</span></span>
-                <span class="brand-tagline">ROSOKH REAL ESTATE</span>
-              </div>
+            <div class="footer-logo-wrap">
+              <a href="index.html" aria-label="شركة رسوخ العقارية">
+                <img src="./img/logo.webp" alt="شركة رسوخ العقارية" class="footer-brand-logo">
+              </a>
             </div>
 
             <span class="footer-brand-slogan">نحن نبني مجتمعات تدوم</span>
