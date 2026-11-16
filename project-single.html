@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">مشروع رسوخ إيليت | شركة رسوخ العقارية</title>
+  <meta name="description" content="تفاصيل ومخططات صروح شركة رسوخ العقارية في أرقى أحياء الرياض - صكوك إلكترونية وضمانات حتى 25 عاماً.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Dedicated Project Single Page Styles */
+    .project-hero-banner {
+      position: relative;
+      padding: 160px 0 90px;
+      background: linear-gradient(135deg, #101F30 0%, #0d1927 60%, #182e47 100%);
+      color: #FFFFFF;
+      overflow: hidden;
+    }
+    .project-hero-banner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 80% 30%, rgba(191, 159, 118, 0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .p-breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--secondary-light);
+      margin-bottom: 20px;
+    }
+    .p-breadcrumb a {
+      color: #FFFFFF;
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+    .p-breadcrumb a:hover {
+      opacity: 1;
+      color: var(--secondary);
+    }
+    .single-hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .single-header-tags {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .single-project-title {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+    .single-project-title span {
+      display: block;
+      color: var(--secondary);
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      margin-top: 6px;
+    }
+    .single-project-location {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--secondary-light);
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+    }
+    .single-project-location svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--secondary);
+    }
+    .single-project-lead {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #D1D8E2;
+      margin-bottom: 30px;
+    }
+    .single-hero-visual {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid rgba(191, 159, 118, 0.4);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      height: 420px;
+    }
+    .single-hero-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Specs Section */
+    .single-specs-section {
+      padding: 70px 0;
+      background: #FFFFFF;
+    }
+    .single-specs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+    .single-spec-card {
+      background: #F8F9FA;
+      border: 1px solid rgba(16, 31, 48, 0.08);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .single-spec-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--secondary);
+      box-shadow: 0 10px 25px rgba(191, 159, 118, 0.15);
+    }
+    .single-spec-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(191, 159, 118, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+    }
+    .single-spec-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--secondary-dark);
+    }
+    .single-spec-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .single-spec-val {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    /* Plans & Gallery Layout */
+    .plans-inquiry-layout {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .plan-box {
+      background: #F8F9FA;
+      border: 1px solid rgba(16, 31, 48, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      box-shadow: var(--shadow-sm);
+    }
+    .plan-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(16, 31, 48, 0.08);
+      padding-bottom: 12px;
+    }
+    .plan-tab-btn {
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      background: #FFFFFF;
+      border: 1px solid rgba(16, 31, 48, 0.1);
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--text-secondary);
+      transition: var(--transition);
+    }
+    .plan-tab-btn.active {
+      background: var(--primary);
+      color: #FFFFFF;
+      border-color: var(--primary);
+    }
+    .plan-preview-box {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: #FFFFFF;
+      border: 1px solid rgba(16, 31, 48, 0.08);
+      min-height: 380px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+    }
+    .plan-preview-box img {
+      max-height: 320px;
+      object-fit: contain;
+      border-radius: var(--radius-sm);
+    }
+    .plan-meta-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+      justify-content: center;
+    }
+    .plan-meta-item {
+      font-size: 0.85rem;
+      background: #F4F6F9;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Single Booking Sidebar */
+    .single-booking-sidebar {
+      background: #FFFFFF;
+      border: 2px solid rgba(191, 159, 118, 0.4);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      box-shadow: 0 15px 40px rgba(16, 31, 48, 0.08);
+      position: sticky;
+      top: 110px;
+    }
+    .single-booking-sidebar h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .single-booking-sidebar p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 992px) {
+      .single-hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .single-specs-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .plans-inquiry-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 576px) {
+      .single-project-title {
+        font-size: 2.2rem;
+      }
+      .single-specs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header (Matching Index) -->
+  <header class="site-header scrolled">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="شركة رسوخ العقارية">
+        <div class="brand-emblem">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 9.5V22h7v-7h6v7h7V9.5L12 2zm0 3.8l6 4.5v9.7h-3v-7H9v7H6V10.3l6-4.5z"/></svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">رُسـوخ <span>العقارية</span></span>
+          <span class="brand-tagline">ROSOKH REAL ESTATE</span>
+        </div>
+      </a>
+
+      <nav class="main-navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+          <li><a href="index.html#about-rosokh" class="nav-link">من نحن</a></li>
+          <li><a href="index.html#projects" class="nav-link active">مشاريعنا</a></li>
+          <li><a href="index.html#contact" class="nav-link">تواصل معنا</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="mailto:info@rosohk.com" class="nav-email-btn">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>info@rosohk.com</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Banner with Dynamic Project Details -->
+    <section class="project-hero-banner">
+      <div class="container">
+        
+        <div class="p-breadcrumb">
+          <a href="index.html">الرئيسية</a>
+          <span>/</span>
+          <a href="index.html#projects">مشاريعنا</a>
+          <span>/</span>
+          <span id="breadcrumbCurrent" style="color:var(--secondary);">رسوخ إيليت</span>
+        </div>
+
+        <div class="single-hero-grid">
+          <div>
+            <div class="single-header-tags">
+              <span class="p-category-tag tag-elite" id="pCategoryTag">مشاريع النخبة</span>
+              <span class="p-status-pill pill-available" id="pStatusPill"><span class="dot"></span> <span id="pStatusText">متاح للحجز الفوري</span></span>
+              <span class="p-code-badge" id="pCodeBadge">R-ELITE-01</span>
+            </div>
+
+            <h1 class="single-project-title" id="pTitle">
+              رسـوخ إيـلـيـت
+              <span id="pEnTitle">ROSOKH ELITE</span>
+            </h1>
+
+            <div class="single-project-location">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span id="pDistrict">الرياض - حي حطين الراقي</span>
+            </div>
+
+            <p class="single-project-lead" id="pDesc">
+              تحفة معمارية تنبض بالحداثة والخصوصية المطلقة في أرقى مربعات حي حطين؛ قصور وفلل فارهة صُممت لتلائم نخبة المجتمع، بواجهات زجاجية مزدوجة معزولة، مساحات متدفقة، ومسابح خاصة مع أنظمة سمارت هوم ذكية متكاملة.
+            </p>
+
+            <div class="spotlight-footer-row" style="border-top:1px solid rgba(255,255,255,0.15);padding-top:20px;">
+              <div class="spotlight-price-box">
+                <span class="sp-label">القيمة الاستثمارية تبدأ من</span>
+                <div class="sp-amount" id="pPrice">
+                  6,800,000 <span>ر.س</span>
+                </div>
+              </div>
+
+              <div class="spotlight-actions-group">
+                <a href="#bookingSection" class="btn-spotlight-primary">
+                  <span>طلب حجز معاينة ميدانية</span>
+                  <svg viewBox="0 0 24 24"><path d="M14 7l-5 5 5 5V7z"/></svg>
+                </a>
+                <a id="pWhatsAppBtn" href="#" target="_blank" rel="noopener" class="btn-advisory-wa" style="background:#25D366;border-color:#25D366;">
+                  <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
+                  <span>واتساب مباشر</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="single-hero-visual">
+            <img id="pMainImg" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85" alt="واجهة المشروع">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Specs Matrix -->
+    <section class="single-specs-section">
+      <div class="container">
+        
+        <div class="single-specs-grid">
+          <div class="single-spec-card">
+            <div class="single-spec-icon">
+              <svg viewBox="0 0 24 24"><path d="M19 12h-2V8h-2v4h-2V6H9v6H7V9H5v10h14v-7z"/></svg>
+            </div>
+            <div class="single-spec-label">المساحات المتوفرة</div>
+            <div class="single-spec-val" id="specArea">450 - 620 م²</div>
+          </div>
+
+          <div class="single-spec-card">
+            <div class="single-spec-icon">
+              <svg viewBox="0 0 24 24"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>
+            </div>
+            <div class="single-spec-label">الغرف والأجنحة</div>
+            <div class="single-spec-val" id="specRooms">6 أجنحة ماستر</div>
+          </div>
+
+          <div class="single-spec-card">
+            <div class="single-spec-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            </div>
+            <div class="single-spec-label">الضمانات المعتمدة</div>
+            <div class="single-spec-val" id="specWarranty">25 سنة هيكل إنشائي</div>
+          </div>
+
+          <div class="single-spec-card">
+            <div class="single-spec-icon">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            </div>
+            <div class="single-spec-label">حالة الصك</div>
+            <div class="single-spec-val" id="specDeed">صك إلكتروني مستقل</div>
+          </div>
+        </div>
+
+        <!-- Floor Plans & Direct Booking Form Layout -->
+        <div class="plans-inquiry-layout" id="bookingSection">
+          
+          <!-- Left: Architectural Floor Plans & Amenities -->
+          <div class="plan-box">
+            <div class="circles-header" style="text-align:right;margin-bottom:20px;">
+              <span class="section-subtitle">المخططات الهندسية المعتمدة</span>
+              <h2 class="section-title" style="font-size:1.8rem;">توزيع ذكي ومساحات متدفقة</h2>
+            </div>
+
+            <div class="plan-tabs">
+              <button class="plan-tab-btn active" onclick="switchPlan(this, 'ground')">الدور الأرضي (الضيافة والاستقبال)</button>
+              <button class="plan-tab-btn" onclick="switchPlan(this, 'first')">الدور الأول (أجنحة النوم العائلية)</button>
+              <button class="plan-tab-btn" onclick="switchPlan(this, 'roof')">الملحق العلوي (الروف والخدمات)</button>
+            </div>
+
+            <div class="plan-preview-box">
+              <img id="planImg" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" alt="المخطط المعماري">
+              <div class="plan-meta-list" id="planMetaList">
+                <span class="plan-meta-item">مجلس ضيافة رسمي فسيح</span>
+                <span class="plan-meta-item">صالة طعام ملكية</span>
+                <span class="plan-meta-item">مطبخ مفتوح + مطبخ خدمة</span>
+                <span class="plan-meta-item">مسبح خارجي وشلال مائي</span>
+                <span class="plan-meta-item">كراج لـ 3 سيارات</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: VIP Consultation Booking Form -->
+          <div class="single-booking-sidebar">
+            <div class="advisory-badge" style="color:var(--secondary);margin-bottom:8px;">
+              <svg style="width:18px;height:18px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 8.5L4.47 7 12 3.24 19.53 7 12 10.5zm0 3.5l-8-4v6.5l8 4 8-4V10l-8 4z"/></svg>
+              <span>حجز مباشر مع مستشار المشروع</span>
+            </div>
+            <h3>طلب جولة معاينة VIP</h3>
+            <p>سيتواصل معك مستشار رسوخ المختص بهذا المشروع لترتيب موعد زيارة ميدانية خاصة وتزويدك بالكتالوج الكامل.</p>
+
+            <form onsubmit="event.preventDefault(); alert('شكراً لاهتمامك بمشاريع رسوخ! تم تسجيل طلبك بنجاح وسيتواصل معك مستشار المشروع خلال 15 دقيقة.'); this.reset();">
+              <div class="form-group" style="margin-bottom:14px;">
+                <label style="font-size:0.88rem;font-weight:700;display:block;margin-bottom:4px;">الاسم الكريم</label>
+                <input type="text" class="form-control" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;" placeholder="أدخل اسمك الكريم" required>
+              </div>
+
+              <div class="form-group" style="margin-bottom:14px;">
+                <label style="font-size:0.88rem;font-weight:700;display:block;margin-bottom:4px;">رقم الجوال</label>
+                <input type="tel" class="form-control" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;" placeholder="05XXXXXXXX" required>
+              </div>
+
+              <div class="form-group" style="margin-bottom:18px;">
+                <label style="font-size:0.88rem;font-weight:700;display:block;margin-bottom:4px;">نوع الاستفسار</label>
+                <select class="form-control" style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
+                  <option>حجز موعد معاينة ميدانية</option>
+                  <option>طلب ملف البروشور والمخططات الهندسية PDF</option>
+                  <option>استشارة تمويلية وحجز فوري</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn-hero-primary" style="width:100%;">
+                <span>إرسال طلب المعاينة</span>
+                <svg style="width:18px;height:18px;fill:currentColor" viewBox="0 0 24 24"><path d="M14 7l-5 5 5 5V7z"/></svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Masterpiece Footer (Matching Index) -->
+  <footer class="masterpiece-footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        <div class="footer-brand-box">
+          <div class="brand-logo footer-logo-wrap">
+            <div class="brand-emblem"><svg viewBox="0 0 24 24"><path d="M12 2L2 9.5V22h7v-7h6v7h7V9.5L12 2zm0 3.8l6 4.5v9.7h-3v-7H9v7H6V10.3l6-4.5z"/></svg></div>
+            <div class="brand-text">
+              <span class="brand-name">رُسـوخ <span>العقارية</span></span>
+              <span class="brand-tagline">ROSOKH REAL ESTATE</span>
+            </div>
+          </div>
+          <span class="footer-brand-slogan">نحن نبني مجتمعات تدوم</span>
+          <p class="footer-brand-desc">ريادة في تطوير وتسويق الصروح المعمارية الفاخرة بالرياض، صكوك إلكترونية وضمانات حتى 25 عاماً.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title"><span>روابط سريعة</span></h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">الصفحة الرئيسية</a></li>
+            <li><a href="index.html#projects">جميع المشاريع الـ 13</a></li>
+            <li><a href="index.html#about-rosokh">من نحن</a></li>
+            <li><a href="index.html#contact">تواصل معنا</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title"><span>المقر والتواصل</span></h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-row"><span>الرياض، حي حطين الراقي | طريق الأمير تركي الأول</span></div>
+            <div class="footer-contact-row"><span>الهاتف: <strong style="color:#BF9F76;">800 123 7000</strong></span></div>
+            <div class="footer-contact-row"><span>info@rosohk.com</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script to load the project data based on URL parameter -->
+  <script>
+    const projectsData = {
+      elite: {
+        title: 'رسـوخ إيـلـيـت',
+        enTitle: 'ROSOKH ELITE',
+        code: 'R-ELITE-01',
+        district: 'الرياض - حي حطين النموذجي',
+        category: 'elite',
+        categoryName: 'مشاريع النخبة',
+        status: 'available',
+        statusText: 'متاح للحجز الفوري',
+        price: '6,800,000 ر.س',
+        area: '450 - 620 م²',
+        rooms: '6 أجنحة ماستر ملكية',
+        warranty: '25 سنة هيكل إنشائي معتمد',
+        deed: 'صك إلكتروني مستقل فوري',
+        desc: 'تحفة معمارية تنبض بالحداثة والخصوصية المطلقة في أرقى مربعات حي حطين؛ قصور وفلل فارهة صُممت لتلائم نخبة المجتمع، بواجهات زجاجية مزدوجة معزولة، ومسابح خاصة مع أنظمة سمارت هوم ذكية متكاملة ومصاعد إيطالية.',
+        img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85'
+      },
+      residence: {
+        title: 'رسـوخ ريـزيـدنـس',
+        enTitle: 'ROSOKH RESIDENCE',
+        code: 'R-RES-02',
+        district: 'الرياض - حي النرجس (شمال طريق الملك سلمان)',
+        category: 'elite',
+        categoryName: 'مشاريع النخبة',
+        status: 'available',
+        statusText: 'متاح للحجز الفوري',
+        price: '4,200,000 ر.س',
+        area: '380 - 480 م²',
+        rooms: '5 أجنحة ماستر',
+        warranty: '25 سنة هيكل إنشائي',
+        deed: 'صك إلكتروني مستقل',
+        desc: 'مجتمع سكني مغلق راقي يوفر أعلى مستويات الأمان والرفاهية العائلية، مع حدائق ومسارات مشي خاصة وتشطيبات إيطالية متقنة وإضاءات طبيعية فسيحة.',
+        img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85'
+      },
+      riwaq: {
+        title: 'رسـوخ رِواق',
+        enTitle: 'ROSOKH RIWAQ',
+        code: 'R-RWQ-03',
+        district: 'الرياض - حي الياسمين النموذجي',
+        category: 'elite',
+        categoryName: 'مشاريع النخبة',
+        status: 'available',
+        statusText: 'متاح للحجز',
+        price: '2,150,000 ر.س',
+        area: '220 - 340 م²',
+        rooms: '4 غرف نوم',
+        warranty: '15 سنة شاملة',
+        deed: 'صك إلكتروني مستقل',
+        desc: 'فلل روف وشقق بوتيك فاخرة بتصميم نيوكلاسيك معاصر ومصاعد خاصة وإطلالات بانورامية مفتوحة في أحد أهدأ مواقع حي الياسمين.',
+        img: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85'
+      },
+      darwazah262: {
+        title: 'رسـوخ دروازة 262',
+        enTitle: 'DARWAZAH 262',
+        code: 'R-DAR-262',
+        district: 'الرياض - حي الملقا (طريق أنس بن مالك)',
+        category: 'elite',
+        categoryName: 'مشاريع النخبة',
+        status: 'sold',
+        statusText: 'مباع بالكامل (Sold Out)',
+        price: 'مباع 100% بنجاح',
+        area: '400 - 520 م²',
+        rooms: '5 أجنحة ماستر',
+        warranty: '25 سنة',
+        deed: 'تم الإفراغ للملاك',
+        desc: 'أحد أبرز صروح رسوخ التاريخية في حي الملقا؛ فلل فارهة بقبو ترفيهي وصالة سينما خاصة ومصعد إيطالي وشلالات زجاجية مميزة.',
+        img: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=85'
+      },
+      269: {
+        title: 'رسـوخ 269',
+        enTitle: 'ROSOKH 269',
+        code: 'R-269',
+        district: 'الرياض - حي العارض (شمال الملك سلمان)',
+        category: 'series',
+        categoryName: 'سلسلة رسوخ السكنية',
+        status: 'available',
+        statusText: 'متاح للحجز',
+        price: '3,450,000 ر.س',
+        area: '320 - 410 م²',
+        rooms: '5 غرف ماستر',
+        warranty: '20 سنة',
+        deed: 'صك إلكتروني مستقل',
+        desc: 'فلل مودرن ذكية بواجهات رخامية حديثة بنظام تحكم ذكي كامل بالأجهزة والتكييف والإضاءات مع حوش خلفي فسيح.',
+        img: 'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1200&q=85'
+      },
+      235: {
+        title: 'رسـوخ 235',
+        enTitle: 'ROSOKH 235',
+        code: 'R-235',
+        district: 'الرياض - حي النرجس (موقع حيوي)',
+        category: 'series',
+        categoryName: 'سلسلة رسوخ السكنية',
+        status: 'sold',
+        statusText: 'مباع بالكامل',
+        price: 'مباع بالكامل',
+        area: '260 - 350 م²',
+        rooms: '4 غرف نوم',
+        warranty: '20 سنة',
+        deed: 'تم الإفراغ للملاك',
+        desc: 'تاون هاوس وأدوار سكنية مستقلة بمداخل سيارات خاصة وتشطيب سوبر ديلوكس في قلب حي النرجس الحيوي.',
+        img: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=85'
+      },
+      247: {
+        title: 'رسـوخ 247',
+        enTitle: 'ROSOKH 247',
+        code: 'R-247',
+        district: 'الرياض - حي الياسمين (مربع 14)',
+        category: 'series',
+        categoryName: 'سلسلة رسوخ السكنية',
+        status: 'available',
+        statusText: 'متاح للحجز',
+        price: '3,850,000 ر.س',
+        area: '350 - 450 م²',
+        rooms: '5 أجنحة ماستر',
+        warranty: '25 سنة',
+        deed: 'صك إلكتروني مستقل',
+        desc: 'فلل سكنية بطراز معماري سلماني حديث يدمج مفردات العمارة النجدية مع راحة وتقنيات الحياة المعاصرة.',
+        img: 'https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1200&q=85'
+      },
+      248: {
+        title: 'رسـوخ 248',
+        enTitle: 'ROSOKH 248',
+        code: 'R-248',
+        district: 'الرياض - حي القيروان الراقي',
+        category: 'series',
+        categoryName: 'سلسلة رسوخ السكنية',
+        status: 'available',
+        statusText: 'متاح للحجز',
+        price: '3,900,000 ر.س',
+        area: '360 - 430 م²',
+        rooms: '5 غرف ماستر',
+        warranty: '25 سنة',
+        deed: 'صك إلكتروني مستقل',
+        desc: 'فلل عائلية فارهة بمسطحات خضراء واسعة، مصاعد خاصة، وتوزيع ذكي للفراغات يضمن أعلى مستويات الخصوصية.',
+        img: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=85'
+      },
+      251: {
+        title: 'رسـوخ 251',
+        enTitle: 'ROSOKH 251',
+        code: 'R-251',
+        district: 'الرياض - حي الصحافة (قرب برج الراجحي)',
+        category: 'series',
+        categoryName: 'سلسلة رسوخ السكنية',
+        status: 'sold',
+        statusText: 'مباع بالكامل',
+        price: 'مباع بالكامل',
+        area: '300 - 380 م²',
+        rooms: '4 غرف نوم',
+        warranty: '20 سنة',
+        deed: 'تم الإفراغ للملاك',
+        desc: 'مجمع فلل متلاصقة بتشطيبات إيطالية وموقع استراتيجي ممتاز بالقرب من طريق الملك فهد وأبراج الأعمال.',
+        img: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85'
+      },
+      257: {
+        title: 'رسـوخ 257',
+        enTitle: 'ROSOKH 257',
+        code: 'R-257',
+        district: 'الرياض - حي الربيع الفاخر',
+        category: 'series',
+        categoryName: 'سلسلة رسوخ السكنية',
+        status: 'available',
+        statusText: 'متاح للحجز',
+        price: '4,600,000 ر.س',
+        area: '390 - 510 م²',
+        rooms: '5 أجنحة ماستر',
+        warranty: '25 سنة',
+        deed: 'صك إلكتروني مستقل',
+        desc: 'فلل فاخرة بإطلالات زجاجية كاملة وتصميم مودرن متطور مع مصاعد راكبة ومسابح خاصة وتكييف كونسيلد.',
+        img: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=85'
+      },
+      258: {
+        title: 'رسـوخ 258',
+        enTitle: 'ROSOKH 258',
+        code: 'R-258',
+        district: 'الرياض - حي الندا (قرب جامعة الإمام)',
+        category: 'series',
+        categoryName: 'سلسلة رسوخ السكنية',
+        status: 'available',
+        statusText: 'متاح للحجز',
+        price: '2,900,000 ر.س',
+        area: '280 - 370 م²',
+        rooms: '4 غرف نوم',
+        warranty: '20 سنة',
+        deed: 'صك إلكتروني مستقل',
+        desc: 'وحدات سكنية ذكية بنظام أمني متطور وتشطيب فندقي متكامل بالقرب من الطرق والمحاور الرئيسية.',
+        img: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=85'
+      },
+      259: {
+        title: 'رسـوخ 259',
+        enTitle: 'ROSOKH 259',
+        code: 'R-259',
+        district: 'الرياض - حي الغدير (موقع استراتيجي)',
+        category: 'series',
+        categoryName: 'سلسلة رسوخ السكنية',
+        status: 'sold',
+        statusText: 'مباع بالكامل',
+        price: 'مباع بالكامل',
+        area: '310 - 400 م²',
+        rooms: '4 غرف نوم',
+        warranty: '20 سنة',
+        deed: 'تم الإفراغ للملاك',
+        desc: 'فلل دبلكس مودرن مع حدائق أسطح مجهزة لجلسات الشواء وإطلالات ساحرة على شمال الرياض.',
+        img: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85'
+      },
+      261: {
+        title: 'رسـوخ 261',
+        enTitle: 'ROSOKH 261',
+        code: 'R-261',
+        district: 'الرياض - حي العقيق (دقيقة من KAFD)',
+        category: 'series',
+        categoryName: 'سلسلة رسوخ السكنية',
+        status: 'available',
+        statusText: 'متاح للحجز',
+        price: '5,200,000 ر.س',
+        area: '420 - 560 م²',
+        rooms: '5 أجنحة ماستر',
+        warranty: '25 سنة',
+        deed: 'صك إلكتروني مستقل',
+        desc: 'فلل تنفيذية فاخرة بموقع استثنائي بجوار مركز الملك عبدالله المالي، تمثل فرصة نادرة للسكن الراقي والاستثمار عالي العائد.',
+        img: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85'
+      }
+    };
+
+    // Load data from URL query param ?id=...
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get('id') || 'elite';
+    const project = projectsData[projectId] || projectsData['elite'];
+
+    // Populate Page Elements
+    document.getElementById('pageTitle').textContent = `مشروع ${project.title} | شركة رسوخ العقارية`;
+    document.getElementById('breadcrumbCurrent').textContent = project.title;
+    document.getElementById('pTitle').childNodes[0].nodeValue = project.title + ' ';
+    document.getElementById('pEnTitle').textContent = project.enTitle;
+    document.getElementById('pCodeBadge').textContent = project.code;
+    document.getElementById('pDistrict').textContent = project.district;
+    document.getElementById('pDesc').textContent = project.desc;
+    document.getElementById('pPrice').innerHTML = project.price.includes('ر.س') ? `${project.price.replace('ر.س','')} <span>ر.س</span>` : project.price;
+    document.getElementById('pMainImg').src = project.img;
+    document.getElementById('pCategoryTag').textContent = project.categoryName;
+    document.getElementById('pStatusText').textContent = project.statusText;
+    
+    // Status styling
+    if (project.status === 'sold') {
+      document.getElementById('pStatusPill').className = 'p-status-pill pill-sold';
+    } else {
+      document.getElementById('pStatusPill').className = 'p-status-pill pill-available';
+    }
+
+    // Specs
+    document.getElementById('specArea').textContent = project.area;
+    document.getElementById('specRooms').textContent = project.rooms;
+    document.getElementById('specWarranty').textContent = project.warranty;
+    document.getElementById('specDeed').textContent = project.deed;
+
+    // WhatsApp CTA
+    document.getElementById('pWhatsAppBtn').href = `https://wa.me/966500000000?text=${encodeURIComponent('مرحباً شركة رسوخ العقارية، أود الاستفسار عن مشروع ' + project.title)}`;
+
+    // Floor plan switcher
+    function switchPlan(btn, type) {
+      document.querySelectorAll('.plan-tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const meta = document.getElementById('planMetaList');
+      if (type === 'ground') {
+        meta.innerHTML = `
+          <span class="plan-meta-item">مجلس ضيافة رسمي فسيح</span>
+          <span class="plan-meta-item">صالة طعام ملكية</span>
+          <span class="plan-meta-item">مطبخ مفتوح + مطبخ خدمة</span>
+          <span class="plan-meta-item">مسبح خارجي وشلال مائي</span>
+          <span class="plan-meta-item">كراج لـ 3 سيارات</span>
+        `;
+      } else if (type === 'first') {
+        meta.innerHTML = `
+          <span class="plan-meta-item">جناح ماستر ملكي مع غرفة ملابس وجاكوزي</span>
+          <span class="plan-meta-item">3 أجنحة نوم ماستر إضافية</span>
+          <span class="plan-meta-item">صالة معيشة عائلية خاصة</span>
+          <span class="plan-meta-item">أوفيس تحضيري مجهز</span>
+        `;
+      } else {
+        meta.innerHTML = `
+          <span class="plan-meta-item">صالة رياضية خاصة / سينما</span>
+          <span class="plan-meta-item">روف وتراس خارجي مجهز للشواء</span>
+          <span class="plan-meta-item">غرفة غسيل وغرفة خادمة مستقلة</span>
+          <span class="plan-meta-item">إطلالة بانورامية علوية</span>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>
