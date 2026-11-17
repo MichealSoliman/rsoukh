@@ -3076,8 +3076,8 @@ img, video {
   }
 
   .rosokh-stats-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 16px;
   }
 
   .rosokh-stat-item:nth-child(2)::after {
@@ -3164,8 +3164,21 @@ img, video {
   }
 
   .rosokh-stats-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 12px;
+  }
+
+  .rosokh-stat-item {
+    padding: 0 8px;
+  }
+
+  .rosokh-stat-number {
+    font-size: 2.25rem;
+  }
+
+  .rosokh-stat-label {
+    font-size: 0.88rem;
+    margin-top: 4px;
   }
 
   .rosokh-stat-item:not(:last-child)::after {
@@ -5897,5 +5910,279 @@ img, video {
   }
   .faq-answer {
     padding: 0 20px 20px;
+  }
+}
+
+
+/* ==========================================================================
+   Creative Floating Concierge Dock (WhatsApp & Call)
+   ========================================================================== */
+.rosokh-floating-dock {
+  position: fixed;
+  bottom: 30px;
+  left: 28px;
+  z-index: 1040;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  direction: rtl;
+  pointer-events: none;
+}
+
+/* Micro Live Concierge Badge */
+.floating-dock-badge {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(16, 31, 48, 0.92);
+  border: 1px solid rgba(191, 159, 118, 0.45);
+  color: #BF9F76;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 6px 18px rgba(16, 31, 48, 0.25);
+  margin-bottom: 2px;
+  user-select: none;
+  animation: dockBadgeFloat 3s ease-in-out infinite alternate;
+}
+
+@keyframes dockBadgeFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-3px); }
+}
+
+.badge-dot-live {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 8px #10B981;
+  display: inline-block;
+  animation: liveDotPulse 1.8s infinite;
+}
+
+@keyframes liveDotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* Shared Floating Button Pill */
+.floating-dock-btn {
+  pointer-events: auto;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 52px;
+  border-radius: 52px;
+  text-decoration: none;
+  color: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(16, 31, 48, 0.25);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #101F30;
+}
+
+.floating-dock-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  color: #FFFFFF;
+}
+
+/* Icon Box inside Pill */
+.dock-btn-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.dock-btn-icon svg {
+  width: 26px;
+  height: 26px;
+  transition: transform 0.3s ease;
+}
+
+.floating-dock-btn:hover .dock-btn-icon svg {
+  transform: scale(1.12);
+}
+
+/* Expandable Label */
+.dock-btn-label {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.86rem;
+  font-weight: 700;
+  font-family: 'Almarai', sans-serif;
+  transition: max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.3s ease,
+              padding 0.3s ease;
+  padding: 0;
+}
+
+.dock-btn-label b {
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.floating-dock-btn:hover .dock-btn-label {
+  max-width: 230px;
+  opacity: 1;
+  padding-left: 18px;
+  padding-right: 4px;
+}
+
+/* Specific Style: WhatsApp */
+.floating-dock-wa {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.38);
+}
+
+.floating-dock-wa:hover {
+  box-shadow: 0 14px 34px rgba(37, 211, 102, 0.55);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Radar Pulse Ring on WhatsApp */
+.floating-dock-wa::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid #25D366;
+  opacity: 0.7;
+  pointer-events: none;
+  animation: waPulseRing 2.4s infinite cubic-bezier(0.24, 0, 0.38, 1);
+}
+
+@keyframes waPulseRing {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  60% { transform: scale(1.45); opacity: 0; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Specific Style: Call Phone */
+.floating-dock-call {
+  background: linear-gradient(135deg, #101F30 0%, #1B2E46 100%);
+  border: 1.5px solid rgba(191, 159, 118, 0.65);
+  box-shadow: 0 10px 28px rgba(16, 31, 48, 0.35), 0 0 14px rgba(191, 159, 118, 0.18);
+}
+
+.floating-dock-call .dock-btn-icon svg {
+  fill: #BF9F76;
+}
+
+.floating-dock-call .dock-btn-label {
+  color: #FFFFFF;
+}
+
+.floating-dock-call .dock-btn-label b {
+  color: #BF9F76;
+}
+
+.floating-dock-call:hover {
+  box-shadow: 0 14px 34px rgba(16, 31, 48, 0.5), 0 0 22px rgba(191, 159, 118, 0.35);
+  border-color: #BF9F76;
+}
+
+.floating-dock-call:hover .dock-btn-icon svg {
+  animation: phoneJiggle 0.6s ease infinite;
+}
+
+@keyframes phoneJiggle {
+  0% { transform: rotate(0deg) scale(1.1); }
+  20% { transform: rotate(-12deg) scale(1.1); }
+  40% { transform: rotate(12deg) scale(1.1); }
+  60% { transform: rotate(-8deg) scale(1.1); }
+  80% { transform: rotate(8deg) scale(1.1); }
+  100% { transform: rotate(0deg) scale(1.1); }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .rosokh-floating-dock {
+    bottom: 20px;
+    left: 16px;
+    gap: 10px;
+  }
+
+  /* When on project-single page where mobile-bottom-bar exists */
+  .mobile-bottom-bar ~ .rosokh-floating-dock,
+  body.has-mobile-bottom-bar .rosokh-floating-dock {
+    bottom: 84px;
+  }
+
+  .floating-dock-badge {
+    font-size: 0.70rem;
+    padding: 3px 9px;
+  }
+
+  .floating-dock-btn {
+    height: 48px;
+    border-radius: 48px;
+  }
+
+  .dock-btn-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .floating-dock-wa::before {
+    width: 48px;
+    height: 48px;
+  }
+
+  .dock-btn-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .dock-btn-label {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .rosokh-floating-dock {
+    bottom: 16px;
+    left: 14px;
+    gap: 8px;
+  }
+
+  .floating-dock-badge {
+    display: none;
+  }
+
+  .floating-dock-btn {
+    height: 46px;
+    border-radius: 46px;
+  }
+
+  .dock-btn-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .floating-dock-wa::before {
+    width: 46px;
+    height: 46px;
+  }
+
+  .dock-btn-icon svg {
+    width: 20px;
+    height: 20px;
   }
 }

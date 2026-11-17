@@ -163,7 +163,7 @@ const MASTERPIECE_FOOTER_HTML = `<footer class="masterpiece-footer">
     </div>
   </footer>`;
 
-const targetFiles = ['index.html', 'about.html', 'contact.html', 'services.html', 'project-single.html'];
+const targetFiles = ['index.html', 'about/', 'contact/', 'services.html', 'project-single.html'];
 
 targetFiles.forEach(file => {
   const filePath = path.join(ROOT_DIR, file);
@@ -171,7 +171,7 @@ targetFiles.forEach(file => {
 
   let content = fs.readFileSync(filePath, 'utf8');
   const footerRegex = /<footer class="masterpiece-footer">[\s\S]*?<\/footer>/;
-  
+
   if (footerRegex.test(content)) {
     content = content.replace(footerRegex, MASTERPIECE_FOOTER_HTML);
     fs.writeFileSync(filePath, content, 'utf8');

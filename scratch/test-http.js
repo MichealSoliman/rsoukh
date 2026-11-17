@@ -3,8 +3,8 @@ const http = require('http');
 const pages = [
   '',
   'services.html',
-  'about.html',
-  'contact.html',
+  'about/',
+  'contact/',
   'service-development.html',
   'service-project-management.html',
   'service-sales-marketing.html',

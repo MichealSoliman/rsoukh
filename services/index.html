@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>خدماتنا العقارية المتكاملة | شركة رسوخ العقارية</title>
-  <meta name="description" content="تعرف على منظومة خدمات شركة رسوخ العقارية: التطوير العقاري، إدارة المشاريع والإشراف الهندسي، التسويق والمبيعات، دراسات الجدوى، والتصميم المعماري.">
-  
+  <meta name="description"
+    content="تعرف على منظومة خدمات شركة رسوخ العقارية: التطوير العقاري، إدارة المشاريع والإشراف الهندسي، التسويق والمبيعات، دراسات الجدوى، والتصميم المعماري.">
+
   <!-- Google Fonts: Almarai -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/project-details.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/project-details.css">
 
   <style>
     /* Dedicated Page Styling for Services */
     .services-page-hero {
       padding: 160px 0 95px;
       background: radial-gradient(circle at 50% 20%, rgba(191, 159, 118, 0.15) 0%, transparent 70%),
-                  linear-gradient(180deg, #09131F 0%, #0E1B29 100%);
+        linear-gradient(180deg, #09131F 0%, #0E1B29 100%);
       color: #FFFFFF;
       text-align: center;
       position: relative;
@@ -310,10 +312,12 @@
       .service-pillars-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
       .service-detail-footer {
         flex-direction: column;
         align-items: flex-start;
       }
+
       .service-wa-btn {
         width: 100%;
         justify-content: center;
@@ -324,28 +328,34 @@
       .services-page-hero {
         padding: 120px 0 50px;
       }
+
       .services-hero-headline {
         font-size: 2.1rem;
       }
+
       .service-detail-card {
         padding: 30px 22px;
       }
+
       .service-detail-header {
         flex-direction: column;
       }
+
       .service-detail-number {
         display: none;
       }
+
       .service-pillars-grid {
         grid-template-columns: 1fr;
       }
+
       .service-metrics-row {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
       }
     }
-  
+
     .service-footer-btns-group {
       display: flex;
       align-items: center;
@@ -382,6 +392,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- ==========================================================================
@@ -391,55 +402,73 @@
     <div class="container">
       <nav class="navbar">
         <!-- Brand Logo -->
-        <a href="index.html" class="brand-logo" aria-label="شركة رسوخ العقارية">
-          <img src="./img/logo.webp" alt="شركة رسوخ العقارية" class="navbar-brand-logo">
+        <a href="../index.html" class="brand-logo" aria-label="شركة رسوخ العقارية">
+          <img src="../img/logo.webp" alt="شركة رسوخ العقارية" class="navbar-brand-logo">
         </a>
 
         <!-- Desktop Navigation Menu -->
         <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html" class="nav-link">الرئيسية</a></li>
-          <li><a href="about.html" class="nav-link">من نحن</a></li>
+          <li><a href="../index.html" class="nav-link">الرئيسية</a></li>
+          <li><a href="../about/" class="nav-link">من نحن</a></li>
 
           <!-- Dropdown 1: خدماتنا (Active) -->
           <li class="nav-item-dropdown">
-            <a href="services.html" class="nav-link active">
+            <a href="../services/" class="nav-link active">
               <span>خدماتنا</span>
-              <svg class="dropdown-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              <svg class="dropdown-arrow" viewBox="0 0 24 24">
+                <path d="M7 10l5 5 5-5z" />
+              </svg>
             </a>
             <div class="dropdown-menu services-dropdown">
-              <a href="service-development.html" class="dropdown-item">
+              <a href="../service-development/" class="dropdown-item">
                 <div class="item-icon-box">
-                  <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 3.8l6 4.5v9.7h-3v-7H9v7H6V11.3l6-4.5z"/></svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 3.8l6 4.5v9.7h-3v-7H9v7H6V11.3l6-4.5z" />
+                  </svg>
                 </div>
                 <span>التطوير العقاري والاستثمار</span>
               </a>
-              <a href="service-project-management.html" class="dropdown-item">
+              <a href="../service-project-management/" class="dropdown-item">
                 <div class="item-icon-box">
-                  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                  </svg>
                 </div>
                 <span>إدارة المشاريع والإشراف الهندسي</span>
               </a>
-              <a href="service-sales-marketing.html" class="dropdown-item">
+              <a href="../service-sales-marketing/" class="dropdown-item">
                 <div class="item-icon-box">
-                  <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" />
+                  </svg>
                 </div>
                 <span>التسويق والمبيعات وحلول التملّك</span>
               </a>
-              <a href="service-consulting.html" class="dropdown-item">
+              <a href="../service-consulting/" class="dropdown-item">
                 <div class="item-icon-box">
-                  <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                  </svg>
                 </div>
                 <span>الاستشارات ودراسات الجدوى</span>
               </a>
-              <a href="service-architectural-design.html" class="dropdown-item">
+              <a href="../service-architectural-design/" class="dropdown-item">
                 <div class="item-icon-box">
-                  <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
+                  </svg>
                 </div>
                 <span>التصميم المعماري والديكور الداخلي</span>
               </a>
-              <a href="service-facility-management.html" class="dropdown-item">
+              <a href="../service-facility-management/" class="dropdown-item">
                 <div class="item-icon-box">
-                  <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                  </svg>
                 </div>
                 <span>إدارة الأصول وتشغيل المرافق</span>
               </a>
@@ -447,15 +476,16 @@
           </li>
 
           <!-- Dropdown 2: مشاريعنا -->
-          <li><a href="index.html#projects" class="nav-link">مشاريعنا</a></li>
-          <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+          <li><a href="../index.html#projects" class="nav-link">مشاريعنا</a></li>
+          <li><a href="../contact/" class="nav-link">تواصل معنا</a></li>
         </ul>
 
         <!-- Nav Actions: Email Button & Hamburger -->
         <div class="nav-actions">
           <a href="mailto:info@rosohk.com" class="nav-email-btn" title="راسلنا عبر البريد الإلكتروني">
             <svg viewBox="0 0 24 24">
-              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
             </svg>
             <span>info@rosohk.com</span>
           </a>
@@ -470,7 +500,7 @@
   <section class="services-page-hero">
     <div class="container">
       <div class="services-breadcrumbs">
-        <a href="index.html">الرئيسية</a>
+        <a href="../index.html">الرئيسية</a>
         <span>/</span>
         <span>خدماتنا</span>
       </div>
@@ -478,17 +508,18 @@
         منظومة <span>خدماتنا العقارية</span> المتكاملة
       </h1>
       <p class="services-hero-desc">
-        نُسخّر خبراتنا المتراكمة وكفاءاتنا الهندسية والاستثمارية لنقدم حلولاً متكاملة تصنع الفارق؛ بدءاً من الرؤية الاستراتيجية وتأمين الأراضي، وحتى تسليم وإدارة المجتمعات العمرانية الفاخرة.
+        نُسخّر خبراتنا المتراكمة وكفاءاتنا الهندسية والاستثمارية لنقدم حلولاً متكاملة تصنع الفارق؛ بدءاً من الرؤية
+        الاستراتيجية وتأمين الأراضي، وحتى تسليم وإدارة المجتمعات العمرانية الفاخرة.
       </p>
 
       <!-- Fast Anchor Navigation Pills -->
       <div class="services-nav-pills">
-        <a href="service-development.html" class="service-nav-pill-item">التطوير العقاري</a>
-        <a href="service-project-management.html" class="service-nav-pill-item">إدارة المشاريع</a>
-        <a href="service-sales-marketing.html" class="service-nav-pill-item">التسويق والمبيعات</a>
-        <a href="service-consulting.html" class="service-nav-pill-item">الاستشارات والجدوى</a>
-        <a href="service-architectural-design.html" class="service-nav-pill-item">التصميم المعماري</a>
-        <a href="service-facility-management.html" class="service-nav-pill-item">إدارة الأصول والمرافق</a>
+        <a href="../service-development/" class="service-nav-pill-item">التطوير العقاري</a>
+        <a href="../service-project-management/" class="service-nav-pill-item">إدارة المشاريع</a>
+        <a href="../service-sales-marketing/" class="service-nav-pill-item">التسويق والمبيعات</a>
+        <a href="../service-consulting/" class="service-nav-pill-item">الاستشارات والجدوى</a>
+        <a href="../service-architectural-design/" class="service-nav-pill-item">التصميم المعماري</a>
+        <a href="../service-facility-management/" class="service-nav-pill-item">إدارة الأصول والمرافق</a>
       </div>
     </div>
   </section>
@@ -505,7 +536,7 @@
           <div class="service-detail-title-group">
             <div class="service-detail-icon-circle">
               <svg viewBox="0 0 24 24">
-                <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 3.8l6 4.5v9.7h-3v-7H9v7H6V11.3l6-4.5z"/>
+                <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 3.8l6 4.5v9.7h-3v-7H9v7H6V11.3l6-4.5z" />
               </svg>
             </div>
             <div>
@@ -517,7 +548,9 @@
         </div>
 
         <p class="service-detail-desc">
-          نعمل في «رسوخ» على تحويل الأراضي الخام إلى مجتمعات حيوية متكاملة تتناغم مع كود البناء السعودي ومستهدفات جودة الحياة في رؤية المملكة 2030. نتبع منهجية تطويرية محكمة تعتمد على معايير الاستدامة وكفاءة الطاقة، وتضمن أعلى درجات العائد الاستثماري لشركائنا وعملائنا.
+          نعمل في «رسوخ» على تحويل الأراضي الخام إلى مجتمعات حيوية متكاملة تتناغم مع كود البناء السعودي ومستهدفات جودة
+          الحياة في رؤية المملكة 2030. نتبع منهجية تطويرية محكمة تعتمد على معايير الاستدامة وكفاءة الطاقة، وتضمن أعلى
+          درجات العائد الاستثماري لشركائنا وعملائنا.
         </p>
 
         <div class="service-pillars-grid">
@@ -530,7 +563,8 @@
           <div class="pillar-box">
             <span class="pillar-number">المرحلة 02</span>
             <div class="pillar-title">الاعتمادات والمخططات</div>
-            <p class="pillar-desc">إعداد المخططات الهندسية واستخراج التراخيص النظامية من الجهات المعنية بسرعة واحترافية.</p>
+            <p class="pillar-desc">إعداد المخططات الهندسية واستخراج التراخيص النظامية من الجهات المعنية بسرعة واحترافية.
+            </p>
           </div>
 
           <div class="pillar-box">
@@ -552,17 +586,23 @@
             <div class="metric-badge"><span class="dot">✦</span>ضمان إنشائي 10 سنوات</div>
             <div class="metric-badge"><span class="dot">✦</span>مطابقة كود البناء السعودي</div>
           </div>
-          
-            <div class="service-footer-btns-group">
-              <a href="service-development.html" class="service-details-full-btn">
-                <span>استعراض صفحة الخدمة الشاملة والمشاريع</span>
-                <svg viewBox="0 0 24 24"><path d="M14 7l-5 5 5 5V7z"/></svg>
-              </a>
-              <a href="https://wa.me/966500000000?text=مرحباً%20شركة%20رسوخ،%20أرغب%20في%20استشارة%20حول%20خدمة%20التطوير%20العقاري" target="_blank" rel="noopener" class="service-wa-btn">
-            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
-            <span>طلب استشارة تطوير عقاري عبر واتساب</span>
-          </a>
-            </div>
+
+          <div class="service-footer-btns-group">
+            <a href="../service-development/" class="service-details-full-btn">
+              <span>استعراض صفحة الخدمة الشاملة والمشاريع</span>
+              <svg viewBox="0 0 24 24">
+                <path d="M14 7l-5 5 5 5V7z" />
+              </svg>
+            </a>
+            <a href="https://wa.me/966500000000?text=مرحباً%20شركة%20رسوخ،%20أرغب%20في%20استشارة%20حول%20خدمة%20التطوير%20العقاري"
+              target="_blank" rel="noopener" class="service-wa-btn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z" />
+              </svg>
+              <span>طلب استشارة تطوير عقاري عبر واتساب</span>
+            </a>
+          </div>
         </div>
       </article>
 
@@ -572,7 +612,8 @@
           <div class="service-detail-title-group">
             <div class="service-detail-icon-circle">
               <svg viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
               </svg>
             </div>
             <div>
@@ -584,7 +625,8 @@
         </div>
 
         <p class="service-detail-desc">
-          نقدم خدمات إدارة وإشراف هندسي متكاملة تشمل كافة مراحل التنفيذ من الحفر وحتى التشطيب النهائي، بالاعتماد على كوادر هندسية وطنية وعالمية ذات خبرة عالية لضمان الالتزام بالمواصفات الفنية المعتمدة والميزانيات المحددة.
+          نقدم خدمات إدارة وإشراف هندسي متكاملة تشمل كافة مراحل التنفيذ من الحفر وحتى التشطيب النهائي، بالاعتماد على
+          كوادر هندسية وطنية وعالمية ذات خبرة عالية لضمان الالتزام بالمواصفات الفنية المعتمدة والميزانيات المحددة.
         </p>
 
         <div class="service-pillars-grid">
@@ -619,17 +661,23 @@
             <div class="metric-badge"><span class="dot">✦</span>100% الالتزام بالجداول الزمنية</div>
             <div class="metric-badge"><span class="dot">✦</span>معايير سلامة مهنية صارمة</div>
           </div>
-          
-            <div class="service-footer-btns-group">
-              <a href="service-project-management.html" class="service-details-full-btn">
-                <span>استعراض صفحة الخدمة الشاملة والمشاريع</span>
-                <svg viewBox="0 0 24 24"><path d="M14 7l-5 5 5 5V7z"/></svg>
-              </a>
-              <a href="https://wa.me/966500000000?text=مرحباً%20شركة%20رسوخ،%20أرغب%20في%20استشارة%20حول%20إدارة%20المشاريع%20والإشراف%20الهندسي" target="_blank" rel="noopener" class="service-wa-btn">
-            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
-            <span>طلب خدمات الإشراف الهندسي عبر واتساب</span>
-          </a>
-            </div>
+
+          <div class="service-footer-btns-group">
+            <a href="../service-project-management/" class="service-details-full-btn">
+              <span>استعراض صفحة الخدمة الشاملة والمشاريع</span>
+              <svg viewBox="0 0 24 24">
+                <path d="M14 7l-5 5 5 5V7z" />
+              </svg>
+            </a>
+            <a href="https://wa.me/966500000000?text=مرحباً%20شركة%20رسوخ،%20أرغب%20في%20استشارة%20حول%20إدارة%20المشاريع%20والإشراف%20الهندسي"
+              target="_blank" rel="noopener" class="service-wa-btn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z" />
+              </svg>
+              <span>طلب خدمات الإشراف الهندسي عبر واتساب</span>
+            </a>
+          </div>
         </div>
       </article>
 
@@ -639,7 +687,7 @@
           <div class="service-detail-title-group">
             <div class="service-detail-icon-circle">
               <svg viewBox="0 0 24 24">
-                <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+                <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" />
               </svg>
             </div>
             <div>
@@ -651,7 +699,9 @@
         </div>
 
         <p class="service-detail-desc">
-          منظومة تسويقية ومبيعات متطورة تعتمد على أدوات الاستهداف الرقمي والواقع الافتراضي 3D، مع شبكة شراكات استراتيجية مع كبرى البنوك والمؤسسات التمويلية في المملكة لتقديم حلول تمويل عقاري ميسرة تضمن سرعة تسويق الوحدات وتيسير التملك.
+          منظومة تسويقية ومبيعات متطورة تعتمد على أدوات الاستهداف الرقمي والواقع الافتراضي 3D، مع شبكة شراكات استراتيجية
+          مع كبرى البنوك والمؤسسات التمويلية في المملكة لتقديم حلول تمويل عقاري ميسرة تضمن سرعة تسويق الوحدات وتيسير
+          التملك.
         </p>
 
         <div class="service-pillars-grid">
@@ -686,17 +736,23 @@
             <div class="metric-badge"><span class="dot">✦</span>سرعة تسويق وإغلاق صفقات</div>
             <div class="metric-badge"><span class="dot">✦</span>حلول تمويل متوافقة مع الشريعة</div>
           </div>
-          
-            <div class="service-footer-btns-group">
-              <a href="service-sales-marketing.html" class="service-details-full-btn">
-                <span>استعراض صفحة الخدمة الشاملة والمشاريع</span>
-                <svg viewBox="0 0 24 24"><path d="M14 7l-5 5 5 5V7z"/></svg>
-              </a>
-              <a href="https://wa.me/966500000000?text=مرحباً%20شركة%20رسوخ،%20أرغب%20في%20استشارة%20حول%20حلول%20التسويق%20والمبيعات" target="_blank" rel="noopener" class="service-wa-btn">
-            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
-            <span>تواصل مع مستشار المبيعات عبر واتساب</span>
-          </a>
-            </div>
+
+          <div class="service-footer-btns-group">
+            <a href="../service-sales-marketing/" class="service-details-full-btn">
+              <span>استعراض صفحة الخدمة الشاملة والمشاريع</span>
+              <svg viewBox="0 0 24 24">
+                <path d="M14 7l-5 5 5 5V7z" />
+              </svg>
+            </a>
+            <a href="https://wa.me/966500000000?text=مرحباً%20شركة%20رسوخ،%20أرغب%20في%20استشارة%20حول%20حلول%20التسويق%20والمبيعات"
+              target="_blank" rel="noopener" class="service-wa-btn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z" />
+              </svg>
+              <span>تواصل مع مستشار المبيعات عبر واتساب</span>
+            </a>
+          </div>
         </div>
       </article>
 
@@ -706,7 +762,8 @@
           <div class="service-detail-title-group">
             <div class="service-detail-icon-circle">
               <svg viewBox="0 0 24 24">
-                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                <path
+                  d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
               </svg>
             </div>
             <div>
@@ -718,7 +775,9 @@
         </div>
 
         <p class="service-detail-desc">
-          ندعم قرارات المستثمرين والملاك عبر دراسات ميدانية وتحليلات دقيقة لحركة السوق العقاري؛ تشمل حساب التكاليف التقديرية، نمذجة العائد على الاستثمار (ROI)، وتحديد أعلى وأفضل استخدام للأرض (Highest and Best Use Analysis) لتفادي المخاطر وتحقيق أقصى ربحية ممكنة.
+          ندعم قرارات المستثمرين والملاك عبر دراسات ميدانية وتحليلات دقيقة لحركة السوق العقاري؛ تشمل حساب التكاليف
+          التقديرية، نمذجة العائد على الاستثمار (ROI)، وتحديد أعلى وأفضل استخدام للأرض (Highest and Best Use Analysis)
+          لتفادي المخاطر وتحقيق أقصى ربحية ممكنة.
         </p>
 
         <div class="service-pillars-grid">
@@ -753,17 +812,23 @@
             <div class="metric-badge"><span class="dot">✦</span>تعظيم العائد على رأس المال</div>
             <div class="metric-badge"><span class="dot">✦</span>تقارير معتمدة لصناديق الاستثمار</div>
           </div>
-          
-            <div class="service-footer-btns-group">
-              <a href="service-consulting.html" class="service-details-full-btn">
-                <span>استعراض صفحة الخدمة الشاملة والمشاريع</span>
-                <svg viewBox="0 0 24 24"><path d="M14 7l-5 5 5 5V7z"/></svg>
-              </a>
-              <a href="https://wa.me/966500000000?text=مرحباً%20شركة%20رسوخ،%20أرغب%20في%20طلب%20دراسة%20جدوى%20عقارية%20لمشروعي" target="_blank" rel="noopener" class="service-wa-btn">
-            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
-            <span>طلب دراسة جدوى استثمارية عبر واتساب</span>
-          </a>
-            </div>
+
+          <div class="service-footer-btns-group">
+            <a href="../service-consulting/" class="service-details-full-btn">
+              <span>استعراض صفحة الخدمة الشاملة والمشاريع</span>
+              <svg viewBox="0 0 24 24">
+                <path d="M14 7l-5 5 5 5V7z" />
+              </svg>
+            </a>
+            <a href="https://wa.me/966500000000?text=مرحباً%20شركة%20رسوخ،%20أرغب%20في%20طلب%20دراسة%20جدوى%20عقارية%20لمشروعي"
+              target="_blank" rel="noopener" class="service-wa-btn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z" />
+              </svg>
+              <span>طلب دراسة جدوى استثمارية عبر واتساب</span>
+            </a>
+          </div>
         </div>
       </article>
 
@@ -773,7 +838,8 @@
           <div class="service-detail-title-group">
             <div class="service-detail-icon-circle">
               <svg viewBox="0 0 24 24">
-                <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+                <path
+                  d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z" />
               </svg>
             </div>
             <div>
@@ -785,7 +851,9 @@
         </div>
 
         <p class="service-detail-desc">
-          نبتكر تصاميم معمارية فريدة تستلهم أصالة الطراز السلماني النجدي وتمزجه بأحدث مفاهيم العمارة الحديثة؛ نوفر حلولاً داخلية ذكية تعزز تدفق الضوء الطبيعي، وتوظف أرقى الخامات كالأخشاب الطبيعية ورخام الكلكتا الإيطالي لخلق تجربة عيش فندقية لا تُنسى.
+          نبتكر تصاميم معمارية فريدة تستلهم أصالة الطراز السلماني النجدي وتمزجه بأحدث مفاهيم العمارة الحديثة؛ نوفر
+          حلولاً داخلية ذكية تعزز تدفق الضوء الطبيعي، وتوظف أرقى الخامات كالأخشاب الطبيعية ورخام الكلكتا الإيطالي لخلق
+          تجربة عيش فندقية لا تُنسى.
         </p>
 
         <div class="service-pillars-grid">
@@ -820,17 +888,23 @@
             <div class="metric-badge"><span class="dot">✦</span>إضاءة طبيعية واجهات بانورامية</div>
             <div class="metric-badge"><span class="dot">✦</span>عزل صوتي وحراري فائق</div>
           </div>
-          
-            <div class="service-footer-btns-group">
-              <a href="service-architectural-design.html" class="service-details-full-btn">
-                <span>استعراض صفحة الخدمة الشاملة والمشاريع</span>
-                <svg viewBox="0 0 24 24"><path d="M14 7l-5 5 5 5V7z"/></svg>
-              </a>
-              <a href="https://wa.me/966500000000?text=مرحباً%20شركة%20رسوخ،%20أرغب%20في%20استشارة%20معمارية%20وتصميم%20داخلي" target="_blank" rel="noopener" class="service-wa-btn">
-            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
-            <span>طلب استشارة تصميم معماري عبر واتساب</span>
-          </a>
-            </div>
+
+          <div class="service-footer-btns-group">
+            <a href="../service-architectural-design/" class="service-details-full-btn">
+              <span>استعراض صفحة الخدمة الشاملة والمشاريع</span>
+              <svg viewBox="0 0 24 24">
+                <path d="M14 7l-5 5 5 5V7z" />
+              </svg>
+            </a>
+            <a href="https://wa.me/966500000000?text=مرحباً%20شركة%20رسوخ،%20أرغب%20في%20استشارة%20معمارية%20وتصميم%20داخلي"
+              target="_blank" rel="noopener" class="service-wa-btn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z" />
+              </svg>
+              <span>طلب استشارة تصميم معماري عبر واتساب</span>
+            </a>
+          </div>
         </div>
       </article>
 
@@ -840,7 +914,8 @@
           <div class="service-detail-title-group">
             <div class="service-detail-icon-circle">
               <svg viewBox="0 0 24 24">
-                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                <path
+                  d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
               </svg>
             </div>
             <div>
@@ -852,7 +927,9 @@
         </div>
 
         <p class="service-detail-desc">
-          علاقتنا مع عملائنا لا تنتهي عند تسليم المفتاح؛ بل نواصل دعمهم عبر منظومة إدارة مرافق متكاملة تضمن استدامة الصرح السكني ورفع كفاءته التشغيلية، وصيانة الأنظمة الميكانيكية والكهربائية لحفظ القيمة السوقية للعقار على المدى الطويل.
+          علاقتنا مع عملائنا لا تنتهي عند تسليم المفتاح؛ بل نواصل دعمهم عبر منظومة إدارة مرافق متكاملة تضمن استدامة
+          الصرح السكني ورفع كفاءته التشغيلية، وصيانة الأنظمة الميكانيكية والكهربائية لحفظ القيمة السوقية للعقار على
+          المدى الطويل.
         </p>
 
         <div class="service-pillars-grid">
@@ -877,7 +954,8 @@
           <div class="pillar-box">
             <span class="pillar-number">الخدمة 04</span>
             <div class="pillar-title">تعظيم العائد الإيجاري</div>
-            <p class="pillar-desc">حلول إدارة وتأجير للوحدات الاستثمارية تضمن للمستثمر تدفقاً نقدياً مستقراً ومستداماً.</p>
+            <p class="pillar-desc">حلول إدارة وتأجير للوحدات الاستثمارية تضمن للمستثمر تدفقاً نقدياً مستقراً ومستداماً.
+            </p>
           </div>
         </div>
 
@@ -887,17 +965,23 @@
             <div class="metric-badge"><span class="dot">✦</span>حفظ استدامة ورونق العقار</div>
             <div class="metric-badge"><span class="dot">✦</span>إدارة احترافية للمرافق المشتركة</div>
           </div>
-          
-            <div class="service-footer-btns-group">
-              <a href="service-facility-management.html" class="service-details-full-btn">
-                <span>استعراض صفحة الخدمة الشاملة والمشاريع</span>
-                <svg viewBox="0 0 24 24"><path d="M14 7l-5 5 5 5V7z"/></svg>
-              </a>
-              <a href="https://wa.me/966500000000?text=مرحباً%20شركة%20رسوخ،%20أرغب%20في%20خدمات%20إدارة%20الأصول%20وتشغيل%20المرافق" target="_blank" rel="noopener" class="service-wa-btn">
-            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
-            <span>طلب خدمات تشغيل وإدارة المرافق عبر واتساب</span>
-          </a>
-            </div>
+
+          <div class="service-footer-btns-group">
+            <a href="../service-facility-management/" class="service-details-full-btn">
+              <span>استعراض صفحة الخدمة الشاملة والمشاريع</span>
+              <svg viewBox="0 0 24 24">
+                <path d="M14 7l-5 5 5 5V7z" />
+              </svg>
+            </a>
+            <a href="https://wa.me/966500000000?text=مرحباً%20شركة%20رسوخ،%20أرغب%20في%20خدمات%20إدارة%20الأصول%20وتشغيل%20المرافق"
+              target="_blank" rel="noopener" class="service-wa-btn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z" />
+              </svg>
+              <span>طلب خدمات تشغيل وإدارة المرافق عبر واتساب</span>
+            </a>
+          </div>
         </div>
       </article>
 
@@ -908,7 +992,7 @@
        Executive Footer
        ========================================================================== -->
   <footer class="masterpiece-footer">
-    
+
     <!-- VIP Newsletter & Investor Club Strip -->
     <div class="footer-vip-strip">
       <div class="container">
@@ -917,12 +1001,13 @@
             <h3>انضم إلى <span>نادي النخبة والمستثمرين</span> لدى رُسوخ</h3>
             <p>احصل على أحدث الفرص الاستثمارية والقصور الحصرية قبل طرحها في السوق مع استشارات خاصة.</p>
           </div>
-          <form class="vip-form" onsubmit="event.preventDefault(); alert('شكراً لانضمامك لنادي النخبة لدى رسوخ! ستصلك أحدث العروض الحصرية.'); this.reset();">
+          <form class="vip-form"
+            onsubmit="event.preventDefault(); alert('شكراً لانضمامك لنادي النخبة لدى رسوخ! ستصلك أحدث العروض الحصرية.'); this.reset();">
             <input type="email" class="vip-input" placeholder="أدخل بريدك الإلكتروني" required>
             <button type="submit" class="btn-vip-submit">
               <span>اشتراك حصري</span>
               <svg style="width:16px;height:16px;fill:currentColor" viewBox="0 0 24 24">
-                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
               </svg>
             </button>
           </form>
@@ -937,15 +1022,16 @@
         <!-- Col 1: Brand Logo & About Rosokh -->
         <div class="footer-brand-box">
           <div class="footer-logo-wrap">
-            <a href="index.html" aria-label="شركة رسوخ العقارية">
-              <img src="./img/logo.webp" alt="شركة رسوخ العقارية" class="footer-brand-logo">
+            <a href="../index.html" aria-label="شركة رسوخ العقارية">
+              <img src="../img/logo.webp" alt="شركة رسوخ العقارية" class="footer-brand-logo">
             </a>
           </div>
 
           <span class="footer-brand-slogan">نحن نبني مجتمعات تدوم</span>
 
           <p class="footer-brand-desc">
-            ريادة في تطوير وتسويق الصروح المعمارية والفلل الفاخرة بالمملكة العربية السعودية؛ نبتكر حلولاً وخدمات عقارية متكاملة تصنع قيمة حقيقية تدوم للأجيال.
+            ريادة في تطوير وتسويق الصروح المعمارية والفلل الفاخرة بالمملكة العربية السعودية؛ نبتكر حلولاً وخدمات عقارية
+            متكاملة تصنع قيمة حقيقية تدوم للأجيال.
           </p>
 
           <div class="footer-licenses-pills">
@@ -957,59 +1043,76 @@
         <!-- Col 2: Our Services -->
         <div class="footer-col">
           <h4 class="footer-col-title">
-            <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" />
+            </svg>
             <span>خدماتنا</span>
           </h4>
           <ul class="footer-links-list">
-            <li><a href="service-development.html">التطوير العقاري والاستثمار</a></li>
-            <li><a href="service-project-management.html">إدارة المشاريع والإشراف الهندسي</a></li>
-            <li><a href="service-sales-marketing.html">التسويق والمبيعات وحلول التملّك</a></li>
-            <li><a href="service-consulting.html">الاستشارات ودراسات الجدوى</a></li>
-            <li><a href="service-architectural-design.html">التصميم المعماري والديكور الداخلي</a></li>
-            <li><a href="service-facility-management.html">إدارة الأصول وتشغيل المرافق</a></li>
+            <li><a href="../service-development/">التطوير العقاري والاستثمار</a></li>
+            <li><a href="../service-project-management/">إدارة المشاريع والإشراف الهندسي</a></li>
+            <li><a href="../service-sales-marketing/">التسويق والمبيعات وحلول التملّك</a></li>
+            <li><a href="../service-consulting/">الاستشارات ودراسات الجدوى</a></li>
+            <li><a href="../service-architectural-design/">التصميم المعماري والديكور الداخلي</a></li>
+            <li><a href="../service-facility-management/">إدارة الأصول وتشغيل المرافق</a></li>
           </ul>
         </div>
 
         <!-- Col 3: Exclusive Projects -->
         <div class="footer-col">
           <h4 class="footer-col-title">
-            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+            </svg>
             <span>مشاريعنا</span>
           </h4>
           <ul class="footer-links-list">
-            <li><a href="project-single.html?id=elite">رسوخ إيليت (حي حطين)</a></li>
-            <li><a href="project-single.html?id=residence">رسوخ ريزيدنس (حي النرجس)</a></li>
-            <li><a href="project-single.html?id=riwaq">رسوخ رواق (حي الياسمين)</a></li>
-            <li><a href="project-single.html?id=darwazah262">رسوخ دروازة 262</a></li>
-            <li><a href="index.html#projects">سلسلة رسوخ السكنية</a></li>
+            <li><a href="../project-single.html?id=elite">رسوخ إيليت (حي حطين)</a></li>
+            <li><a href="../project-single.html?id=residence">رسوخ ريزيدنس (حي النرجس)</a></li>
+            <li><a href="../project-single.html?id=riwaq">رسوخ رواق (حي الياسمين)</a></li>
+            <li><a href="../project-single.html?id=darwazah262">رسوخ دروازة 262</a></li>
+            <li><a href="../index.html#projects">سلسلة رسوخ السكنية</a></li>
           </ul>
         </div>
 
         <!-- Col 4: Contact & Interactive QR Code -->
         <div class="footer-col">
           <h4 class="footer-col-title">
-            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            </svg>
             <span>المقر والتواصل</span>
           </h4>
-          
+
           <div class="footer-contact-items">
             <div class="footer-contact-row">
               <div class="footer-contact-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
               </div>
               <span>الرياض، حي حطين الراقي | طريق الأمير تركي بن عبدالعزيز الأول</span>
             </div>
 
             <div class="footer-contact-row">
               <div class="footer-contact-icon">
-                <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1.01A11.36 11.36 0 0 1 8.5 3.92c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.54c0-.55-.45-1-.99-1z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1.01A11.36 11.36 0 0 1 8.5 3.92c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.54c0-.55-.45-1-.99-1z" />
+                </svg>
               </div>
               <span>الهاتف المجاني: <strong style="color:#BF9F76;" dir="ltr">800 123 7000</strong></span>
             </div>
 
             <div class="footer-contact-row">
               <div class="footer-contact-icon">
-                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
               </div>
               <span>info@rosohk.com</span>
             </div>
@@ -1019,7 +1122,8 @@
           <div class="footer-qr-container">
             <div class="footer-qr-img">
               <svg viewBox="0 0 100 100" fill="#101F30">
-                <path d="M0 0h34v34H0V0zm6 6v22h22V6H6zm5 5h12v12H11V11zM66 0h34v34H66V0zm6 6v22h22V6H72zm5 5h12v12H77V11zM0 66h34v34H0V66zm6 6v22h22V72H6zm5 5h12v12H11V77zM42 0h16v10H42V0zm0 18h8v16h-8V18zm8 8h8v8h-8v-8zm16 16h10v8H66v-8zm8 8h10v8H74v-8zm-32 8h8v8h-8v-8zm8 8h8v8h-8v-8zm8-8h8v16h-8V50zm-16 8h8v8h-8v-8zm-8 8h8v8h-8v-8zm32 0h16v8H66v-8zm0 16h8v10H66V74zm8 10h10v8H74v-8zm10-18h8v8h-8v-8zm8 8h8v16h-8V72zm0-16h8v8h-8v-8z"/>
+                <path
+                  d="M0 0h34v34H0V0zm6 6v22h22V6H6zm5 5h12v12H11V11zM66 0h34v34H66V0zm6 6v22h22V6H72zm5 5h12v12H77V11zM0 66h34v34H0V66zm6 6v22h22V72H6zm5 5h12v12H11V77zM42 0h16v10H42V0zm0 18h8v16h-8V18zm8 8h8v8h-8v-8zm16 16h10v8H66v-8zm8 8h10v8H74v-8zm-32 8h8v8h-8v-8zm8 8h8v8h-8v-8zm8-8h8v16h-8V50zm-16 8h8v8h-8v-8zm-8 8h8v8h-8v-8zm32 0h16v8H66v-8zm0 16h8v10H66V74zm8 10h10v8H74v-8zm10-18h8v8h-8v-8zm8 8h8v16h-8V72zm0-16h8v8h-8v-8z" />
               </svg>
             </div>
             <div class="footer-qr-text">
@@ -1031,16 +1135,31 @@
           <!-- Social Media Icons -->
           <div class="footer-social-row">
             <a href="https://x.com" target="_blank" rel="noopener" class="social-circle-btn" aria-label="X (Twitter)">
-              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-circle-btn" aria-label="Instagram">
-              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-circle-btn"
+              aria-label="Instagram">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-circle-btn" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c-.95 0-1.72-.77-1.72-1.72s.77-1.72 1.72-1.72 1.72.77 1.72 1.72-.77 1.72-1.72 1.72M7.86 18.5v-8.37H5.07v8.37h2.79z"/></svg>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-circle-btn"
+              aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c-.95 0-1.72-.77-1.72-1.72s.77-1.72 1.72-1.72 1.72.77 1.72 1.72-.77 1.72-1.72 1.72M7.86 18.5v-8.37H5.07v8.37h2.79z" />
+              </svg>
             </a>
-            <a href="https://wa.me/966500000000" target="_blank" rel="noopener" class="social-circle-btn" aria-label="WhatsApp">
-              <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/></svg>
+            <a href="https://wa.me/966500000000" target="_blank" rel="noopener" class="social-circle-btn"
+              aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z" />
+              </svg>
             </a>
           </div>
         </div>
@@ -1067,5 +1186,43 @@
     </div>
   </footer>
 
+
+  <!-- ==========================================================================
+       Floating Quick Contact Concierge Dock (WhatsApp & Call)
+       ========================================================================== -->
+  <aside class="rosokh-floating-dock" id="rosokhFloatingDock" aria-label="قنوات التواصل السريع">
+    <!-- Live Concierge Badge -->
+    <div class="floating-dock-badge">
+      <span class="badge-dot-live"></span>
+      <span>مستشارك متاح</span>
+    </div>
+
+    <!-- WhatsApp Action Button -->
+    <a href="https://wa.me/966500000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B4%D8%B1%D9%83%D8%A9%20%D8%B1%D8%B3%D9%88%D8%AE%20%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%B1%D9%8A%D8%A9%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1"
+      target="_blank" rel="noopener" class="floating-dock-btn floating-dock-wa" id="floatingWhatsAppBtn"
+      aria-label="محادثة واتساب مباشرة">
+      <div class="dock-btn-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92zM12.04 20.14c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31c-.82-1.31-1.26-2.83-1.26-4.38 0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24s-3.7 8.24-8.23 8.24zm4.52-6.18c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.07-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.17 1.73 2.64 4.19 3.7 0.59.25 1.04.41 1.4.52.59.19 1.13.16 1.56.1 0.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.12-.23-.19-.48-.31z" />
+        </svg>
+      </div>
+      <span class="dock-btn-label">محادثة واتساب</span>
+    </a>
+
+    <!-- Call Action Button -->
+    <a href="tel:8001237000" class="floating-dock-btn floating-dock-call" id="floatingCallBtn"
+      aria-label="اتصال هاتفي مباشر">
+      <div class="dock-btn-icon">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-2.2 2.2a15.053 15.053 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1.01A11.36 11.36 0 018.57 3.9c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.52c0-.55-.45-1-.99-1z" />
+        </svg>
+      </div>
+      <span class="dock-btn-label">اتصل بنا <b dir="ltr">800 123 7000</b></span>
+    </a>
+  </aside>
+
 </body>
+
 </html>

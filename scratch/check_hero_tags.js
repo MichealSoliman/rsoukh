@@ -3,8 +3,8 @@ const fs = require('fs');
 const pages = [
   'project-single.html',
   'services.html',
-  'about.html',
-  'contact.html',
+  'about/',
+  'contact/',
   'service-development.html',
   'service-architectural-design.html',
   'service-project-management.html',

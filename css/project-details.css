@@ -1377,7 +1377,8 @@
 
 /* 3. Breakpoint: Tablets & Large Phones (max-width: 768px) */
 @media (max-width: 768px) {
-  body {
+  body.has-mobile-bottom-bar,
+  body:has(.mobile-bottom-bar) {
     padding-bottom: 74px; /* Space for the floating bottom bar */
   }
 

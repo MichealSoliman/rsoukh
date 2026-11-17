@@ -11,6 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Lightbox Initialization
   initServiceLightbox();
+
+  // 3. Customize Floating WhatsApp Button with Current Service Name
+  const floatingWhatsAppBtn = document.getElementById('floatingWhatsAppBtn');
+  if (floatingWhatsAppBtn) {
+    const serviceTitle = document.querySelector('.hero-title-main')?.textContent?.trim();
+    if (serviceTitle) {
+      const waText = encodeURIComponent(`مرحباً شركة رسوخ العقارية، أود الاستفسار وطلب خدمة (${serviceTitle}).`);
+      floatingWhatsAppBtn.href = `https://wa.me/966500000000?text=${waText}`;
+    }
+  }
 });
 
 function handleDynamicServiceRender() {

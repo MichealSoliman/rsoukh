@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-['about.html', 'contact.html', 'css/pages.css'].forEach(f => {
+['about/', 'contact/', 'css/pages.css'].forEach(f => {
   if (!fs.existsSync(f)) return;
   const content = fs.readFileSync(f, 'utf8');
   console.log(`=== ${f} ===`);

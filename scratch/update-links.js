@@ -23,8 +23,8 @@ const SERVICE_LINK_MAP = [
 const targetFiles = [
   'index.html',
   'services.html',
-  'about.html',
-  'contact.html',
+  'about/',
+  'contact/',
   'project-single.html'
 ];
 

@@ -126,6 +126,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     heroWhatsAppBtn.href = `https://wa.me/966500000000?text=${waText}`;
   }
 
+  const floatingWhatsAppBtn = document.getElementById('floatingWhatsAppBtn');
+  if (floatingWhatsAppBtn && project) {
+    const waText = encodeURIComponent(`مرحباً شركة رسوخ العقارية، أود الاستفسار عن تفاصيل وحجز مشروع (${project.name} - ${project.code || ''}).`);
+    floatingWhatsAppBtn.href = `https://wa.me/966500000000?text=${waText}`;
+  }
+
   // Populate Hero Metrics Capsules Strip
   if (heroMetricsStrip && project.specs) {
     const capsules = [];

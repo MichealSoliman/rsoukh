@@ -827,7 +827,7 @@ function generateServiceHtml(service) {
         <!-- Desktop Navigation Menu -->
         <ul class="nav-menu" id="navMenu">
           <li><a href="index.html" class="nav-link">الرئيسية</a></li>
-          <li><a href="about.html" class="nav-link">من نحن</a></li>
+          <li><a href="about/" class="nav-link">من نحن</a></li>
 
           <!-- Dropdown 1: خدماتنا (Active) -->
           <li class="nav-item-dropdown">
@@ -959,7 +959,7 @@ function generateServiceHtml(service) {
             </div>
           </li>
 
-          <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+          <li><a href="contact/" class="nav-link">تواصل معنا</a></li>
 
           <!-- Mobile Drawer Quick Actions -->
           <li class="nav-drawer-footer">
