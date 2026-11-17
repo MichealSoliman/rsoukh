@@ -108,17 +108,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Populate Full-Bleed Hero Background & Hero Metadata
   const projectHeroSection = document.getElementById('projectHeroSection');
   const heroWhatsAppBtn = document.getElementById('heroWhatsAppBtn');
-  const heroPhotosCount = document.getElementById('heroPhotosCount');
-  const heroMetricsStrip = document.getElementById('heroMetricsStrip');
-  const btnOpenHeroGallery = document.getElementById('btnOpenHeroGallery');
 
   const heroImgUrl = (project.gallery && project.gallery[0]?.url) || 'img/projects/p-247.webp';
   if (projectHeroSection) {
     projectHeroSection.style.backgroundImage = `url('${heroImgUrl}')`;
-  }
-
-  if (heroPhotosCount && project.gallery) {
-    heroPhotosCount.textContent = project.gallery.length;
   }
 
   if (heroWhatsAppBtn) {
@@ -130,33 +123,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (floatingWhatsAppBtn && project) {
     const waText = encodeURIComponent(`مرحباً شركة رسوخ العقارية، أود الاستفسار عن تفاصيل وحجز مشروع (${project.name} - ${project.code || ''}).`);
     floatingWhatsAppBtn.href = `https://wa.me/966500000000?text=${waText}`;
-  }
-
-  // Populate Hero Metrics Capsules Strip
-  if (heroMetricsStrip && project.specs) {
-    const capsules = [];
-    if (project.specs.landArea) {
-      capsules.push({ label: 'مساحة الأرض', val: project.specs.landArea, icon: '<path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>' });
-    }
-    if (project.specs.builtArea) {
-      capsules.push({ label: 'مسطح البناء', val: project.specs.builtArea, icon: '<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>' });
-    }
-    if (project.specs.bedrooms) {
-      capsules.push({ label: 'أجنحة النوم', val: project.specs.bedrooms, icon: '<path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/>' });
-    }
-    if (project.price) {
-      capsules.push({ label: 'القيمة الاستثمارية', val: `${project.pricePrefix || ''} ${project.price} ${project.currency || 'ر.س'}`, icon: '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/>' });
-    }
-
-    heroMetricsStrip.innerHTML = capsules.map(c => `
-      <div class="hero-metric-capsule">
-        <svg viewBox="0 0 24 24">${c.icon}</svg>
-        <div>
-          <div class="m-label">${c.label}</div>
-          <div class="m-val">${c.val}</div>
-        </div>
-      </div>
-    `).join('');
   }
 
   // Navbar Interactions (Mobile Menu Drawer & Dropdowns)
@@ -359,7 +325,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderLightboxThumbnails();
 
   if (btnOpenAllPhotos) btnOpenAllPhotos.addEventListener('click', () => openLightbox(0));
-  if (btnOpenHeroGallery) btnOpenHeroGallery.addEventListener('click', () => openLightbox(0));
 
   if (bentoGalleryWrap && bentoMosaicGrid) {
     if (galleryList.length > 0) {
@@ -554,17 +519,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
 
       if (mapFrameWrap) {
-        if (hasMap) {
-          mapFrameWrap.innerHTML = `<iframe src="${project.location.mapEmbedUrl}" title="موقع المشروع" allowfullscreen loading="lazy"></iframe>`;
-          mapFrameWrap.style.display = '';
-        } else {
-          mapFrameWrap.style.display = 'none';
-        }
+        const mapUrl = (project.location && project.location.mapEmbedUrl) 
+          ? project.location.mapEmbedUrl 
+          : `https://maps.google.com/maps?q=${encodeURIComponent((project.location?.district || 'حي الصحافة') + ' الرياض')}&t=&z=14&ie=UTF8&iwloc=&output=embed`;
+        mapFrameWrap.innerHTML = `<iframe src="${mapUrl}" title="موقع الصرح المعماري" allowfullscreen loading="lazy"></iframe>`;
+        mapFrameWrap.style.display = '';
       }
 
       landmarksSection.style.display = '';
     } else {
-      landmarksSection.style.display = 'none';
+      landmarksSection.style.display = '';
     }
   }
 

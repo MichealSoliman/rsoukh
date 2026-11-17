@@ -117,7 +117,7 @@ img, video {
 }
 
 .site-header.scrolled {
-  padding: 13px 0;
+  padding: 18px 0;
   background: rgba(16, 31, 48, 0.96);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -147,7 +147,7 @@ img, video {
   background: transparent;
   border-color: transparent;
   box-shadow: none;
-  padding: 0;
+  padding: 0 18px;
 }
 
 /* Brand Logo (Official High-Resolution Typography Artwork - No Side Text) */
@@ -156,6 +156,8 @@ img, video {
   align-items: center;
   flex-shrink: 0;
   text-decoration: none;
+  padding: 2px 8px;
+  margin-left: 20px;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
 }
 
@@ -171,7 +173,11 @@ img, video {
   object-fit: contain;
   display: block;
   filter: brightness(0) invert(1);
-  transition: opacity 0.25s ease;
+  transition: height 0.3s ease, opacity 0.25s ease, transform 0.3s ease;
+}
+
+.site-header.scrolled .navbar-brand-logo {
+  height: 38px;
 }
 
 .brand-logo:hover .navbar-brand-logo {

@@ -949,8 +949,9 @@
   margin-top: 25px;
   border-radius: var(--radius-md);
   overflow: hidden;
-  height: 280px;
-  border: 1px solid rgba(16, 31, 48, 0.1);
+  height: 340px;
+  border: 1px solid rgba(191, 159, 118, 0.3);
+  box-shadow: 0 6px 25px rgba(16, 31, 48, 0.08);
 }
 
 .landmarks-map-frame iframe {
