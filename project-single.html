@@ -31,7 +31,7 @@
         <!-- Desktop Navigation Menu -->
         <ul class="nav-menu" id="navMenu">
           <li><a href="index.html" class="nav-link">الرئيسية</a></li>
-          <li><a href="index.html#about-rosokh" class="nav-link">من نحن</a></li>
+          <li><a href="about.html" class="nav-link">من نحن</a></li>
 
           <!-- Dropdown 1: خدماتنا -->
           <li class="nav-item-dropdown">
@@ -40,37 +40,37 @@
               <svg class="dropdown-arrow" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
             </a>
             <div class="dropdown-menu services-dropdown">
-              <a href="services.html#development" class="dropdown-item">
+              <a href="service-development.html" class="dropdown-item">
                 <div class="item-icon-box">
                   <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm0 3.8l6 4.5v9.7h-3v-7H9v7H6V11.3l6-4.5z"/></svg>
                 </div>
                 <span>التطوير العقاري والاستثمار</span>
               </a>
-              <a href="services.html#project-management" class="dropdown-item">
+              <a href="service-project-management.html" class="dropdown-item">
                 <div class="item-icon-box">
                   <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
                 </div>
                 <span>إدارة المشاريع والإشراف الهندسي</span>
               </a>
-              <a href="services.html#sales-marketing" class="dropdown-item">
+              <a href="service-sales-marketing.html" class="dropdown-item">
                 <div class="item-icon-box">
                   <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
                 </div>
                 <span>التسويق والمبيعات وحلول التملّك</span>
               </a>
-              <a href="services.html#consulting" class="dropdown-item">
+              <a href="service-consulting.html" class="dropdown-item">
                 <div class="item-icon-box">
                   <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
                 </div>
                 <span>الاستشارات ودراسات الجدوى</span>
               </a>
-              <a href="services.html#architectural-design" class="dropdown-item">
+              <a href="service-architectural-design.html" class="dropdown-item">
                 <div class="item-icon-box">
                   <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
                 </div>
                 <span>التصميم المعماري والديكور الداخلي</span>
               </a>
-              <a href="services.html#facility-management" class="dropdown-item">
+              <a href="service-facility-management.html" class="dropdown-item">
                 <div class="item-icon-box">
                   <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
                 </div>
@@ -196,7 +196,7 @@
             </div>
           </li>
 
-          <li><a href="index.html#contact" class="nav-link">تواصل معنا</a></li>
+          <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
 
           <!-- Mobile Drawer Quick Actions -->
           <li class="nav-drawer-footer">
@@ -504,8 +504,14 @@
          ========================================================================== -->
     <div class="lightbox-modal" id="galleryLightboxModal" role="dialog" aria-modal="true" aria-label="ألبوم صور المشروع">
       <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="إغلاق">&times;</button>
-      <button class="lightbox-nav-btn next" id="lightboxNextBtn" aria-label="الصورة التالية">&#10095;</button>
-      <button class="lightbox-nav-btn prev" id="lightboxPrevBtn" aria-label="الصورة السابقة">&#10094;</button>
+      
+      <!-- Prominent Nav Buttons with clear SVG icons -->
+      <button class="lightbox-nav-btn prev" id="lightboxPrevBtn" aria-label="الصورة السابقة" title="الصورة السابقة">
+        <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+      </button>
+      <button class="lightbox-nav-btn next" id="lightboxNextBtn" aria-label="الصورة التالية" title="الصورة التالية">
+        <svg viewBox="0 0 24 24"><path d="M15.41 7.41L10.83 12l4.58 4.59L14 18l-6-6 6-6 1.41 1.41z"/></svg>
+      </button>
       
       <div class="lightbox-stage">
         <img id="lightboxImg" src="" alt="معاينة بكامل الشاشة">
@@ -513,7 +519,12 @@
 
       <div class="lightbox-caption-bar">
         <div class="lightbox-caption-text" id="lightboxCaption"></div>
-        <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
+        <div class="lightbox-counter" id="lightboxCounter" dir="ltr">1 / 1</div>
+      </div>
+
+      <!-- Quick Thumbnail Navigation Strip -->
+      <div class="lightbox-thumbnails-wrap" id="lightboxThumbnailsWrap">
+        <!-- Injected dynamically via JS -->
       </div>
     </div>
   </main>
@@ -770,7 +781,7 @@
             <h3>انضم إلى <span>نادي النخبة والمستثمرين</span> لدى رُسوخ</h3>
             <p>احصل على أحدث الفرص الاستثمارية والقصور الحصرية قبل طرحها في السوق مع استشارات خاصة.</p>
           </div>
-          <form class="vip-form" onsubmit="event.preventDefault(); showToast('شكراً لانضمامك لنادي النخبة لدى رسوخ! ستصلك أحدث العروض الحصرية.'); this.reset();">
+          <form class="vip-form" onsubmit="event.preventDefault(); alert('شكراً لانضمامك لنادي النخبة لدى رسوخ! ستصلك أحدث العروض الحصرية.'); this.reset();">
             <input type="email" class="vip-input" placeholder="أدخل بريدك الإلكتروني" required>
             <button type="submit" class="btn-vip-submit">
               <span>اشتراك حصري</span>
@@ -814,11 +825,12 @@
             <span>خدماتنا</span>
           </h4>
           <ul class="footer-links-list">
-            <li><a href="index.html#about-rosokh">التطوير العقاري</a></li>
-            <li><a href="index.html#about-rosokh">إدارة المجتمعات</a></li>
-            <li><a href="index.html#contact">الاستشارات العقارية</a></li>
-            <li><a href="index.html#contact">إدارة البيع والتسويق</a></li>
-            <li><a href="index.html#features">إدارة وصيانة المرافق</a></li>
+            <li><a href="service-development.html">التطوير العقاري والاستثمار</a></li>
+            <li><a href="service-project-management.html">إدارة المشاريع والإشراف الهندسي</a></li>
+            <li><a href="service-sales-marketing.html">التسويق والمبيعات وحلول التملّك</a></li>
+            <li><a href="service-consulting.html">الاستشارات ودراسات الجدوى</a></li>
+            <li><a href="service-architectural-design.html">التصميم المعماري والديكور الداخلي</a></li>
+            <li><a href="service-facility-management.html">إدارة الأصول وتشغيل المرافق</a></li>
           </ul>
         </div>
 
@@ -856,7 +868,7 @@
               <div class="footer-contact-icon">
                 <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.053 15.053 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1.01A11.36 11.36 0 0 1 8.5 3.92c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.54c0-.55-.45-1-.99-1z"/></svg>
               </div>
-              <span>الهاتف المجاني: <strong style="color:#BF9F76;">800 123 7000</strong></span>
+              <span>الهاتف المجاني: <strong style="color:#BF9F76;" dir="ltr">800 123 7000</strong></span>
             </div>
 
             <div class="footer-contact-row">
@@ -882,13 +894,13 @@
 
           <!-- Social Media Icons -->
           <div class="footer-social-row">
-            <a href="#" class="social-circle-btn" aria-label="X (Twitter)">
+            <a href="https://x.com" target="_blank" rel="noopener" class="social-circle-btn" aria-label="X (Twitter)">
               <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <a href="#" class="social-circle-btn" aria-label="Instagram">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-circle-btn" aria-label="Instagram">
               <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             </a>
-            <a href="#" class="social-circle-btn" aria-label="LinkedIn">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-circle-btn" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c-.95 0-1.72-.77-1.72-1.72s.77-1.72 1.72-1.72 1.72.77 1.72 1.72-.77 1.72-1.72 1.72M7.86 18.5v-8.37H5.07v8.37h2.79z"/></svg>
             </a>
             <a href="https://wa.me/966500000000" target="_blank" rel="noopener" class="social-circle-btn" aria-label="WhatsApp">
